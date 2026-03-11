@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can I Work in Poland? — Permit Path Finder</title>
+  <link rel="icon" href="assets/vp-favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+      background: #1c004c;
+      color: #ffffff;
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .subheader {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      opacity: 0.75;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+    }
+
+    .hero .powered-by {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      opacity: 0.65;
+    }
+
+    .hero .powered-by img {
+      height: 16px;
+      object-fit: contain;
+      vertical-align: middle;
+    }
+
+    .hero .powered-by a { color: #fff; text-decoration: none; }
+
+    /* ---- LANGUAGE TOGGLE ---- */
+    .lang-toggle {
+      position: absolute;
+      top: 1.25rem;
+      right: 2rem;
+      display: flex;
+      background: rgba(255,255,255,0.12);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .lang-toggle button {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: transparent;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    .lang-toggle button.active {
+      background: #2d1560;
+      color: #fff;
+    }
+
+    .lang-toggle button:hover:not(.active) {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ---- CONTAINER ---- */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+
+    /* ---- PROGRESS BAR ---- */
+    .progress-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 0;
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-step {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #9b8fb5;
+    }
+
+    .progress-back {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #9b8fb5;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    .progress-back:hover { color: #2d1560; }
+
+    .progress-bar {
+      width: 100%;
+      height: 3px;
+      background: #f0edf5;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #2d1560;
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    /* ---- QUESTION ---- */
+    .question-wrap {
+      animation: fadeSlideIn 0.35s ease;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .question-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .question-sub {
+      font-size: 0.875rem;
+      color: #777;
+      text-align: center;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- OPTION CARDS ---- */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .options-grid.single-col {
+      grid-template-columns: 1fr;
+      max-width: 540px;
+    }
+
+    .option-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #fff;
+    }
+
+    .option-card:hover {
+      border-color: #2d1560;
+      box-shadow: 0 2px 12px rgba(45, 21, 96, 0.08);
+    }
+
+    .option-card.selected {
+      background: #2d1560;
+      color: #fff;
+      border-color: #2d1560;
+    }
+
+    .option-card .icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 2rem;
+      text-align: center;
+    }
+
+    .option-card .label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    .option-card .desc {
+      font-size: 0.8rem;
+      opacity: 0.65;
+      margin-top: 0.2rem;
+      line-height: 1.4;
+    }
+
+    .option-card.selected .desc { opacity: 0.8; }
+
+    /* ---- COUNTRY SELECTOR ---- */
+    .country-search-wrap {
+      max-width: 540px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .country-search {
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .country-search:focus { border-color: #2d1560; }
+
+    .country-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+      max-height: 320px;
+      overflow-y: auto;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .country-dropdown.open { display: block; }
+
+    .country-group-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #9b8fb5;
+      padding: 0.75rem 1.25rem 0.35rem;
+    }
+
+    .country-item {
+      padding: 0.6rem 1.25rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.1s;
+    }
+
+    .country-item:hover { background: #f7f5fa; }
+    .country-item.highlighted { background: #f0ebf8; }
+
+    /* ---- AUTOCOMPLETE (OCCUPATION) ---- */
+    .occupation-search-wrap {
+      max-width: 540px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .occupation-search {
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .occupation-search:focus { border-color: #2d1560; }
+
+    .occupation-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+      max-height: 280px;
+      overflow-y: auto;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .occupation-dropdown.open { display: block; }
+
+    .occ-item {
+      padding: 0.6rem 1.25rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.1s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .occ-item:hover { background: #f7f5fa; }
+    .occ-item .occ-group {
+      font-size: 0.7rem;
+      color: #9b8fb5;
+      font-weight: 600;
+    }
+
+    .occ-skip {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .occ-skip button {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      color: #9b8fb5;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.15s;
+    }
+
+    .occ-skip button:hover { color: #2d1560; }
+
+    /* ---- SALARY INPUT ---- */
+    .salary-wrap {
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .salary-input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .salary-input {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      outline: none;
+      width: 200px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .salary-input:focus { border-color: #2d1560; }
+
+    .salary-unit {
+      font-size: 0.9rem;
+      color: #777;
+      font-weight: 500;
+    }
+
+    .salary-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #2d1560;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 9999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .salary-submit:hover { background: #3d1f80; transform: translateY(-1px); }
+    .salary-submit:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+    .salary-threshold-note {
+      font-size: 0.8rem;
+      color: #9b8fb5;
+      margin-top: 0.75rem;
+    }
+
+    /* ---- INFO PANEL ---- */
+    .info-panel {
+      max-width: 640px;
+      margin: 0 auto 1.5rem;
+      background: #f7f5fa;
+      border: 1px solid #e8e4f0;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .info-panel p {
+      font-size: 0.875rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-panel p:last-child { margin-bottom: 0; }
+
+    .info-panel .continue-btn {
+      display: inline-flex;
+      margin-top: 0.75rem;
+      background: #2d1560;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 9999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .info-panel .continue-btn:hover { background: #3d1f80; }
+
+    /* ---- RESULT CARDS ---- */
+    .results-wrap {
+      animation: fadeSlideIn 0.4s ease;
+    }
+
+    .result-note {
+      max-width: 640px;
+      margin: 0 auto 1.5rem;
+      padding: 1rem 1.25rem;
+      background: #f0ebf8;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      color: #2d1560;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .result-card {
+      background: #fff;
+      border: 1px solid #e8e4f0;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .result-card .path-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #2d1560;
+      margin-bottom: 0.5rem;
+    }
+
+    .result-card .legal-pill {
+      display: inline-block;
+      background: #f0ebf8;
+      color: #2d1560;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .deficit-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+
+    .result-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .result-section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9b8fb5;
+      margin-bottom: 0.4rem;
+    }
+
+    .result-section p,
+    .result-section li {
+      font-size: 0.875rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .result-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .result-section ul li {
+      padding: 0.2rem 0;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .result-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #2d1560;
+    }
+
+    .result-section.watch-out {
+      background: #fff8f0;
+      border: 1px solid #ffe0b2;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+
+    .result-section.watch-out .result-section-label {
+      color: #e65100;
+    }
+
+    .result-section.watch-out ul li::before {
+      background: #e65100;
+    }
+
+    .restart-wrap {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .restart-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #2d1560;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 9999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .restart-btn:hover { background: #3d1f80; transform: translateY(-1px); }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      padding: 2rem 2rem;
+      font-size: 0.75rem;
+      color: #b0a8c4;
+      border-top: 1px solid #f0edf5;
+    }
+
+    .footer a { color: #2d1560; text-decoration: none; font-weight: 500; }
+    .footer a:hover { text-decoration: underline; }
+
+    .disclaimer {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 2rem 1rem;
+      text-align: center;
+      font-size: 0.7rem;
+      color: #b0a8c4;
+      line-height: 1.5;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 640px) {
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+      .hero h1 { font-size: 1.75rem; }
+      .hero .subheader { font-size: 0.9rem; }
+      .lang-toggle { top: 0.75rem; right: 1rem; }
+      .container { padding: 1.5rem 1.25rem 3rem; }
+      .progress-wrap { padding: 1.25rem 1.25rem 0; }
+      .options-grid { grid-template-columns: 1fr; }
+      .question-text { font-size: 1.25rem; }
+      .result-card { padding: 1.5rem 1.25rem; }
+      .result-card .path-name { font-size: 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="lang-toggle">
+      <button id="langEN" class="active" onclick="setLang('en')">EN</button>
+      <button id="langPL" onclick="setLang('pl')">PL</button>
+    </div>
+    <h1 id="heroTitle">Can I work<br>in Poland?</h1>
+    <div class="subheader" id="heroSub">Answer a few questions to find your path to a Polish work or residence permit.</div>
+    <div class="powered-by">
+      Powered by <a href="https://vastpoint.vc" target="_blank" rel="noopener"><img src="assets/vp-logo.svg" alt="Vastpoint"></a>
+    </div>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-info">
+      <button class="progress-back" id="backBtn" onclick="goBack()"></button>
+      <span class="progress-step" id="progressLabel"></span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <div class="container" id="mainContent"></div>
+
+  <div class="disclaimer" id="disclaimer">
+    This tool provides general guidance only and does not constitute legal advice. Immigration law changes frequently. Always consult a licensed immigration lawyer for your specific situation. Information current as of March 2026.
+  </div>
+
+  <div class="footer">
+    &copy; 2026 <a href="https://vastpoint.vc">Vastpoint</a>
+  </div>
+
+<script>
+/* ============================================================
+   POLAND PERMIT PATH FINDER — State Machine + Renderer
+   ============================================================ */
+
+// ---- i18n ----
+const UI = {
+  heroTitle: { en: 'Can I work<br>in Poland?', pl: 'Czy mogę pracować<br>w Polsce?' },
+  heroSub: { en: 'Answer a few questions to find your path to a Polish work or residence permit.', pl: 'Odpowiedz na kilka pytań, aby znaleźć swoją ścieżkę do zezwolenia na pracę lub pobyt w Polsce.' },
+  back: { en: '\u2190 Back', pl: '\u2190 Wstecz' },
+  stepOf: { en: 'Step {n} of {t}', pl: 'Krok {n} z {t}' },
+  startOver: { en: 'Start over', pl: 'Zacznij od nowa' },
+  disclaimer: { en: 'This tool provides general guidance only and does not constitute legal advice. Immigration law changes frequently. Always consult a licensed immigration lawyer for your specific situation. Information current as of March 2026.', pl: 'To narzędzie dostarcza jedynie ogólnych wskazówek i nie stanowi porady prawnej. Prawo imigracyjne zmienia się często. Zawsze skonsultuj się z licencjonowanym prawnikiem imigracyjnym w Twojej konkretnej sytuacji. Informacje aktualne na marzec 2026.' },
+  searchCountry: { en: 'Search for your country...', pl: 'Wyszukaj swój kraj...' },
+  searchOccupation: { en: 'e.g. "I build mobile apps" or "nurse in oncology ward"', pl: 'np. „tworzę aplikacje mobilne" lub „pielęgniarka na oddziale onkologii"' },
+  notSure: { en: "Skip — I'll check later", pl: 'Pomiń — sprawdzę później' },
+  checkRole: { en: 'Check my role', pl: 'Sprawdź moje stanowisko' },
+  checking: { en: 'Checking...', pl: 'Sprawdzanie...' },
+  matchFound: { en: 'Match found!', pl: 'Znaleziono dopasowanie!' },
+  noMatch: { en: 'No exact match in the deficit list — you can still proceed.', pl: 'Brak dokładnego dopasowania na liście deficytowej — możesz kontynuować.' },
+  matchError: { en: 'Could not check right now. You can proceed without this check.', pl: 'Nie udało się sprawdzić. Możesz kontynuować bez tej weryfikacji.' },
+  proceed: { en: 'Continue', pl: 'Dalej' },
+  salaryLabel: { en: 'PLN / month (gross)', pl: 'PLN / miesiąc (brutto)' },
+  salarySubmit: { en: 'Continue', pl: 'Dalej' },
+  salaryNote: { en: 'Blue Card threshold: 13,355 PLN gross/month (150% of national average)', pl: 'Próg Niebieskiej Karty: 13 355 PLN brutto/miesiąc (150% średniej krajowej)' },
+  deficitBadge: { en: 'Your role qualifies for priority processing (art. 29)', pl: 'Twoje stanowisko kwalifikuje się do priorytetowego rozpatrzenia (art. 29)' },
+  who: { en: 'WHO THIS IS FOR', pl: 'DLA KOGO' },
+  requirements: { en: 'REQUIREMENTS', pl: 'WYMAGANIA' },
+  documents: { en: "DOCUMENTS YOU'LL NEED", pl: 'POTRZEBNE DOKUMENTY' },
+  timeline: { en: 'EXPECTED TIMELINE', pl: 'PRZEWIDYWANY CZAS' },
+  fastTrack: { en: 'FAST-TRACK AVAILABLE?', pl: 'SZYBKA ŚCIEŻKA?' },
+  benefits: { en: 'KEY BENEFITS', pl: 'KLUCZOWE KORZYŚCI' },
+  watchOut: { en: 'WATCH OUT', pl: 'UWAGA' },
+
+  // Q1
+  q1: { en: 'What do you want to do in Poland?', pl: 'Co chcesz robić w Polsce?' },
+  q1_employee: { en: 'I want to join a company', pl: 'Chcę dołączyć do firmy' },
+  q1_employee_desc: { en: 'Work as an employee for a Polish company', pl: 'Pracować jako pracownik w polskiej firmie' },
+  q1_founder: { en: 'I want to start a company', pl: 'Chcę założyć firmę' },
+  q1_founder_desc: { en: 'Run my own business or startup in Poland', pl: 'Prowadzić własną firmę lub startup w Polsce' },
+  q1_research: { en: 'I want to do research', pl: 'Chcę prowadzić badania' },
+  q1_research_desc: { en: 'Work at a university or research institute', pl: 'Pracować na uczelni lub w instytucie badawczym' },
+  q1_student: { en: 'I want to study', pl: 'Chcę studiować' },
+  q1_student_desc: { en: 'Attend a Polish university or doctoral school', pl: 'Studiować na polskiej uczelni lub w szkole doktorskiej' },
+
+  // Q2
+  q2: { en: 'Where are you from?', pl: 'Skąd pochodzisz?' },
+  q2_sub: { en: 'Your nationality determines which fast-track options are available.', pl: 'Twoje obywatelstwo określa dostępne opcje szybkiej ścieżki.' },
+  groupEU: { en: 'EU / EEA / Switzerland', pl: 'UE / EOG / Szwajcaria' },
+  groupDecl: { en: 'Simplified procedure countries', pl: 'Kraje uproszczonej procedury' },
+  groupOther: { en: 'All other countries', pl: 'Pozostałe kraje' },
+
+  // Q location
+  qLoc: { en: 'Are you currently in Poland?', pl: 'Czy jesteś obecnie w Polsce?' },
+  qLoc_sub: { en: 'This affects your practical next steps.', pl: 'To wpływa na Twoje praktyczne kolejne kroki.' },
+  qLoc_yes: { en: "Yes, I'm already in Poland", pl: 'Tak, jestem już w Polsce' },
+  qLoc_yes_desc: { en: 'On a visa, visa-free stay, or another permit', pl: 'Na wizie, w ruchu bezwizowym lub na innym zezwoleniu' },
+  qLoc_no: { en: "No, I'm outside Poland", pl: 'Nie, jestem poza Polską' },
+  qLoc_no_desc: { en: "I haven't arrived yet", pl: 'Jeszcze nie przyjechałem' },
+  nextSteps: { en: 'YOUR NEXT STEPS', pl: 'TWOJE KOLEJNE KROKI' },
+  nextStepsInPoland: { en: "<strong>Since you're already in Poland:</strong> Go directly to the voivodeship office (urząd wojewódzki) to submit your application. You'll receive a stampel (stamp) in your passport confirming legal stay while your application is processed. <strong>Important:</strong> You must submit your application before your current legal stay expires (e.g., before day 90 of a Schengen tourist stay). From the day you submit, you can stay and work legally.", pl: '<strong>Ponieważ jesteś już w Polsce:</strong> Udaj się bezpośrednio do urzędu wojewódzkiego, aby złożyć wniosek. Otrzymasz stempel w paszporcie potwierdzający legalny pobyt podczas rozpatrywania wniosku. <strong>Ważne:</strong> Musisz złożyć wniosek przed upływem obecnego legalnego pobytu (np. przed 90. dniem pobytu turystycznego w strefie Schengen). Od dnia złożenia wniosku możesz legalnie przebywać i pracować.' },
+  nextStepsAbroad: { en: "<strong>Since you're outside Poland:</strong> You'll need a visa first. Apply for the appropriate D-type visa at the Polish consulate in your country ({visaType}). Processing takes 2-6 weeks. After entering Poland with your visa, apply for the residence permit at the voivodeship office (urząd wojewódzki). You'll get a stampel allowing legal stay while processing.", pl: '<strong>Ponieważ jesteś poza Polską:</strong> Najpierw potrzebujesz wizy. Złóż wniosek o odpowiednią wizę typu D w polskim konsulacie w Twoim kraju ({visaType}). Rozpatrywanie trwa 2-6 tygodni. Po wjeździe do Polski z wizą złóż wniosek o zezwolenie na pobyt w urzędzie wojewódzkim. Otrzymasz stempel legalizujący pobyt na czas rozpatrywania.' },
+
+  // Q3e
+  q3e: { en: 'Describe your role', pl: 'Opisz swoje stanowisko' },
+  q3e_sub: { en: 'We\'ll check if your occupation qualifies for priority processing.', pl: 'Sprawdzimy, czy Twoje stanowisko kwalifikuje się do priorytetowego rozpatrzenia.' },
+
+  // Q4e
+  q4e: { en: 'What type of contract do you have (or will have)?', pl: 'Jaki rodzaj umowy masz (lub będziesz mieć)?' },
+  q4e_umowa: { en: 'Umowa o pracę (employment contract)', pl: 'Umowa o pracę' },
+  q4e_umowa_desc: { en: 'Standard employment contract under Polish labor code', pl: 'Standardowa umowa o pracę zgodna z Kodeksem pracy' },
+  q4e_zlecenie: { en: 'Umowa zlecenie / o dzieło (civil law)', pl: 'Umowa zlecenie / o dzieło' },
+  q4e_zlecenie_desc: { en: 'Civil law contract — also eligible for Blue Card since 2025', pl: 'Umowa cywilnoprawna — od 2025 r. kwalifikuje się też do Niebieskiej Karty' },
+  q4e_b2b: { en: 'B2B contract', pl: 'Kontrakt B2B' },
+  q4e_b2b_desc: { en: 'Business-to-business / self-employed contract', pl: 'Kontrakt między firmami / samozatrudnienie' },
+  q4e_unknown: { en: "I don't know yet", pl: 'Jeszcze nie wiem' },
+  q4e_unknown_desc: { en: "I haven't discussed contract details with the employer", pl: 'Nie omawiałem jeszcze szczegółów umowy z pracodawcą' },
+
+  // B2B redirect
+  b2bRedirect: { en: "B2B contracts don't qualify for work permits or Blue Card. If you're running your own business, the founder/business path is the right one for you.", pl: 'Kontrakty B2B nie kwalifikują się do zezwoleń na pracę ani Niebieskiej Karty. Jeśli prowadzisz własną działalność, ścieżka dla założycieli jest dla Ciebie odpowiednia.' },
+  b2bBtn: { en: 'Go to founder path \u2192', pl: 'Przejdź do ścieżki założyciela \u2192' },
+
+  // Q5e
+  q5e: { en: 'What is your gross monthly salary (or offered salary)?', pl: 'Jakie jest Twoje wynagrodzenie brutto miesięcznie (lub oferowane)?' },
+
+  // Founder Q3f
+  q3f: { en: 'Do you already have a company registered in Poland?', pl: 'Czy masz już zarejestrowaną firmę w Polsce?' },
+  q3f_yes: { en: 'Yes, I have a registered company', pl: 'Tak, mam zarejestrowaną firmę' },
+  q3f_yes_desc: { en: 'Already registered in KRS', pl: 'Już zarejestrowana w KRS' },
+  q3f_no: { en: "No, not yet", pl: 'Nie, jeszcze nie' },
+  q3f_no_desc: { en: "I haven't registered a company in Poland", pl: 'Nie zarejestrowałem firmy w Polsce' },
+
+  // No company info
+  noCompanyInfo: { en: "<strong>You don't need to be in Poland to register a company.</strong> There are two ways to do it remotely:<br><br><strong>Option A: S24 online system</strong> (fastest — 24 hours)<br>Go to s24.ms.gov.pl. All shareholders need a <strong>qualified electronic signature</strong> (kwalifikowany podpis elektroniczny). This is an EU-standard digital certificate — think of it as a government-verified digital ID for signing legal documents. Foreign citizens can get one from Polish providers like Certum (certum.pl) via video verification for ~200-300 PLN/year, without visiting Poland. It's Poland's closest equivalent to Estonia's e-Residency, though less well-known.<br><br><strong>Option B: Through a lawyer</strong> (1-2 weeks)<br>Grant a power of attorney (pełnomocnictwo) to a Polish lawyer. They handle everything with a notary on your behalf. No e-signature needed, but costs more (~3,000-5,000 PLN in legal fees).<br><br><strong>For both options you'll need:</strong> company name, registered address in Poland (a virtual office works — ~100-200 PLN/month), shareholders' passport copies, articles of association, minimum share capital of 5,000 PLN.<br><br><strong>After registration:</strong><br>1. <strong>NIP and REGON</strong> — assigned automatically with KRS, 1-3 business days.<br>2. <strong>Company bank account</strong> — some banks allow remote onboarding (e.g., Nest Bank, Alior); others require an in-person visit.<br>3. <strong>Visa D04</strong> (business activity) — apply at the Polish consulate with KRS extract, financials, and business plan.<br>4. <strong>Arrive in Poland</strong> and apply for <strong>residence permit under art. 142</strong> at the voivodeship office.", pl: '<strong>Nie musisz być w Polsce, żeby zarejestrować firmę.</strong> Są dwa sposoby rejestracji zdalnej:<br><br><strong>Opcja A: System S24</strong> (najszybsza — 24 godziny)<br>Wejdź na s24.ms.gov.pl. Wszyscy wspólnicy potrzebują <strong>kwalifikowanego podpisu elektronicznego</strong>. To certyfikat cyfrowy zgodny ze standardem unijnym — zweryfikowany przez państwo cyfrowy identyfikator do podpisywania dokumentów prawnych. Obcokrajowcy mogą go uzyskać od polskich dostawców, np. Certum (certum.pl), przez weryfikację wideo za ~200-300 PLN/rok, bez przyjazdu do Polski. To najbliższy polski odpowiednik estońskiego e-Residency, choć mniej znany.<br><br><strong>Opcja B: Przez prawnika</strong> (1-2 tygodnie)<br>Udziel pełnomocnictwa polskiemu prawnikowi. Załatwi wszystko u notariusza w Twoim imieniu. Nie potrzeba podpisu elektronicznego, ale kosztuje więcej (~3 000-5 000 PLN za obsługę prawną).<br><br><strong>W obu przypadkach potrzebujesz:</strong> nazwy firmy, adresu siedziby w Polsce (wirtualne biuro wystarczy — ~100-200 PLN/mies.), kopii paszportów wspólników, umowy spółki, minimalnego kapitału zakładowego 5 000 PLN.<br><br><strong>Po rejestracji:</strong><br>1. <strong>NIP i REGON</strong> — przydzielane automatycznie z KRS, 1-3 dni robocze.<br>2. <strong>Konto firmowe</strong> — niektóre banki umożliwiają zdalny onboarding (np. Nest Bank, Alior); inne wymagają wizyty osobistej.<br>3. <strong>Wiza D04</strong> (działalność gospodarcza) — złóż wniosek w konsulacie RP z odpisem KRS, dokumentami finansowymi i biznesplanem.<br>4. <strong>Przyjazd do Polski</strong> i złożenie wniosku o <strong>zezwolenie na pobyt na podstawie art. 142</strong> w urzędzie wojewódzkim.' },
+  continueBtn: { en: 'Continue \u2192', pl: 'Dalej \u2192' },
+
+  // Q4f
+  q4f: { en: 'Does your company have institutional investment?', pl: 'Czy Twoja firma ma inwestycję instytucjonalną?' },
+  q4f_yes: { en: 'Yes, from a VC fund / angel fund / accelerator', pl: 'Tak, od funduszu VC / aniołów biznesu / akceleratora' },
+  q4f_yes_desc: { en: 'Investment from a registered investment entity', pl: 'Inwestycja od zarejestrowanego podmiotu inwestycyjnego' },
+  q4f_no: { en: 'No', pl: 'Nie' },
+  q4f_no_desc: { en: 'No institutional investment (yet)', pl: 'Brak inwestycji instytucjonalnej (na razie)' },
+
+  // Q5f
+  q5f: { en: 'Does your company meet either of these?', pl: 'Czy Twoja firma spełnia któryś z tych warunków?' },
+  q5f_revenue: { en: 'Annual revenue \u2265 12x average monthly wage (~100K PLN/year)', pl: 'Roczny przychód \u2265 12x średnie miesięczne wynagrodzenie (~100 tys. PLN/rok)' },
+  q5f_revenue_desc: { en: 'Company generates sufficient revenue', pl: 'Firma generuje wystarczający przychód' },
+  q5f_employees: { en: '\u2265 2 full-time employees for 1+ year', pl: '\u2265 2 pracowników na pełen etat przez 1+ rok' },
+  q5f_employees_desc: { en: 'Company has created Polish jobs', pl: 'Firma stworzyła miejsca pracy w Polsce' },
+  q5f_neither: { en: 'Neither — we\'re early stage', pl: 'Żaden — jesteśmy na wczesnym etapie' },
+  q5f_neither_desc: { en: "Don't meet revenue or employment thresholds yet", pl: 'Nie spełniamy jeszcze progów przychodów ani zatrudnienia' },
+
+  // Research Q3r
+  q3r: { en: 'Are you invited by a Polish institution?', pl: 'Czy masz zaproszenie od polskiej instytucji?' },
+  q3r_yes: { en: 'Yes — university, PAN institute, or research institute', pl: 'Tak — uczelnia, instytut PAN lub instytut badawczy' },
+  q3r_yes_desc: { en: 'I have a hosting agreement or invitation', pl: 'Mam umowę o przyjęciu lub zaproszenie' },
+  q3r_no: { en: "No, I'm looking for opportunities", pl: 'Nie, szukam możliwości' },
+  q3r_no_desc: { en: 'Exploring research positions in Poland', pl: 'Szukam stanowisk badawczych w Polsce' },
+  nawaInfo: { en: "<strong>How to find a research position in Poland:</strong><br><br><strong>1. Direct applications</strong> — Contact universities and institutes directly. Key institutions: Polish Academy of Sciences (PAN) institutes, IDEAS NCBR (AI/ML research), Sano Centre (computational medicine), major universities (UW, AGH, UJ, PW). Many post open positions on Euraxess.<br><br><strong>2. NAWA programs</strong> — Polish National Agency for Academic Exchange (17M PLN/year budget). ULAM program for postdocs, Polish Returns for diaspora researchers. Competitive but prestigious — they arrange institutional hosting for you.<br><br><strong>3. Visit on a Schengen visa first</strong> — You can enter Poland on a short-stay Schengen visa (up to 90 days in 180) or visa-free if your country qualifies. Use this time to visit institutions, attend conferences, and network. Once you secure a hosting agreement, apply for the research residence permit from within Poland (art. 151) — you'll get a stampel allowing legal stay while processing.<br><br><strong>4. EU funding routes</strong> — Marie Sklodowska-Curie Actions (MSCA) fund researchers at Polish institutions. ERC grants can be hosted at Polish universities. These come with automatic support for visa/permit processing.", pl: '<strong>Jak znaleźć stanowisko badawcze w Polsce:</strong><br><br><strong>1. Bezpośrednie aplikacje</strong> — Skontaktuj się bezpośrednio z uczelniami i instytutami. Kluczowe instytucje: instytuty Polskiej Akademii Nauk (PAN), IDEAS NCBR (badania AI/ML), Sano Centre (medycyna obliczeniowa), główne uczelnie (UW, AGH, UJ, PW). Wiele z nich publikuje oferty na Euraxess.<br><br><strong>2. Programy NAWA</strong> — Narodowa Agencja Wymiany Akademickiej (budżet 17 mln PLN/rok). Program ULAM dla postdoków, Polskie Powroty dla naukowców z diaspory. Konkurencyjne, ale prestiżowe — organizują przyjęcie w instytucji za Ciebie.<br><br><strong>3. Przyjazd na wizie Schengen</strong> — Możesz wjechać do Polski na wizie krótkoterminowej Schengen (do 90 dni w ciągu 180) lub w ruchu bezwizowym, jeśli Twój kraj się kwalifikuje. Wykorzystaj ten czas na odwiedzenie instytucji, konferencje i networking. Po uzyskaniu umowy o przyjęciu złóż wniosek o zezwolenie na pobyt w celu prowadzenia badań (art. 151) z terenu Polski — otrzymasz stempel legalizujący pobyt na czas rozpatrywania.<br><br><strong>4. Finansowanie z UE</strong> — Marie Sklodowska-Curie Actions (MSCA) finansują naukowców w polskich instytucjach. Granty ERC mogą być realizowane na polskich uczelniach. Obejmują automatyczne wsparcie w procesie wizowo-pobytowym.' },
+
+  // Student Q3s
+  q3s: { en: 'Have you been accepted to a Polish university?', pl: 'Czy zostałeś przyjęty na polską uczelnię?' },
+  q3s_bachelor: { en: "Yes — bachelor's or master's program", pl: 'Tak — studia licencjackie lub magisterskie' },
+  q3s_bachelor_desc: { en: 'Accepted to an undergraduate or graduate program', pl: 'Przyjęty na studia I lub II stopnia' },
+  q3s_doctoral: { en: 'Yes — doctoral school', pl: 'Tak — szkoła doktorska' },
+  q3s_doctoral_desc: { en: 'Accepted to a doctoral program', pl: 'Przyjęty do szkoły doktorskiej' },
+  q3s_no: { en: 'Not yet', pl: 'Jeszcze nie' },
+  q3s_no_desc: { en: "I'm still exploring or applying", pl: 'Wciąż szukam lub aplikuję' },
+  studentInfo: { en: '<strong>How to get accepted to a Polish university:</strong><br><br><strong>1. English-taught programs</strong> — Many Polish universities offer full degree programs in English. Top options: University of Warsaw (UW), Jagiellonian University (UJ), Warsaw University of Technology (PW), AGH University of Krakow, Wroclaw University of Science and Technology (PWr). Browse programs at <em>study.gov.pl</em> — the official Polish government portal listing all English-taught programs.<br><br><strong>2. Application timeline</strong> — Most programs accept applications between March and July for October start. Some have rolling admissions. Doctoral schools typically recruit once a year (April-June).<br><br><strong>3. Tuition & scholarships</strong> — Tuition for non-EU students ranges from 2,000-6,000 EUR/year depending on the program. Scholarships available through: NAWA (Polish government scholarships for international students), Erasmus Mundus (EU-funded joint degrees), university-specific scholarships, and bilateral government agreements.<br><br><strong>4. After acceptance</strong> — Apply for student visa D09 at the Polish consulate in your country. Processing takes 2-4 weeks. Bring: acceptance letter, proof of funds (~700 PLN/month), health insurance, and accommodation confirmation. Once in Poland, apply for a student residence permit (art. 144) at the voivodeship office.', pl: '<strong>Jak dostać się na polską uczelnię:</strong><br><br><strong>1. Programy w języku angielskim</strong> — Wiele polskich uczelni oferuje pełne programy studiów w języku angielskim. Najlepsze opcje: Uniwersytet Warszawski (UW), Uniwersytet Jagielloński (UJ), Politechnika Warszawska (PW), AGH w Krakowie, Politechnika Wrocławska (PWr). Przeglądaj programy na <em>study.gov.pl</em> — oficjalnym portalu rządowym z listą programów anglojęzycznych.<br><br><strong>2. Harmonogram rekrutacji</strong> — Większość programów przyjmuje zgłoszenia od marca do lipca na start w październiku. Niektóre mają rekrutację ciągłą. Szkoły doktorskie rekrutują zazwyczaj raz w roku (kwiecień-czerwiec).<br><br><strong>3. Czesne i stypendia</strong> — Czesne dla studentów spoza UE wynosi 2 000-6 000 EUR/rok w zależności od programu. Stypendia dostępne przez: NAWA (rządowe stypendia dla studentów zagranicznych), Erasmus Mundus (wspólne studia finansowane przez UE), stypendia uczelniane oraz bilateralne umowy rządowe.<br><br><strong>4. Po przyjęciu</strong> — Złóż wniosek o wizę studencką D09 w polskim konsulacie. Rozpatrywanie trwa 2-4 tygodnie. Zabierz: list akceptacyjny, potwierdzenie środków (~700 PLN/mies.), ubezpieczenie zdrowotne i potwierdzenie zakwaterowania. Po przyjeździe do Polski złóż wniosek o zezwolenie na pobyt studenta (art. 144) w urzędzie wojewódzkim.' },
+
+  // Declaration note
+  declarationNote: { en: 'As a citizen of {country}, you also qualify for the simplified declaration procedure (oświadczenie). Your employer can register a declaration at the local labor office in 7-14 days, bypassing the voivodeship office entirely. This works for up to 24 months. However, if you plan to stay longer, consider the Blue Card or standard permit for more stability.', pl: 'Jako obywatel {country} kwalifikujesz się również do uproszczonej procedury oświadczeniowej. Twój pracodawca może zarejestrować oświadczenie w powiatowym urzędzie pracy w ciągu 7-14 dni, z pominięciem urzędu wojewódzkiego. Procedura obowiązuje do 24 miesięcy. Jeśli planujesz zostać dłużej, rozważ Niebieską Kartę lub standardowe zezwolenie dla większej stabilności.' },
+  dualPathNote: { en: 'Based on your answers, you have two options. The declaration procedure is faster but temporary (24 months). The permit path below offers more long-term stability.', pl: 'Na podstawie Twoich odpowiedzi masz dwie opcje. Procedura oświadczeniowa jest szybsza, ale tymczasowa (24 miesiące). Poniższa ścieżka zezwolenia oferuje większą stabilność długoterminową.' },
+};
+
+// ---- COUNTRIES ----
+const COUNTRIES = {
+  eu: [
+    'Austria','Belgium','Bulgaria','Croatia','Cyprus','Czech Republic','Denmark','Estonia',
+    'Finland','France','Germany','Greece','Hungary','Iceland','Ireland','Italy','Latvia',
+    'Liechtenstein','Lithuania','Luxembourg','Malta','Netherlands','Norway','Poland',
+    'Portugal','Romania','Slovakia','Slovenia','Spain','Sweden','Switzerland'
+  ],
+  declaration: ['Armenia','Belarus','Moldova','Ukraine'],
+  other: [
+    'Afghanistan','Albania','Algeria','Angola','Argentina','Australia','Azerbaijan',
+    'Bahrain','Bangladesh','Bolivia','Bosnia and Herzegovina','Brazil','Brunei','Cambodia',
+    'Cameroon','Canada','Chile','China','Colombia','Congo','Costa Rica','Cuba',
+    'Dominican Republic','Ecuador','Egypt','El Salvador','Ethiopia','Georgia','Ghana',
+    'Guatemala','Honduras','Hong Kong','India','Indonesia','Iran','Iraq','Israel',
+    'Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kosovo','Kuwait','Kyrgyzstan',
+    'Laos','Lebanon','Libya','Macedonia','Madagascar','Malaysia','Mali','Mexico',
+    'Mongolia','Montenegro','Morocco','Mozambique','Myanmar','Nepal','New Zealand',
+    'Nicaragua','Niger','Nigeria','North Korea','Oman','Pakistan','Palestine','Panama',
+    'Paraguay','Peru','Philippines','Qatar','Russia','Rwanda','Saudi Arabia','Senegal',
+    'Serbia','Singapore','Somalia','South Africa','South Korea','Sri Lanka','Sudan',
+    'Syria','Taiwan','Tajikistan','Tanzania','Thailand','Trinidad and Tobago','Tunisia',
+    'Turkey','Turkmenistan','Uganda','United Arab Emirates','United Kingdom',
+    'United States','Uruguay','Uzbekistan','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'
+  ]
+};
+
+// ---- STATE ----
+let state = {
+  step: 'q1',
+  answers: {},
+  language: localStorage.getItem('pp-lang') || 'en',
+  matchedOccupation: null,
+  history: []
+};
+
+let pathsData = [];
+let occupationsData = [];
+
+// ---- LANGUAGE ----
+function setLang(lang) {
+  state.language = lang;
+  localStorage.setItem('pp-lang', lang);
+  document.getElementById('langEN').classList.toggle('active', lang === 'en');
+  document.getElementById('langPL').classList.toggle('active', lang === 'pl');
+  document.getElementById('heroTitle').innerHTML = UI.heroTitle[lang];
+  document.getElementById('heroSub').textContent = UI.heroSub[lang];
+  document.getElementById('disclaimer').textContent = UI.disclaimer[lang];
+  document.documentElement.lang = lang;
+  renderStep();
+}
+
+function t(key) {
+  const val = UI[key];
+  if (!val) return key;
+  return val[state.language] || val.en || key;
+}
+
+function tp(obj) {
+  if (!obj) return '';
+  return obj[state.language] || obj.en || '';
+}
+
+// ---- NAVIGATION ----
+function goTo(step) {
+  state.history.push(state.step);
+  state.step = step;
+  renderStep();
+}
+
+function goBack() {
+  if (state.history.length) {
+    state.step = state.history.pop();
+    renderStep();
+  }
+}
+
+function restart() {
+  state = { step: 'q1', answers: {}, language: state.language, matchedOccupation: null, history: [] };
+  renderStep();
+}
+
+// ---- PROGRESS ----
+function getProgress() {
+  // Dynamic step counts based on branch
+  const branch = state.answers.branch;
+  const totals = { employee: 6, founder: 6, research: 4, student: 4 };
+  const total = totals[branch] || 5;
+  const stepMap = {
+    q1: null, q2: [2, total], q_location: [3, total],
+    q3e: [4, total], q4e: [5, total], q5e: [6, total],
+    q3f: [4, total], q4f: [5, total], q5f: [6, total],
+    q3r: [4, total], q3s: [4, total],
+    result: null, info: null,
+    b2b_redirect: [5, total],
+    no_company_info: [4, total],
+    nawa_info: null,
+    student_info: null
+  };
+  return stepMap[state.step] || null;
+}
+
+function updateProgress() {
+  const prog = getProgress();
+  const wrap = document.getElementById('progressWrap');
+  if (!prog && state.step !== 'result' && state.step !== 'nawa_info' && state.step !== 'student_info') {
+    wrap.style.display = 'none';
+    return;
+  }
+  if (!prog) {
+    // Show just the back button, no progress label/bar
+    wrap.style.display = '';
+    document.getElementById('backBtn').textContent = t('back');
+    document.getElementById('backBtn').style.visibility = state.history.length ? 'visible' : 'hidden';
+    document.getElementById('progressLabel').textContent = '';
+    document.getElementById('progressFill').style.width = '100%';
+    return;
+  }
+  wrap.style.display = '';
+  document.getElementById('backBtn').textContent = t('back');
+  document.getElementById('backBtn').style.visibility = state.history.length ? 'visible' : 'hidden';
+  document.getElementById('progressLabel').textContent = t('stepOf').replace('{n}', prog[0]).replace('{t}', prog[1]);
+  document.getElementById('progressFill').style.width = ((prog[0] / prog[1]) * 100) + '%';
+}
+
+// ---- RENDER ----
+function renderStep() {
+  updateProgress();
+  const el = document.getElementById('mainContent');
+
+  switch (state.step) {
+    case 'q1': return renderQ1(el);
+    case 'q2': return renderQ2(el);
+    case 'q_location': return renderQLocation(el);
+    case 'q3e': return renderQ3e(el);
+    case 'q4e': return renderQ4e(el);
+    case 'b2b_redirect': return renderB2BRedirect(el);
+    case 'q5e': return renderQ5e(el);
+    case 'q3f': return renderQ3f(el);
+    case 'no_company_info': return renderNoCompanyInfo(el);
+    case 'q4f': return renderQ4f(el);
+    case 'q5f': return renderQ5f(el);
+    case 'q3r': return renderQ3r(el);
+    case 'nawa_info': return renderNAWAInfo(el);
+    case 'q3s': return renderQ3s(el);
+    case 'student_info': return renderStudentInfo(el);
+    case 'result': return renderResult(el);
+  }
+}
+
+// ---- Q1: What do you want to do? ----
+function renderQ1(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q1')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectQ1('employee')">
+          <div class="icon">&#128188;</div>
+          <div><div class="label">${t('q1_employee')}</div><div class="desc">${t('q1_employee_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectQ1('founder')">
+          <div class="icon">&#128640;</div>
+          <div><div class="label">${t('q1_founder')}</div><div class="desc">${t('q1_founder_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectQ1('research')">
+          <div class="icon">&#128300;</div>
+          <div><div class="label">${t('q1_research')}</div><div class="desc">${t('q1_research_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectQ1('student')">
+          <div class="icon">&#127891;</div>
+          <div><div class="label">${t('q1_student')}</div><div class="desc">${t('q1_student_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectQ1(branch) {
+  state.answers.branch = branch;
+  goTo('q2');
+}
+
+// ---- Q2: Where are you from? ----
+function renderQ2(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q2')}</div>
+      <div class="question-sub">${t('q2_sub')}</div>
+      <div class="country-search-wrap">
+        <input class="country-search" id="countryInput" type="text" placeholder="${t('searchCountry')}" autocomplete="off">
+        <div class="country-dropdown" id="countryDropdown"></div>
+      </div>
+    </div>`;
+
+  const input = document.getElementById('countryInput');
+  const dropdown = document.getElementById('countryDropdown');
+
+  function buildDropdown(filter) {
+    const f = (filter || '').toLowerCase();
+    let html = '';
+    const groups = [
+      { key: 'eu', label: t('groupEU') },
+      { key: 'declaration', label: t('groupDecl') },
+      { key: 'other', label: t('groupOther') }
+    ];
+    let hasResults = false;
+    groups.forEach(g => {
+      const items = COUNTRIES[g.key].filter(c => c.toLowerCase().includes(f));
+      if (!items.length) return;
+      hasResults = true;
+      html += `<div class="country-group-label">${g.label}</div>`;
+      items.forEach(c => {
+        html += `<div class="country-item" data-country="${c}" data-group="${g.key}">${c}</div>`;
+      });
+    });
+    dropdown.innerHTML = html;
+    dropdown.classList.toggle('open', hasResults);
+    dropdown.querySelectorAll('.country-item').forEach(item => {
+      item.addEventListener('click', () => selectCountry(item.dataset.country, item.dataset.group));
+    });
+  }
+
+  input.addEventListener('focus', () => buildDropdown(input.value));
+  input.addEventListener('input', () => buildDropdown(input.value));
+  document.addEventListener('click', function handler(e) {
+    if (!e.target.closest('.country-search-wrap')) {
+      dropdown.classList.remove('open');
+      document.removeEventListener('click', handler);
+    }
+  });
+}
+
+function selectCountry(country, group) {
+  state.answers.country = country;
+  state.answers.countryGroup = group;
+
+  if (group === 'eu') {
+    state.answers.resultPaths = ['eu-citizen'];
+    goTo('result');
+  } else {
+    goTo('q_location');
+  }
+}
+
+// ---- Q Location: Are you in Poland? ----
+function renderQLocation(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('qLoc')}</div>
+      <div class="question-sub">${t('qLoc_sub')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectLocation(true)">
+          <div class="icon">&#127477;&#127473;</div>
+          <div><div class="label">${t('qLoc_yes')}</div><div class="desc">${t('qLoc_yes_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectLocation(false)">
+          <div class="icon">&#9992;&#65039;</div>
+          <div><div class="label">${t('qLoc_no')}</div><div class="desc">${t('qLoc_no_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectLocation(inPoland) {
+  state.answers.inPoland = inPoland;
+  const branch = state.answers.branch;
+  if (branch === 'employee') goTo('q3e');
+  else if (branch === 'founder') goTo('q3f');
+  else if (branch === 'research') goTo('q3r');
+  else if (branch === 'student') goTo('q3s');
+}
+
+// ---- Q3e: Describe your role (client-side fuzzy matching) ----
+let occupationsData = [];
+fetch('occupations.json').then(r => r.json()).then(d => { occupationsData = d; });
+
+function normalizeStr(s) {
+  return s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .trim();
+}
+
+function fuzzyMatch(query, occupations, topN) {
+  const q = normalizeStr(query);
+  const tokens = q.split(/\s+/).filter(t => t.length >= 2);
+  if (!tokens.length) return [];
+
+  const scored = occupations.map(occ => {
+    const nameEn = normalizeStr(occ.name.en);
+    const namePl = normalizeStr(occ.name.pl);
+    const group = normalizeStr(occ.group);
+    const targets = [nameEn, namePl, group];
+
+    let score = 0;
+    for (const token of tokens) {
+      let best = 0;
+      for (const target of targets) {
+        if (target.includes(token)) {
+          let s = token.length / Math.max(target.length, 1);
+          if (target.split(/\s+/).some(w => w === token)) s += 0.6;
+          else if (target.split(/\s+/).some(w => w.startsWith(token))) s += 0.3;
+          best = Math.max(best, s);
+        }
+      }
+      score += best;
+    }
+    return { occ, score: tokens.length ? score / tokens.length : 0 };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, topN).filter(m => m.score > 0.15);
+}
+
+function renderQ3e(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3e')}</div>
+      <div class="question-sub">${t('q3e_sub')}</div>
+      <div class="occupation-search-wrap">
+        <input class="occupation-search" id="occInput" type="text" placeholder="${t('searchOccupation')}" autocomplete="off">
+      </div>
+      <div style="text-align:center;margin-top:1rem">
+        <button class="salary-submit" id="checkRoleBtn" onclick="checkRole()" disabled>${t('checkRole')}</button>
+      </div>
+      <div id="occResult" style="max-width:540px;margin:1rem auto 0;display:none"></div>
+      <div class="occ-skip"><button onclick="skipOccupation()">${t('notSure')}</button></div>
+    </div>`;
+
+  const input = document.getElementById('occInput');
+  input.addEventListener('input', () => {
+    document.getElementById('checkRoleBtn').disabled = input.value.trim().length < 3;
+    document.getElementById('occResult').style.display = 'none';
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && input.value.trim().length >= 3) checkRole();
+  });
+}
+
+function checkRole() {
+  const input = document.getElementById('occInput');
+  const btn = document.getElementById('checkRoleBtn');
+  const resultDiv = document.getElementById('occResult');
+  const description = input.value.trim();
+
+  btn.disabled = true;
+  btn.textContent = t('checking');
+  resultDiv.style.display = 'none';
+
+  const matches = fuzzyMatch(description, occupationsData, 3);
+
+  if (matches.length > 0) {
+    window._matchedOccs = matches.map(m => m.occ);
+    let html = '<div style="background:#e8f5e9;border-radius:12px;padding:1rem 1.25rem;text-align:center">';
+    html += `<div style="font-weight:700;color:#2e7d32;margin-bottom:0.5rem">${t('matchFound')}</div>`;
+
+    matches.forEach((m, i) => {
+      const occ = m.occ;
+      html += `<div style="font-size:0.9rem;color:#444;padding:0.4rem 0;${i > 0 ? 'border-top:1px solid #c8e6c9;' : ''}">`;
+      html += `<strong>${tp(occ.name)}</strong> <span style="color:#9b8fb5;font-size:0.75rem">${occ.group}</span>`;
+      html += `<div style="margin-top:0.35rem"><button class="salary-submit" style="${i > 0 ? 'background:#5a9a5f;font-size:0.8rem;padding:0.35rem 1rem;' : ''}" onclick="selectOccupation(window._matchedOccs[${i}])">${i === 0 ? t('proceed') : (state.language === 'pl' ? 'Wybierz' : 'Select')}</button></div>`;
+      html += `</div>`;
+    });
+
+    html += '</div>';
+    resultDiv.innerHTML = html;
+  } else {
+    resultDiv.innerHTML = `
+      <div style="background:#f7f5fa;border-radius:12px;padding:1rem 1.25rem;text-align:center">
+        <div style="font-size:0.875rem;color:#777">${t('noMatch')}</div>
+        <div style="margin-top:0.75rem"><button class="salary-submit" onclick="skipOccupation()">${t('proceed')}</button></div>
+      </div>`;
+  }
+  resultDiv.style.display = 'block';
+
+  btn.textContent = t('checkRole');
+  btn.disabled = false;
+}
+
+function selectOccupation(occ) {
+  state.matchedOccupation = occ;
+  goTo('q4e');
+}
+
+function skipOccupation() {
+  state.matchedOccupation = null;
+  goTo('q4e');
+}
+
+// ---- Q4e: Contract type ----
+function renderQ4e(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q4e')}</div>
+      <div class="options-grid single-col">
+        <div class="option-card" onclick="selectContract('umowa')">
+          <div class="icon">&#128196;</div>
+          <div><div class="label">${t('q4e_umowa')}</div><div class="desc">${t('q4e_umowa_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectContract('zlecenie')">
+          <div class="icon">&#128203;</div>
+          <div><div class="label">${t('q4e_zlecenie')}</div><div class="desc">${t('q4e_zlecenie_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectContract('b2b')">
+          <div class="icon">&#128187;</div>
+          <div><div class="label">${t('q4e_b2b')}</div><div class="desc">${t('q4e_b2b_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectContract('unknown')">
+          <div class="icon">&#10067;</div>
+          <div><div class="label">${t('q4e_unknown')}</div><div class="desc">${t('q4e_unknown_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectContract(type) {
+  state.answers.contract = type;
+  if (type === 'b2b') {
+    goTo('b2b_redirect');
+  } else {
+    goTo('q5e');
+  }
+}
+
+// ---- B2B Redirect ----
+function renderB2BRedirect(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q4e')}</div>
+      <div class="info-panel">
+        <p>${t('b2bRedirect')}</p>
+        <button class="continue-btn" onclick="redirectToFounder()">${t('b2bBtn')}</button>
+      </div>
+    </div>`;
+}
+
+function redirectToFounder() {
+  state.answers.branch = 'founder';
+  state.history = ['q1', 'q2', 'q_location'];
+  state.step = 'q3f';
+  renderStep();
+}
+
+// ---- Q5e: Salary ----
+function renderQ5e(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q5e')}</div>
+      <div class="salary-wrap">
+        <div class="salary-input-row">
+          <input class="salary-input" id="salaryInput" type="number" min="0" step="100" placeholder="10,000">
+          <span class="salary-unit">${t('salaryLabel')}</span>
+        </div>
+        <button class="salary-submit" id="salaryBtn" onclick="submitSalary()" disabled>${t('salarySubmit')}</button>
+        <div class="salary-threshold-note">${t('salaryNote')}</div>
+      </div>
+    </div>`;
+
+  document.getElementById('salaryInput').addEventListener('input', function() {
+    document.getElementById('salaryBtn').disabled = !this.value || Number(this.value) <= 0;
+  });
+  document.getElementById('salaryInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && this.value && Number(this.value) > 0) submitSalary();
+  });
+}
+
+function submitSalary() {
+  const salary = Number(document.getElementById('salaryInput').value);
+  state.answers.salary = salary;
+
+  const paths = [];
+  if (salary >= 13355) {
+    paths.push('blue-card');
+  } else {
+    paths.push('standard-work');
+  }
+
+  // Declaration countries get both paths
+  if (state.answers.countryGroup === 'declaration') {
+    paths.unshift('declaration');
+  }
+
+  state.answers.resultPaths = paths;
+  goTo('result');
+}
+
+// ---- Q3f: Company registered? ----
+function renderQ3f(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3f')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectCompanyRegistered(true)">
+          <div class="icon">&#9989;</div>
+          <div><div class="label">${t('q3f_yes')}</div><div class="desc">${t('q3f_yes_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectCompanyRegistered(false)">
+          <div class="icon">&#10060;</div>
+          <div><div class="label">${t('q3f_no')}</div><div class="desc">${t('q3f_no_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectCompanyRegistered(yes) {
+  state.answers.companyRegistered = yes;
+  if (yes) {
+    goTo('q4f');
+  } else {
+    goTo('no_company_info');
+  }
+}
+
+// ---- No company info ----
+function renderNoCompanyInfo(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3f')}</div>
+      <div class="info-panel">
+        <p>${t('noCompanyInfo')}</p>
+        <button class="continue-btn" onclick="goTo('q4f')">${t('continueBtn')}</button>
+      </div>
+    </div>`;
+}
+
+// ---- Q4f: Institutional investment? ----
+function renderQ4f(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q4f')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectInvestment(true)">
+          <div class="icon">&#128176;</div>
+          <div><div class="label">${t('q4f_yes')}</div><div class="desc">${t('q4f_yes_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectInvestment(false)">
+          <div class="icon">&#128100;</div>
+          <div><div class="label">${t('q4f_no')}</div><div class="desc">${t('q4f_no_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectInvestment(yes) {
+  state.answers.hasInvestment = yes;
+  if (yes) {
+    state.answers.resultPaths = ['business-innovation'];
+    goTo('result');
+  } else {
+    goTo('q5f');
+  }
+}
+
+// ---- Q5f: Revenue or employees? ----
+function renderQ5f(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q5f')}</div>
+      <div class="options-grid single-col">
+        <div class="option-card" onclick="selectThreshold('revenue')">
+          <div class="icon">&#128200;</div>
+          <div><div class="label">${t('q5f_revenue')}</div><div class="desc">${t('q5f_revenue_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectThreshold('employees')">
+          <div class="icon">&#128101;</div>
+          <div><div class="label">${t('q5f_employees')}</div><div class="desc">${t('q5f_employees_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectThreshold('neither')">
+          <div class="icon">&#127793;</div>
+          <div><div class="label">${t('q5f_neither')}</div><div class="desc">${t('q5f_neither_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectThreshold(val) {
+  state.answers.threshold = val;
+  if (val === 'neither') {
+    state.answers.resultPaths = ['business-innovation'];
+  } else {
+    state.answers.resultPaths = ['business-standard'];
+  }
+  goTo('result');
+}
+
+// ---- Q3r: Invited by institution? ----
+function renderQ3r(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3r')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectResearchInvited(true)">
+          <div class="icon">&#127979;</div>
+          <div><div class="label">${t('q3r_yes')}</div><div class="desc">${t('q3r_yes_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectResearchInvited(false)">
+          <div class="icon">&#128269;</div>
+          <div><div class="label">${t('q3r_no')}</div><div class="desc">${t('q3r_no_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectResearchInvited(yes) {
+  if (yes) {
+    state.answers.resultPaths = ['research'];
+    goTo('result');
+  } else {
+    goTo('nawa_info');
+  }
+}
+
+// ---- NAWA info ----
+function renderNAWAInfo(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3r')}</div>
+      <div class="info-panel">
+        <p>${t('nawaInfo')}</p>
+      </div>
+      <div class="restart-wrap" style="margin-top:1.5rem">
+        <button class="progress-back" onclick="goBack()" style="margin-right:1rem">${t('back')}</button>
+        <button class="restart-btn" onclick="restart()">${t('startOver')}</button>
+      </div>
+    </div>`;
+}
+
+// ---- Q3s: Student accepted? ----
+function renderQ3s(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3s')}</div>
+      <div class="options-grid single-col">
+        <div class="option-card" onclick="selectStudentType('bachelor')">
+          <div class="icon">&#127891;</div>
+          <div><div class="label">${t('q3s_bachelor')}</div><div class="desc">${t('q3s_bachelor_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectStudentType('doctoral')">
+          <div class="icon">&#128218;</div>
+          <div><div class="label">${t('q3s_doctoral')}</div><div class="desc">${t('q3s_doctoral_desc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectStudentType('none')">
+          <div class="icon">&#128172;</div>
+          <div><div class="label">${t('q3s_no')}</div><div class="desc">${t('q3s_no_desc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectStudentType(type) {
+  state.answers.studentType = type;
+  if (type === 'none') {
+    goTo('student_info');
+  } else {
+    state.answers.resultPaths = ['student'];
+    state.answers.doctoral = type === 'doctoral';
+    goTo('result');
+  }
+}
+
+// ---- Student info ----
+function renderStudentInfo(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q3s')}</div>
+      <div class="info-panel">
+        <p>${t('studentInfo')}</p>
+      </div>
+      <div class="restart-wrap" style="margin-top:1.5rem">
+        <button class="progress-back" onclick="goBack()" style="margin-right:1rem">${t('back')}</button>
+        <button class="restart-btn" onclick="restart()">${t('startOver')}</button>
+      </div>
+    </div>`;
+}
+
+// ---- RESULT ----
+function renderResult(el) {
+  const paths = state.answers.resultPaths || [];
+  const isDeclarationDual = state.answers.countryGroup === 'declaration' && paths.length > 1;
+
+  let html = '<div class="results-wrap">';
+
+  // Dual-path note for declaration countries
+  if (isDeclarationDual) {
+    html += `<div class="result-note">${t('dualPathNote')}</div>`;
+  }
+
+  // Deficit occupation badge
+  const showDeficit = state.matchedOccupation && (paths.includes('blue-card') || paths.includes('standard-work'));
+
+  paths.forEach(pathId => {
+    const path = pathsData.find(p => p.id === pathId);
+    if (!path) return;
+
+    html += `<div class="result-card">`;
+    html += `<div class="path-name">${tp(path.name)}</div>`;
+    html += `<div class="legal-pill">${path.legal_basis}</div>`;
+
+    if (showDeficit) {
+      html += `<div class="deficit-badge">${t('deficitBadge')}</div>`;
+    }
+
+    // Doctoral note for student
+    if (pathId === 'student' && state.answers.doctoral) {
+      const docNote = state.language === 'pl'
+        ? 'Jako student szkoły doktorskiej kwalifikujesz się do priorytetowego rozpatrzenia (art. 112a ust. 3b). Zezwolenie wydawane na okres do 2,5 roku.'
+        : 'As a doctoral school student, you qualify for priority processing (art. 112a ust. 3b). Permit issued for up to 2.5 years.';
+      html += `<div class="result-note" style="margin-bottom:1.25rem">${docNote}</div>`;
+    }
+
+    // Who
+    html += renderSection(t('who'), 'text', tp(path.who));
+
+    // Requirements
+    html += renderSection(t('requirements'), 'list', path.requirements.map(r => tp(r)));
+
+    // Documents
+    html += renderSection(t('documents'), 'list', path.documents.map(d => tp(d)));
+
+    // Timeline
+    html += renderSection(t('timeline'), 'text', tp(path.timeline));
+
+    // Fast track
+    if (path.fast_track) {
+      html += renderSection(t('fastTrack'), 'text', tp(path.fast_track));
+    }
+
+    // Benefits
+    html += renderSection(t('benefits'), 'list', path.benefits.map(b => tp(b)));
+
+    // Watch out
+    if (path.watch_out && path.watch_out.length) {
+      html += `<div class="result-section watch-out">`;
+      html += `<div class="result-section-label">${t('watchOut')}</div>`;
+      html += `<ul>${path.watch_out.map(w => `<li>${tp(w)}</li>`).join('')}</ul>`;
+      html += `</div>`;
+    }
+
+    // Next steps based on location (skip for EU citizens and declaration-only)
+    if (pathId !== 'eu-citizen' && pathId !== 'declaration' && state.answers.inPoland !== undefined) {
+      const visaTypes = {
+        'blue-card': state.language === 'pl' ? 'wiza D w celu wykonywania pracy — Niebieska Karta' : 'D-type visa for work — Blue Card',
+        'standard-work': state.language === 'pl' ? 'wiza D w celu wykonywania pracy' : 'D-type visa for work',
+        'business-standard': state.language === 'pl' ? 'wiza D04 w celu prowadzenia działalności gospodarczej' : 'visa D04 — business activity',
+        'business-innovation': state.language === 'pl' ? 'wiza D04 w celu prowadzenia działalności gospodarczej' : 'visa D04 — business activity',
+        'research': state.language === 'pl' ? 'wiza D w celu prowadzenia badań naukowych' : 'D-type visa for scientific research',
+        'student': state.language === 'pl' ? 'wiza D09 w celu kształcenia się na studiach' : 'visa D09 — study'
+      };
+      const visaType = visaTypes[pathId] || 'D-type';
+      const stepsText = state.answers.inPoland
+        ? t('nextStepsInPoland')
+        : t('nextStepsAbroad').replace('{visaType}', visaType);
+      html += `<div class="result-section" style="background:#f0ebf8;border-radius:10px;padding:1rem 1.25rem;margin-top:0.5rem">`;
+      html += `<div class="result-section-label" style="color:#2d1560">${t('nextSteps')}</div>`;
+      html += `<p>${stepsText}</p>`;
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+  });
+
+  // Declaration note for employee paths
+  if (state.answers.countryGroup === 'declaration' && paths.length === 1 && paths[0] !== 'declaration') {
+    const note = t('declarationNote').replace('{country}', state.answers.country);
+    html += `<div class="result-note">${note}</div>`;
+  }
+
+  html += `<div class="restart-wrap"><button class="progress-back" onclick="goBack()" style="margin-right:1rem">${t('back')}</button><button class="restart-btn" onclick="restart()">${t('startOver')}</button></div>`;
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function renderSection(label, type, content) {
+  let html = `<div class="result-section"><div class="result-section-label">${label}</div>`;
+  if (type === 'text') {
+    html += `<p>${content}</p>`;
+  } else if (type === 'list') {
+    html += `<ul>${content.map(item => `<li>${item}</li>`).join('')}</ul>`;
+  }
+  html += '</div>';
+  return html;
+}
+
+// ---- INIT ----
+async function init() {
+  // Set initial language
+  setLang(state.language);
+
+  try {
+    const [pathsRes, occRes] = await Promise.all([
+      fetch('paths.json').then(r => r.json()),
+      fetch('occupations.json').then(r => r.json())
+    ]);
+    pathsData = pathsRes;
+    occupationsData = occRes;
+  } catch(e) {
+    document.getElementById('mainContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#9b8fb5;">Could not load data files.</div>';
+    return;
+  }
+
+  renderStep();
+}
+
+init();
+</script>
+
+</body>
+</html>

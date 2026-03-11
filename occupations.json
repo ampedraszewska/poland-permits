@@ -1,0 +1,1647 @@
+[
+  {
+    "code": "2511",
+    "name": { "en": "Systems analyst", "pl": "Analityk systemowy" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2512",
+    "name": { "en": "Software developer", "pl": "Programista" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2513",
+    "name": { "en": "Web developer", "pl": "Programista aplikacji webowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2514",
+    "name": { "en": "Application programmer", "pl": "Programista aplikacji" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2519",
+    "name": { "en": "Software and application developer not elsewhere classified", "pl": "Programista aplikacji gdzie indziej niesklasyfikowany" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2521",
+    "name": { "en": "Database designer and administrator", "pl": "Projektant i administrator baz danych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2522",
+    "name": { "en": "Systems administrator", "pl": "Administrator systemow komputerowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2523",
+    "name": { "en": "Computer network professional", "pl": "Specjalista do spraw sieci komputerowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2529",
+    "name": { "en": "Database and network professional not elsewhere classified", "pl": "Specjalista do spraw baz danych i sieci gdzie indziej niesklasyfikowany" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3511",
+    "name": { "en": "ICT operations technician", "pl": "Technik operacji ICT" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3512",
+    "name": { "en": "ICT user support technician", "pl": "Technik wsparcia uzytkownikow ICT" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3513",
+    "name": { "en": "Computer network and systems technician", "pl": "Technik sieci i systemow komputerowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3514",
+    "name": { "en": "Web technician", "pl": "Technik stron internetowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2166",
+    "name": { "en": "Graphic and multimedia designer", "pl": "Projektant grafiki i multimediow" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2434",
+    "name": { "en": "ICT sales professional", "pl": "Specjalista do spraw sprzedazy ICT" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "1330",
+    "name": { "en": "ICT services manager", "pl": "Kierownik do spraw uslug ICT" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2356",
+    "name": { "en": "IT trainer", "pl": "Trener informatyczny" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2152",
+    "name": { "en": "Electronics engineer", "pl": "Inzynier elektronik" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2153",
+    "name": { "en": "Telecommunications engineer", "pl": "Inzynier telekomunikacji" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3521",
+    "name": { "en": "Broadcasting and audiovisual technician", "pl": "Technik nadawczy i audiowizualny" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3522",
+    "name": { "en": "Telecommunications engineering technician", "pl": "Technik inzynierii telekomunikacyjnej" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2515",
+    "name": { "en": "DevOps engineer", "pl": "Inzynier DevOps" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2516",
+    "name": { "en": "Data engineer", "pl": "Inzynier danych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2517",
+    "name": { "en": "Machine learning engineer", "pl": "Inzynier uczenia maszynowego" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2518",
+    "name": { "en": "Cloud architect", "pl": "Architekt rozwiazac chmurowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2524",
+    "name": { "en": "IT security specialist", "pl": "Specjalista do spraw bezpieczenstwa IT" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2525",
+    "name": { "en": "Data scientist", "pl": "Analityk danych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2526",
+    "name": { "en": "Business intelligence analyst", "pl": "Analityk business intelligence" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2527",
+    "name": { "en": "Quality assurance engineer", "pl": "Inzynier zapewnienia jakosci oprogramowania" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2528",
+    "name": { "en": "IT project manager", "pl": "Kierownik projektow informatycznych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3515",
+    "name": { "en": "IT service desk analyst", "pl": "Analityk serwisu informatycznego" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3516",
+    "name": { "en": "Embedded systems technician", "pl": "Technik systemow wbudowanych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2531",
+    "name": { "en": "UX/UI designer", "pl": "Projektant UX/UI" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2532",
+    "name": { "en": "Mobile application developer", "pl": "Programista aplikacji mobilnych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2533",
+    "name": { "en": "Full-stack developer", "pl": "Programista full-stack" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2534",
+    "name": { "en": "Blockchain developer", "pl": "Programista blockchain" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2535",
+    "name": { "en": "Robotic process automation developer", "pl": "Programista automatyzacji procesow" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3517",
+    "name": { "en": "IT infrastructure specialist", "pl": "Specjalista infrastruktury informatycznej" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "3518",
+    "name": { "en": "Fiber optic technician", "pl": "Technik sieci swiatlowodowych" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2536",
+    "name": { "en": "ERP systems specialist", "pl": "Specjalista systemow ERP" },
+    "group": "IT & Telecommunications"
+  },
+  {
+    "code": "2211",
+    "name": { "en": "General practitioner", "pl": "Lekarz ogolny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2212",
+    "name": { "en": "Specialist medical practitioner", "pl": "Lekarz specjalista" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2221",
+    "name": { "en": "Nursing professional", "pl": "Pielegniarka" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2222",
+    "name": { "en": "Midwifery professional", "pl": "Polozna" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2261",
+    "name": { "en": "Dentist", "pl": "Lekarz dentysta" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2262",
+    "name": { "en": "Pharmacist", "pl": "Farmaceuta" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2263",
+    "name": { "en": "Environmental and occupational health professional", "pl": "Specjalista zdrowia srodowiskowego i medycyny pracy" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2264",
+    "name": { "en": "Physiotherapist", "pl": "Fizjoterapeuta" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2265",
+    "name": { "en": "Dietician and nutritionist", "pl": "Dietetyk" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2266",
+    "name": { "en": "Audiologist and speech therapist", "pl": "Logopeda i audiolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2267",
+    "name": { "en": "Optometrist", "pl": "Optometrysta" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3211",
+    "name": { "en": "Medical imaging and therapeutic equipment technician", "pl": "Technik diagnostyki obrazowej" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3212",
+    "name": { "en": "Medical and pathology laboratory technician", "pl": "Technik laboratorium medycznego" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3213",
+    "name": { "en": "Pharmaceutical technician and assistant", "pl": "Technik farmaceutyczny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3214",
+    "name": { "en": "Medical and dental prosthetic technician", "pl": "Technik protetyk" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3221",
+    "name": { "en": "Nursing associate professional", "pl": "Asystent pielegniarki" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3222",
+    "name": { "en": "Midwifery associate professional", "pl": "Asystent poloznej" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2213",
+    "name": { "en": "Surgeon", "pl": "Chirurg" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2214",
+    "name": { "en": "Anaesthesiologist", "pl": "Anestezjolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2215",
+    "name": { "en": "Psychiatrist", "pl": "Psychiatra" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2216",
+    "name": { "en": "Paediatrician", "pl": "Pediatra" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2217",
+    "name": { "en": "Cardiologist", "pl": "Kardiolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2218",
+    "name": { "en": "Radiologist", "pl": "Radiolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2219",
+    "name": { "en": "Oncologist", "pl": "Onkolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2268",
+    "name": { "en": "Paramedic", "pl": "Ratownik medyczny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2269",
+    "name": { "en": "Clinical psychologist", "pl": "Psycholog kliniczny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3215",
+    "name": { "en": "Dental hygienist", "pl": "Higienistka stomatologiczna" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3216",
+    "name": { "en": "Electromedical equipment technician", "pl": "Technik aparatury medycznej" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3255",
+    "name": { "en": "Physiotherapy technician", "pl": "Technik fizjoterapii" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3256",
+    "name": { "en": "Medical assistant", "pl": "Asystent medyczny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2240",
+    "name": { "en": "Emergency medicine physician", "pl": "Lekarz medycyny ratunkowej" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2241",
+    "name": { "en": "Neurologist", "pl": "Neurolog" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2242",
+    "name": { "en": "Geriatrician", "pl": "Geriatra" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3257",
+    "name": { "en": "Sanitary inspector", "pl": "Inspektor sanitarny" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "3258",
+    "name": { "en": "Ambulance worker", "pl": "Pracownik pogotowia ratunkowego" },
+    "group": "Healthcare & Medical"
+  },
+  {
+    "code": "2141",
+    "name": { "en": "Industrial and production engineer", "pl": "Inzynier produkcji i przemyslu" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2142",
+    "name": { "en": "Civil engineer", "pl": "Inzynier budownictwa" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2143",
+    "name": { "en": "Environmental engineer", "pl": "Inzynier srodowiska" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2144",
+    "name": { "en": "Mechanical engineer", "pl": "Inzynier mechanik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2145",
+    "name": { "en": "Chemical engineer", "pl": "Inzynier chemik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2146",
+    "name": { "en": "Mining engineer", "pl": "Inzynier gornik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2149",
+    "name": { "en": "Engineering professional not elsewhere classified", "pl": "Inzynier gdzie indziej niesklasyfikowany" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2151",
+    "name": { "en": "Electrical engineer", "pl": "Inzynier elektryk" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3111",
+    "name": { "en": "Chemical and physical science technician", "pl": "Technik nauk chemicznych i fizycznych" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3112",
+    "name": { "en": "Civil engineering technician", "pl": "Technik budownictwa" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3113",
+    "name": { "en": "Electrical engineering technician", "pl": "Technik elektryk" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3114",
+    "name": { "en": "Electronics engineering technician", "pl": "Technik elektronik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3115",
+    "name": { "en": "Mechanical engineering technician", "pl": "Technik mechanik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3116",
+    "name": { "en": "Chemical engineering technician", "pl": "Technik chemik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3117",
+    "name": { "en": "Mining and metallurgical technician", "pl": "Technik gornictwa i metalurgii" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3118",
+    "name": { "en": "Draughtsperson", "pl": "Kreślarz techniczny" },
+    "group": "Engineering"
+  },
+  {
+    "code": "3119",
+    "name": { "en": "Physical and engineering science technician not elsewhere classified", "pl": "Technik nauk fizycznych i technicznych gdzie indziej niesklasyfikowany" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2131",
+    "name": { "en": "Biologist", "pl": "Biolog" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2154",
+    "name": { "en": "Mechatronics engineer", "pl": "Inzynier mechatronik" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2155",
+    "name": { "en": "Automation engineer", "pl": "Inzynier automatyk" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2156",
+    "name": { "en": "Materials engineer", "pl": "Inzynier materialoznawstwa" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2157",
+    "name": { "en": "Process engineer", "pl": "Inzynier procesowy" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2158",
+    "name": { "en": "Biomedical engineer", "pl": "Inzynier biomedyczny" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2159",
+    "name": { "en": "Robotics engineer", "pl": "Inzynier robotyki" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2161",
+    "name": { "en": "Structural engineer", "pl": "Inzynier konstruktor" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2162",
+    "name": { "en": "Geodetic engineer", "pl": "Inzynier geodeta" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2163",
+    "name": { "en": "Quality control engineer", "pl": "Inzynier kontroli jakosci" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2164",
+    "name": { "en": "Safety engineer", "pl": "Inzynier bezpieczenstwa" },
+    "group": "Engineering"
+  },
+  {
+    "code": "7111",
+    "name": { "en": "House builder", "pl": "Murarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7112",
+    "name": { "en": "Bricklayer", "pl": "Murarz-tynkarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7113",
+    "name": { "en": "Stonemason", "pl": "Kamieniarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7114",
+    "name": { "en": "Concrete placer", "pl": "Betoniarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7115",
+    "name": { "en": "Carpenter and joiner", "pl": "Ciesla" },
+    "group": "Construction"
+  },
+  {
+    "code": "7119",
+    "name": { "en": "Building frame and related trades worker not elsewhere classified", "pl": "Robotnik budowy szkieletowej gdzie indziej niesklasyfikowany" },
+    "group": "Construction"
+  },
+  {
+    "code": "7121",
+    "name": { "en": "Roofer", "pl": "Dekarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7122",
+    "name": { "en": "Floor layer and tile setter", "pl": "Posadzkarz i glazurnik" },
+    "group": "Construction"
+  },
+  {
+    "code": "7123",
+    "name": { "en": "Plasterer", "pl": "Tynkarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7124",
+    "name": { "en": "Insulation worker", "pl": "Monter izolacji" },
+    "group": "Construction"
+  },
+  {
+    "code": "7125",
+    "name": { "en": "Glazier", "pl": "Szklarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7126",
+    "name": { "en": "Plumber and pipe fitter", "pl": "Monter instalacji sanitarnych" },
+    "group": "Construction"
+  },
+  {
+    "code": "7127",
+    "name": { "en": "Air conditioning and refrigeration mechanic", "pl": "Monter klimatyzacji i chlodnictwa" },
+    "group": "Construction"
+  },
+  {
+    "code": "7131",
+    "name": { "en": "Painter and related worker", "pl": "Malarz budowlany" },
+    "group": "Construction"
+  },
+  {
+    "code": "7132",
+    "name": { "en": "Spray painter and varnisher", "pl": "Lakiernik" },
+    "group": "Construction"
+  },
+  {
+    "code": "7133",
+    "name": { "en": "Building structure cleaner", "pl": "Pracownik czyszczenia konstrukcji budowlanych" },
+    "group": "Construction"
+  },
+  {
+    "code": "7211",
+    "name": { "en": "Metal moulder and coremaker", "pl": "Formierz odlewnik" },
+    "group": "Construction"
+  },
+  {
+    "code": "7212",
+    "name": { "en": "Welder and flamecutter", "pl": "Spawacz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7213",
+    "name": { "en": "Sheet metal worker", "pl": "Blacharz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7214",
+    "name": { "en": "Structural metal preparator and erector", "pl": "Monter konstrukcji metalowych" },
+    "group": "Construction"
+  },
+  {
+    "code": "7411",
+    "name": { "en": "Building and related electrician", "pl": "Elektryk budowlany" },
+    "group": "Construction"
+  },
+  {
+    "code": "7134",
+    "name": { "en": "Scaffolder", "pl": "Monter rusztowan" },
+    "group": "Construction"
+  },
+  {
+    "code": "7135",
+    "name": { "en": "Demolition worker", "pl": "Pracownik rozbiorkowy" },
+    "group": "Construction"
+  },
+  {
+    "code": "7136",
+    "name": { "en": "Road construction worker", "pl": "Robotnik budowy drog" },
+    "group": "Construction"
+  },
+  {
+    "code": "7137",
+    "name": { "en": "Waterproofing specialist", "pl": "Specjalista hydroizolacji" },
+    "group": "Construction"
+  },
+  {
+    "code": "7138",
+    "name": { "en": "Crane operator (construction)", "pl": "Operator dzwigu budowlanego" },
+    "group": "Construction"
+  },
+  {
+    "code": "7139",
+    "name": { "en": "Construction site supervisor", "pl": "Kierownik budowy" },
+    "group": "Construction"
+  },
+  {
+    "code": "7140",
+    "name": { "en": "Dry wall installer", "pl": "Monter suchej zabudowy" },
+    "group": "Construction"
+  },
+  {
+    "code": "7141",
+    "name": { "en": "Paving stone layer", "pl": "Brukarz" },
+    "group": "Construction"
+  },
+  {
+    "code": "7142",
+    "name": { "en": "Tunnel construction worker", "pl": "Robotnik budowy tuneli" },
+    "group": "Construction"
+  },
+  {
+    "code": "7143",
+    "name": { "en": "Bridge construction worker", "pl": "Robotnik budowy mostow" },
+    "group": "Construction"
+  },
+  {
+    "code": "7144",
+    "name": { "en": "Heavy equipment operator (construction)", "pl": "Operator ciezkich maszyn budowlanych" },
+    "group": "Construction"
+  },
+  {
+    "code": "7145",
+    "name": { "en": "Excavation worker", "pl": "Operator koparki" },
+    "group": "Construction"
+  },
+  {
+    "code": "8111",
+    "name": { "en": "Mining and quarrying plant operator", "pl": "Operator urzadzen wydobywczych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8112",
+    "name": { "en": "Mineral and stone processing plant operator", "pl": "Operator urzadzen do przerobu mineralow" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8113",
+    "name": { "en": "Well driller and borer", "pl": "Wiertacz studni" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8114",
+    "name": { "en": "Cement and other mineral products machine operator", "pl": "Operator maszyn do produkcji cementu" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8121",
+    "name": { "en": "Metal processing plant operator", "pl": "Operator urzadzen do obrobki metali" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8122",
+    "name": { "en": "Metal finishing, plating and coating machine operator", "pl": "Operator maszyn do wykancania i powlekania metali" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8131",
+    "name": { "en": "Chemical products plant and machine operator", "pl": "Operator urzadzen przemyslu chemicznego" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8132",
+    "name": { "en": "Photographic products machine operator", "pl": "Operator maszyn do produkcji wyrobow fotograficznych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8141",
+    "name": { "en": "Rubber products machine operator", "pl": "Operator maszyn do produkcji wyrobow gumowych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8142",
+    "name": { "en": "Plastic products machine operator", "pl": "Operator maszyn do produkcji wyrobow z tworzyw sztucznych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8143",
+    "name": { "en": "Paper products machine operator", "pl": "Operator maszyn do produkcji wyrobow papierniczych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8151",
+    "name": { "en": "Fibre preparing, spinning and winding machine operator", "pl": "Operator maszyn przedzalniczych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8152",
+    "name": { "en": "Weaving and knitting machine operator", "pl": "Operator maszyn tkackich i dziewiarskich" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8153",
+    "name": { "en": "Sewing machine operator", "pl": "Operator maszyn szwalniczych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8154",
+    "name": { "en": "Bleaching, dyeing and fabric cleaning machine operator", "pl": "Operator maszyn do bielenia i barwienia tkanin" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8160",
+    "name": { "en": "Food and related products machine operator", "pl": "Operator maszyn do produkcji zywnosci" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8171",
+    "name": { "en": "Pulp and papermaking plant operator", "pl": "Operator urzadzen celulozowo-papierniczych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8172",
+    "name": { "en": "Wood processing plant operator", "pl": "Operator urzadzen do obrobki drewna" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8181",
+    "name": { "en": "Glass and ceramics plant operator", "pl": "Operator urzadzen do produkcji szkla i ceramiki" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8182",
+    "name": { "en": "Steam engine and boiler operator", "pl": "Operator kotlow parowych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8183",
+    "name": { "en": "Packing, bottling and labelling machine operator", "pl": "Operator maszyn do pakowania i etykietowania" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "7221",
+    "name": { "en": "Blacksmith, hammerer and forging press worker", "pl": "Kowal" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "7222",
+    "name": { "en": "Toolmaker and related worker", "pl": "Narzędziowiec" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "7223",
+    "name": { "en": "Metal working machine tool setter and operator", "pl": "Operator obrabiarek skrawajacych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "7224",
+    "name": { "en": "Metal polisher, wheel grinder and tool sharpener", "pl": "Poleracz i szlifierz metali" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8184",
+    "name": { "en": "Pharmaceutical production machine operator", "pl": "Operator maszyn do produkcji farmaceutycznej" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8185",
+    "name": { "en": "CNC machine operator", "pl": "Operator maszyn CNC" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8186",
+    "name": { "en": "3D printing technician", "pl": "Technik druku 3D" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8187",
+    "name": { "en": "Assembly line supervisor", "pl": "Nadzorca linii montazowej" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8188",
+    "name": { "en": "Industrial robot operator", "pl": "Operator robotow przemyslowych" },
+    "group": "Manufacturing & Production"
+  },
+  {
+    "code": "8331",
+    "name": { "en": "Bus and tram driver", "pl": "Kierowca autobusu i tramwaju" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8332",
+    "name": { "en": "Heavy truck and lorry driver", "pl": "Kierowca samochodu ciezarowego" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8311",
+    "name": { "en": "Locomotive engine driver", "pl": "Maszynista lokomotywy" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8312",
+    "name": { "en": "Railway brake, signal and switch operator", "pl": "Operator zwrotnic i sygnalow kolejowych" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8321",
+    "name": { "en": "Motorcycle driver", "pl": "Kierowca motocykla" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8322",
+    "name": { "en": "Car, taxi and van driver", "pl": "Kierowca samochodu osobowego i dostawczego" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8341",
+    "name": { "en": "Mobile farm and forestry plant operator", "pl": "Operator maszyn rolniczych i lesnych" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8342",
+    "name": { "en": "Earthmoving and related plant operator", "pl": "Operator maszyn do robót ziemnych" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8343",
+    "name": { "en": "Crane, hoist and related plant operator", "pl": "Operator dzwigu" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8344",
+    "name": { "en": "Lifting truck operator", "pl": "Operator wozka widlowego" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "4321",
+    "name": { "en": "Stock clerk", "pl": "Magazynier" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "4322",
+    "name": { "en": "Production clerk", "pl": "Referent do spraw produkcji" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "4323",
+    "name": { "en": "Transport clerk", "pl": "Referent do spraw transportu" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "1324",
+    "name": { "en": "Supply, distribution and related manager", "pl": "Kierownik do spraw logistyki" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "3151",
+    "name": { "en": "Ship's engineer", "pl": "Mechanik okretowy" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "3152",
+    "name": { "en": "Ship's deck officer and pilot", "pl": "Oficer pokladowy" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "3153",
+    "name": { "en": "Aircraft pilot and related associate professional", "pl": "Pilot samolotu" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "3154",
+    "name": { "en": "Air traffic controller", "pl": "Kontroler ruchu lotniczego" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "3155",
+    "name": { "en": "Air traffic safety electronics technician", "pl": "Technik bezpieczenstwa ruchu lotniczego" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "9333",
+    "name": { "en": "Freight handler", "pl": "Ladowacz" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "4324",
+    "name": { "en": "Customs and freight forwarding specialist", "pl": "Specjalista do spraw spedycji i odpraw celnych" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8345",
+    "name": { "en": "Fleet manager", "pl": "Zarzadca floty pojazdow" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "4325",
+    "name": { "en": "Supply chain analyst", "pl": "Analityk lancucha dostaw" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "8346",
+    "name": { "en": "Warehouse automation technician", "pl": "Technik automatyzacji magazynu" },
+    "group": "Transport & Logistics"
+  },
+  {
+    "code": "2411",
+    "name": { "en": "Accountant", "pl": "Ksiegowy" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2412",
+    "name": { "en": "Financial and investment adviser", "pl": "Doradca finansowy i inwestycyjny" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2413",
+    "name": { "en": "Financial analyst", "pl": "Analityk finansowy" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3311",
+    "name": { "en": "Securities and finance dealer and broker", "pl": "Makler papierow wartosciowych" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3312",
+    "name": { "en": "Credit and loans officer", "pl": "Specjalista do spraw kredytow" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3313",
+    "name": { "en": "Accounting associate professional", "pl": "Technik rachunkowosci" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3314",
+    "name": { "en": "Statistical, mathematical and related associate professional", "pl": "Technik statystyk" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3315",
+    "name": { "en": "Valuers and loss assessors", "pl": "Rzeczoznawca majatkowy" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2414",
+    "name": { "en": "Auditor", "pl": "Biegly rewident" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2415",
+    "name": { "en": "Tax adviser", "pl": "Doradca podatkowy" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2416",
+    "name": { "en": "Risk analyst", "pl": "Analityk ryzyka" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3316",
+    "name": { "en": "Insurance claims adjuster", "pl": "Likwidator szkod ubezpieczeniowych" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "3317",
+    "name": { "en": "Payroll specialist", "pl": "Specjalista do spraw wynagrodzen" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2417",
+    "name": { "en": "Actuary", "pl": "Aktuariusz" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2418",
+    "name": { "en": "Compliance officer (financial)", "pl": "Specjalista do spraw zgodnosci finansowej" },
+    "group": "Finance & Accounting"
+  },
+  {
+    "code": "2310",
+    "name": { "en": "University and higher education teacher", "pl": "Nauczyciel akademicki" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2320",
+    "name": { "en": "Vocational education teacher", "pl": "Nauczyciel ksztalcenia zawodowego" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2330",
+    "name": { "en": "Secondary education teacher", "pl": "Nauczyciel szkoły sredniej" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2341",
+    "name": { "en": "Primary school teacher", "pl": "Nauczyciel szkoły podstawowej" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2342",
+    "name": { "en": "Early childhood educator", "pl": "Nauczyciel wychowania przedszkolnego" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2351",
+    "name": { "en": "Education methods specialist", "pl": "Specjalista metod nauczania" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2352",
+    "name": { "en": "Special needs teacher", "pl": "Nauczyciel specjalnych potrzeb edukacyjnych" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2353",
+    "name": { "en": "Other language teacher", "pl": "Nauczyciel językow obcych" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2354",
+    "name": { "en": "Music teacher", "pl": "Nauczyciel muzyki" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2355",
+    "name": { "en": "Arts teacher", "pl": "Nauczyciel plastyki" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2111",
+    "name": { "en": "Physicist", "pl": "Fizyk" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2112",
+    "name": { "en": "Meteorologist", "pl": "Meteorolog" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2113",
+    "name": { "en": "Chemist", "pl": "Chemik" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2114",
+    "name": { "en": "Geologist and geophysicist", "pl": "Geolog i geofizyk" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2120",
+    "name": { "en": "Mathematician and actuary", "pl": "Matematyk" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2132",
+    "name": { "en": "Farming, forestry and fisheries adviser", "pl": "Doradca rolniczy, lesny i rybołówstwa" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2133",
+    "name": { "en": "Environmental protection professional", "pl": "Specjalista ochrony srodowiska" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2357",
+    "name": { "en": "Mathematics teacher (secondary)", "pl": "Nauczyciel matematyki" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2358",
+    "name": { "en": "Physics teacher (secondary)", "pl": "Nauczyciel fizyki" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "2359",
+    "name": { "en": "Research scientist", "pl": "Pracownik naukowy" },
+    "group": "Education & Science"
+  },
+  {
+    "code": "6111",
+    "name": { "en": "Field crop and vegetable grower", "pl": "Rolnik upraw polowych i warzywnych" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6112",
+    "name": { "en": "Tree and shrub crop grower", "pl": "Sadownik" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6113",
+    "name": { "en": "Gardener, horticultural and nursery grower", "pl": "Ogrodnik" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6121",
+    "name": { "en": "Livestock and dairy producer", "pl": "Hodowca zwierzat i producent mleka" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6122",
+    "name": { "en": "Poultry producer", "pl": "Hodowca drobiu" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6123",
+    "name": { "en": "Apiarist and sericulturist", "pl": "Pszczelarz" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6130",
+    "name": { "en": "Mixed crop and animal producer", "pl": "Rolnik produkcji mieszanej" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6210",
+    "name": { "en": "Forestry and related worker", "pl": "Pracownik lesnictwa" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "6221",
+    "name": { "en": "Aquaculture worker", "pl": "Pracownik akwakultury" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7511",
+    "name": { "en": "Butcher, fishmonger and related food preparer", "pl": "Rzeznik i przetworca ryb" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7512",
+    "name": { "en": "Baker, pastry cook and confectionery maker", "pl": "Piekarz i cukiernik" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7513",
+    "name": { "en": "Dairy products maker", "pl": "Przetworca produktow mleczarskich" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7514",
+    "name": { "en": "Fruit, vegetable and related preserver", "pl": "Przetworca owocow i warzyw" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7515",
+    "name": { "en": "Food and beverage taster and grader", "pl": "Degustator i klasyfikator zywnosci" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "7516",
+    "name": { "en": "Grain miller", "pl": "Mlynarz" },
+    "group": "Agriculture & Food Processing"
+  },
+  {
+    "code": "5111",
+    "name": { "en": "Travel attendant and travel steward", "pl": "Steward i stewardesa" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5112",
+    "name": { "en": "Transport conductor", "pl": "Konduktor" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5113",
+    "name": { "en": "Travel guide", "pl": "Przewodnik turystyczny" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5120",
+    "name": { "en": "Cook", "pl": "Kucharz" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5131",
+    "name": { "en": "Waiter", "pl": "Kelner" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5132",
+    "name": { "en": "Bartender", "pl": "Barman" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "1411",
+    "name": { "en": "Hotel manager", "pl": "Kierownik hotelu" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "1412",
+    "name": { "en": "Restaurant manager", "pl": "Kierownik restauracji" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "4224",
+    "name": { "en": "Hotel receptionist", "pl": "Recepcjonista hotelowy" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5133",
+    "name": { "en": "Chef de cuisine", "pl": "Szef kuchni" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5134",
+    "name": { "en": "Sommelier", "pl": "Sommelier" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5135",
+    "name": { "en": "Event coordinator (hospitality)", "pl": "Koordynator wydarzen hotelowych" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5136",
+    "name": { "en": "Tourism product specialist", "pl": "Specjalista produktu turystycznego" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "4225",
+    "name": { "en": "Travel agency consultant", "pl": "Konsultant biura podrozy" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "5137",
+    "name": { "en": "Spa and wellness therapist", "pl": "Terapeuta spa i odnowy biologicznej" },
+    "group": "Hospitality & Tourism"
+  },
+  {
+    "code": "7231",
+    "name": { "en": "Motor vehicle mechanic and repairer", "pl": "Mechanik pojazdow samochodowych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7232",
+    "name": { "en": "Aircraft engine mechanic and repairer", "pl": "Mechanik silnikow lotniczych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7233",
+    "name": { "en": "Agricultural and industrial machinery mechanic and repairer", "pl": "Mechanik maszyn rolniczych i przemyslowych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7234",
+    "name": { "en": "Bicycle and related repairer", "pl": "Mechanik rowerowy" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7311",
+    "name": { "en": "Precision instrument maker and repairer", "pl": "Mechanik precyzyjny" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7312",
+    "name": { "en": "Musical instrument maker and tuner", "pl": "Lutnik i stroiciel instrumentow" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7313",
+    "name": { "en": "Jewellery and precious metal worker", "pl": "Jubiler" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7314",
+    "name": { "en": "Potter and related worker", "pl": "Ceramik" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7315",
+    "name": { "en": "Glass maker, cutter, grinder and finisher", "pl": "Szlifierz i wytworca szkla" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7316",
+    "name": { "en": "Sign writer, decorative painter and engraver", "pl": "Grawerownik i malarz dekoracyjny" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7317",
+    "name": { "en": "Handicraft worker in wood, basketry and related materials", "pl": "Rzemieślnik wyrobow drewnianych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7318",
+    "name": { "en": "Handicraft worker in textile, leather and related materials", "pl": "Rzemieślnik wyrobow tekstylnych i skorzanych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7412",
+    "name": { "en": "Electrical mechanic and fitter", "pl": "Monter elektryk" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7413",
+    "name": { "en": "Electrical line installer and repairer", "pl": "Monter linii elektrycznych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7421",
+    "name": { "en": "Electronics mechanic and servicer", "pl": "Mechanik elektronik" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7422",
+    "name": { "en": "ICT installer and servicer", "pl": "Instalator i serwisant ICT" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7521",
+    "name": { "en": "Wood treater", "pl": "Pracownik obrobki drewna" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7522",
+    "name": { "en": "Cabinet maker and related worker", "pl": "Stolarz meblowy" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7531",
+    "name": { "en": "Tailor, dressmaker and hatter", "pl": "Krawiec" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7532",
+    "name": { "en": "Furrier and related worker", "pl": "Kusnierz" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7533",
+    "name": { "en": "Shoemaker and related worker", "pl": "Szewc" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7534",
+    "name": { "en": "Upholsterer and related worker", "pl": "Tapicer" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7535",
+    "name": { "en": "Locksmith", "pl": "Slusarz" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7536",
+    "name": { "en": "Lift and escalator installer", "pl": "Monter wind i schodow ruchomych" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "7537",
+    "name": { "en": "Automotive electrician", "pl": "Elektryk samochodowy" },
+    "group": "Skilled Trades"
+  },
+  {
+    "code": "3131",
+    "name": { "en": "Power production plant operator", "pl": "Operator elektrowni" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3132",
+    "name": { "en": "Incinerator and water treatment plant operator", "pl": "Operator oczyszczalni sciekow i spalarni" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3133",
+    "name": { "en": "Chemical processing plant controller", "pl": "Operator zakladow chemicznych" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3134",
+    "name": { "en": "Petroleum and natural gas refining plant operator", "pl": "Operator rafinerii ropy naftowej" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3135",
+    "name": { "en": "Metal production process controller", "pl": "Operator procesow produkcji metali" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3139",
+    "name": { "en": "Process control technician not elsewhere classified", "pl": "Technik kontroli procesow gdzie indziej niesklasyfikowany" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "2165",
+    "name": { "en": "Renewable energy engineer", "pl": "Inzynier energii odnawialnej" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3136",
+    "name": { "en": "Solar energy technician", "pl": "Technik energii slonecznej" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3137",
+    "name": { "en": "Wind turbine technician", "pl": "Technik turbin wiatrowych" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3138",
+    "name": { "en": "Electrical grid technician", "pl": "Technik sieci elektrycznych" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "7414",
+    "name": { "en": "High-voltage electrician", "pl": "Elektryk wysokich napiec" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3140",
+    "name": { "en": "Gas distribution technician", "pl": "Technik dystrybucji gazu" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3141",
+    "name": { "en": "Heating systems technician", "pl": "Technik systemow grzewczych" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3142",
+    "name": { "en": "Water supply network technician", "pl": "Technik sieci wodociagowej" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "3143",
+    "name": { "en": "Energy auditor", "pl": "Audytor energetyczny" },
+    "group": "Energy & Utilities"
+  },
+  {
+    "code": "2611",
+    "name": { "en": "Lawyer", "pl": "Adwokat" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2612",
+    "name": { "en": "Judge", "pl": "Sedzia" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2619",
+    "name": { "en": "Legal professional not elsewhere classified", "pl": "Specjalista prawa gdzie indziej niesklasyfikowany" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "3411",
+    "name": { "en": "Legal and related associate professional", "pl": "Pracownik wsparcia prawnego" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2613",
+    "name": { "en": "Prosecutor", "pl": "Prokurator" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2614",
+    "name": { "en": "Notary", "pl": "Notariusz" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2615",
+    "name": { "en": "Patent attorney", "pl": "Rzecznik patentowy" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2616",
+    "name": { "en": "Data protection officer", "pl": "Inspektor ochrony danych" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2617",
+    "name": { "en": "Compliance specialist", "pl": "Specjalista do spraw zgodnosci" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "3412",
+    "name": { "en": "Court clerk and paralegal", "pl": "Sekretarz sadowy i asystent prawny" },
+    "group": "Legal & Compliance"
+  },
+  {
+    "code": "2431",
+    "name": { "en": "Advertising and marketing professional", "pl": "Specjalista do spraw reklamy i marketingu" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "2432",
+    "name": { "en": "Public relations professional", "pl": "Specjalista do spraw public relations" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "2433",
+    "name": { "en": "Technical and medical sales professional (excluding ICT)", "pl": "Specjalista do spraw sprzedazy technicznej i medycznej" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "3321",
+    "name": { "en": "Insurance representative", "pl": "Przedstawiciel ubezpieczeniowy" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "3322",
+    "name": { "en": "Commercial sales representative", "pl": "Przedstawiciel handlowy" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "3323",
+    "name": { "en": "Buyer", "pl": "Specjalista do spraw zakupow" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "3324",
+    "name": { "en": "Trade broker", "pl": "Posrednik handlowy" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "2435",
+    "name": { "en": "Digital marketing specialist", "pl": "Specjalista marketingu cyfrowego" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "2436",
+    "name": { "en": "Market research analyst", "pl": "Analityk badan rynkowych" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "3325",
+    "name": { "en": "E-commerce specialist", "pl": "Specjalista handlu elektronicznego" },
+    "group": "Marketing & Sales"
+  },
+  {
+    "code": "2635",
+    "name": { "en": "Social worker", "pl": "Pracownik socjalny" },
+    "group": "Social Services"
+  },
+  {
+    "code": "2636",
+    "name": { "en": "Religious professional", "pl": "Duchowny" },
+    "group": "Social Services"
+  },
+  {
+    "code": "3413",
+    "name": { "en": "Social work associate professional", "pl": "Asystent pracy socjalnej" },
+    "group": "Social Services"
+  },
+  {
+    "code": "5311",
+    "name": { "en": "Child care worker", "pl": "Opiekun dzieciecy" },
+    "group": "Social Services"
+  },
+  {
+    "code": "5312",
+    "name": { "en": "Teachers' aide", "pl": "Asystent nauczyciela" },
+    "group": "Social Services"
+  },
+  {
+    "code": "5321",
+    "name": { "en": "Health care assistant", "pl": "Opiekun osoby starszej" },
+    "group": "Social Services"
+  },
+  {
+    "code": "5322",
+    "name": { "en": "Home-based personal care worker", "pl": "Opiekun domowy" },
+    "group": "Social Services"
+  },
+  {
+    "code": "5329",
+    "name": { "en": "Personal care worker not elsewhere classified", "pl": "Pracownik opieki gdzie indziej niesklasyfikowany" },
+    "group": "Social Services"
+  },
+  {
+    "code": "2634",
+    "name": { "en": "Psychologist (counselling)", "pl": "Psycholog (poradnictwo)" },
+    "group": "Social Services"
+  },
+  {
+    "code": "2147",
+    "name": { "en": "Energy efficiency engineer", "pl": "Inzynier efektywnosci energetycznej" },
+    "group": "Engineering"
+  },
+  {
+    "code": "2148",
+    "name": { "en": "Acoustics engineer", "pl": "Inzynier akustyk" },
+    "group": "Engineering"
+  },
+  {
+    "code": "7146",
+    "name": { "en": "Railway track construction worker", "pl": "Robotnik budowy torow kolejowych" },
+    "group": "Construction"
+  },
+  {
+    "code": "7147",
+    "name": { "en": "Prefabricated building assembler", "pl": "Monter budynkow prefabrykowanych" },
+    "group": "Construction"
+  },
+  {
+    "code": "4326",
+    "name": { "en": "Last-mile delivery coordinator", "pl": "Koordynator dostaw ostatniej mili" },
+    "group": "Transport & Logistics"
+  }
+]

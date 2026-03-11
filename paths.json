@@ -1,0 +1,710 @@
+[
+  {
+    "id": "eu-citizen",
+    "name": {
+      "en": "EU/EEA Citizen",
+      "pl": "Obywatel UE/EOG"
+    },
+    "legal_basis": "EU Treaty, Art. 20 TFEU",
+    "who": {
+      "en": "Citizens of EU, EEA (Norway, Iceland, Liechtenstein), or Switzerland",
+      "pl": "Obywatele UE, EOG (Norwegia, Islandia, Liechtenstein) lub Szwajcarii"
+    },
+    "requirements": [
+      {
+        "en": "Valid passport or national ID card",
+        "pl": "Ważny paszport lub dowód osobisty"
+      },
+      {
+        "en": "Register stay at Urząd Gminy if staying longer than 3 months",
+        "pl": "Zarejestrowanie pobytu w Urzędzie Gminy w przypadku pobytu dłuższego niż 3 miesiące"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Passport or national ID card",
+        "pl": "Paszport lub dowód osobisty"
+      }
+    ],
+    "timeline": {
+      "en": "Immediate. No permit needed.",
+      "pl": "Natychmiastowo. Zezwolenie nie jest wymagane."
+    },
+    "fast_track": {
+      "en": "Not applicable — no permit needed",
+      "pl": "Nie dotyczy — zezwolenie nie jest wymagane"
+    },
+    "benefits": [
+      {
+        "en": "Full freedom of movement",
+        "pl": "Pełna swoboda przemieszczania się"
+      },
+      {
+        "en": "Right to work without restrictions",
+        "pl": "Prawo do pracy bez ograniczeń"
+      },
+      {
+        "en": "Access to social services",
+        "pl": "Dostęp do świadczeń socjalnych"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "Must register stay if longer than 3 months",
+        "pl": "Konieczność zarejestrowania pobytu w przypadku pobytu dłuższego niż 3 miesiące"
+      },
+      {
+        "en": "PESEL number needed for many administrative tasks",
+        "pl": "Numer PESEL wymagany do wielu czynności administracyjnych"
+      }
+    ]
+  },
+  {
+    "id": "declaration",
+    "name": {
+      "en": "Declaration Procedure (Oświadczenie)",
+      "pl": "Procedura oświadczeniowa (Oświadczenie)"
+    },
+    "legal_basis": "Art. 87-90, Ustawa o warunkach dopuszczalności powierzania pracy (Dz.U. 2025 poz. 621)",
+    "who": {
+      "en": "Citizens of Armenia, Belarus, Moldova, Ukraine — employed by a Polish employer",
+      "pl": "Obywatele Armenii, Białorusi, Mołdawii, Ukrainy — zatrudnieni przez polskiego pracodawcę"
+    },
+    "requirements": [
+      {
+        "en": "Employer registers declaration at the local powiat employment office (powiatowy urząd pracy)",
+        "pl": "Pracodawca rejestruje oświadczenie w powiatowym urzędzie pracy"
+      },
+      {
+        "en": "No voivodeship office involvement required",
+        "pl": "Nie wymaga udziału urzędu wojewódzkiego"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Declaration form",
+        "pl": "Formularz oświadczenia"
+      },
+      {
+        "en": "Passport copy",
+        "pl": "Kopia paszportu"
+      },
+      {
+        "en": "Employer's KRS extract",
+        "pl": "Wypis z KRS pracodawcy"
+      }
+    ],
+    "timeline": {
+      "en": "7-14 days",
+      "pl": "7-14 dni"
+    },
+    "fast_track": {
+      "en": "This IS the fast track — bypasses voivodeship entirely",
+      "pl": "To JEST ścieżka przyspieszona — całkowicie omija urząd wojewódzki"
+    },
+    "benefits": [
+      {
+        "en": "Bypasses voivodeship entirely",
+        "pl": "Całkowicie omija urząd wojewódzki"
+      },
+      {
+        "en": "Valid for up to 24 months",
+        "pl": "Ważne do 24 miesięcy"
+      },
+      {
+        "en": "Fast and simple procedure",
+        "pl": "Szybka i prosta procedura"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "Still need a visa to enter Poland (unless visa-exempt)",
+        "pl": "Nadal wymagana wiza wjazdowa do Polski (chyba że obywatel jest zwolniony z obowiązku wizowego)"
+      },
+      {
+        "en": "After 24 months, must switch to a residence permit",
+        "pl": "Po 24 miesiącach konieczne przejście na zezwolenie na pobyt"
+      },
+      {
+        "en": "Does NOT apply to self-employed / B2B contractors",
+        "pl": "NIE dotyczy osób samozatrudnionych / współpracujących na B2B"
+      }
+    ]
+  },
+  {
+    "id": "blue-card",
+    "name": {
+      "en": "EU Blue Card",
+      "pl": "Niebieska Karta UE"
+    },
+    "legal_basis": "Art. 127-138, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+    "who": {
+      "en": "Highly qualified employees with salary ≥ 13,355 PLN/month gross",
+      "pl": "Wysoko wykwalifikowani pracownicy z wynagrodzeniem ≥ 13 355 PLN brutto miesięcznie"
+    },
+    "requirements": [
+      {
+        "en": "Employment contract for at least 6 months",
+        "pl": "Umowa o pracę na co najmniej 6 miesięcy"
+      },
+      {
+        "en": "Salary ≥ 13,355 PLN/month gross (150% of national average)",
+        "pl": "Wynagrodzenie ≥ 13 355 PLN brutto miesięcznie (150% średniego krajowego)"
+      },
+      {
+        "en": "Higher qualifications (university degree or 3 years of professional experience for Annex I occupations)",
+        "pl": "Wyższe kwalifikacje (dyplom ukończenia studiów wyższych lub 3 lata doświadczenia zawodowego dla zawodów z Załącznika I)"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Application via MOS portal",
+        "pl": "Wniosek przez portal MOS"
+      },
+      {
+        "en": "Valid passport",
+        "pl": "Ważny paszport"
+      },
+      {
+        "en": "4 biometric photos",
+        "pl": "4 zdjęcia biometryczne"
+      },
+      {
+        "en": "Employment contract",
+        "pl": "Umowa o pracę"
+      },
+      {
+        "en": "Diploma or proof of qualifications",
+        "pl": "Dyplom lub potwierdzenie kwalifikacji"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation",
+        "pl": "Potwierdzenie zakwaterowania"
+      },
+      {
+        "en": "Fees: 440 + 100 PLN",
+        "pl": "Opłaty: 440 + 100 PLN"
+      }
+    ],
+    "timeline": {
+      "en": "60 days (art. 112a). 30 days for long-term mobility (art. 137d).",
+      "pl": "60 dni (art. 112a). 30 dni w przypadku mobilności długoterminowej (art. 137d)."
+    },
+    "fast_track": {
+      "en": "Yes — deficit occupations (art. 29) get priority at consulate (art. 77 ust. 13) and voivodeship (art. 117b)",
+      "pl": "Tak — zawody deficytowe (art. 29) mają priorytet w konsulacie (art. 77 ust. 13) i urzędzie wojewódzkim (art. 117b)"
+    },
+    "benefits": [
+      {
+        "en": "Valid for up to 3 years",
+        "pl": "Ważna do 3 lat"
+      },
+      {
+        "en": "Schengen mobility after 12 months",
+        "pl": "Mobilność w strefie Schengen po 12 miesiącach"
+      },
+      {
+        "en": "Employer change permitted after 12 months",
+        "pl": "Możliwość zmiany pracodawcy po 12 miesiącach"
+      },
+      {
+        "en": "Can run a business on the side (post-May 2025)",
+        "pl": "Możliwość prowadzenia działalności gospodarczej równolegle (po maju 2025)"
+      },
+      {
+        "en": "Family reunification",
+        "pl": "Łączenie rodzin"
+      },
+      {
+        "en": "3-6 month unemployment tolerance period",
+        "pl": "3-6 miesięcy tolerancji w przypadku utraty zatrudnienia"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "B2B contracts do NOT qualify",
+        "pl": "Umowy B2B NIE kwalifikują się"
+      },
+      {
+        "en": "Salary threshold changes annually",
+        "pl": "Próg wynagrodzenia zmienia się co roku"
+      },
+      {
+        "en": "MOS portal has known technical issues (as of 01.2026)",
+        "pl": "Portal MOS ma znane problemy techniczne (stan na 01.2026)"
+      }
+    ]
+  },
+  {
+    "id": "standard-work",
+    "name": {
+      "en": "Standard Work + Residence Permit",
+      "pl": "Standardowe zezwolenie na pracę i pobyt"
+    },
+    "legal_basis": "Art. 114, Ustawa o cudzoziemcach",
+    "who": {
+      "en": "Employees with salary below the Blue Card threshold",
+      "pl": "Pracownicy z wynagrodzeniem poniżej progu Niebieskiej Karty"
+    },
+    "requirements": [
+      {
+        "en": "Employment contract",
+        "pl": "Umowa o pracę"
+      },
+      {
+        "en": "Salary at or above minimum wage",
+        "pl": "Wynagrodzenie równe lub wyższe od płacy minimalnej"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      },
+      {
+        "en": "Occupation not on restricted list",
+        "pl": "Zawód niezaliczany do listy zawodów objętych ograniczeniami"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Application form via MOS portal",
+        "pl": "Formularz wniosku przez portal MOS"
+      },
+      {
+        "en": "Valid passport",
+        "pl": "Ważny paszport"
+      },
+      {
+        "en": "4 recent passport-size photos",
+        "pl": "4 aktualne zdjęcia paszportowe"
+      },
+      {
+        "en": "Employment contract or job offer",
+        "pl": "Umowa o pracę lub oferta zatrudnienia"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation in Poland",
+        "pl": "Potwierdzenie zakwaterowania w Polsce"
+      },
+      {
+        "en": "Fees: 440 PLN (application) + 100 PLN (residence card)",
+        "pl": "Opłaty: 440 PLN (wniosek) + 100 PLN (karta pobytu)"
+      }
+    ],
+    "timeline": {
+      "en": "60 days (art. 112a), subject to delays — often 3-6 months in practice",
+      "pl": "60 dni (art. 112a), możliwe opóźnienia — w praktyce często 3-6 miesięcy"
+    },
+    "fast_track": {
+      "en": "Deficit occupations get priority (art. 29 + art. 117b). Strategic employers get top priority (art. 28).",
+      "pl": "Zawody deficytowe mają priorytet (art. 29 + art. 117b). Pracodawcy strategiczni mają najwyższy priorytet (art. 28)."
+    },
+    "benefits": [
+      {
+        "en": "Valid for up to 3 years",
+        "pl": "Ważne do 3 lat"
+      },
+      {
+        "en": "Stampel (stamp) provides legal stay while application is pending",
+        "pl": "Stempel w paszporcie zapewnia legalny pobyt w trakcie rozpatrywania wniosku"
+      },
+      {
+        "en": "Can work legally from the day of application submission",
+        "pl": "Można legalnie pracować od dnia złożenia wniosku"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "Tied to a specific employer — changing jobs requires a new permit (unless same occupation and conditions)",
+        "pl": "Przypisane do konkretnego pracodawcy — zmiana pracy wymaga nowego zezwolenia (chyba że ten sam zawód i warunki)"
+      },
+      {
+        "en": "Processing times vary significantly by voivodeship — Mazowieckie is typically the slowest",
+        "pl": "Czas rozpatrywania różni się znacząco w zależności od województwa — mazowieckie jest zazwyczaj najwolniejsze"
+      },
+      {
+        "en": "MOS portal may have technical issues — prepare for potential in-person submission",
+        "pl": "Portal MOS może mieć problemy techniczne — przygotuj się na ewentualne osobiste złożenie wniosku"
+      }
+    ]
+  },
+  {
+    "id": "business-standard",
+    "name": {
+      "en": "Business Activity — Standard",
+      "pl": "Działalność gospodarcza — standardowa"
+    },
+    "legal_basis": "Art. 142 ust. 1 pkt 3 lit. a), Ustawa o cudzoziemcach",
+    "who": {
+      "en": "Founders/owners of companies meeting revenue or employment thresholds",
+      "pl": "Założyciele/właściciele firm spełniających progi przychodowe lub zatrudnieniowe"
+    },
+    "requirements": [
+      {
+        "en": "Company revenue ≥ 12x average monthly wage in the voivodeship, OR employment of ≥ 2 full-time employees for at least 1 year",
+        "pl": "Przychód firmy ≥ 12-krotność przeciętnego miesięcznego wynagrodzenia w województwie LUB zatrudnienie ≥ 2 pracowników na pełen etat przez co najmniej 1 rok"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      },
+      {
+        "en": "Stable and regular source of income",
+        "pl": "Stabilne i regularne źródło dochodu"
+      },
+      {
+        "en": "Confirmed accommodation",
+        "pl": "Potwierdzone zakwaterowanie"
+      }
+    ],
+    "documents": [
+      {
+        "en": "KRS extract",
+        "pl": "Wypis z KRS"
+      },
+      {
+        "en": "Financial statements",
+        "pl": "Sprawozdania finansowe"
+      },
+      {
+        "en": "Tax returns",
+        "pl": "Zeznania podatkowe"
+      },
+      {
+        "en": "Employment contracts (if claiming the employee threshold)",
+        "pl": "Umowy o pracę (jeśli powołanie na próg zatrudnieniowy)"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation",
+        "pl": "Potwierdzenie zakwaterowania"
+      }
+    ],
+    "timeline": {
+      "en": "60 days (art. 112a), often much longer in practice",
+      "pl": "60 dni (art. 112a), w praktyce często znacznie dłużej"
+    },
+    "fast_track": {
+      "en": "No specific fast-track, but can argue urgency based on business operations",
+      "pl": "Brak dedykowanej ścieżki przyspieszonej, ale można argumentować pilność ze względu na działalność firmy"
+    },
+    "benefits": [
+      {
+        "en": "Independence from any employer",
+        "pl": "Niezależność od pracodawcy"
+      },
+      {
+        "en": "Ability to hire employees",
+        "pl": "Możliwość zatrudniania pracowników"
+      },
+      {
+        "en": "Full business autonomy",
+        "pl": "Pełna autonomia w prowadzeniu działalności"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "Officials may not understand startup business models. Prepare documentation clearly showing threshold compliance.",
+        "pl": "Urzędnicy mogą nie rozumieć modeli biznesowych startupów. Przygotuj dokumentację jasno wykazującą spełnienie progów."
+      }
+    ]
+  },
+  {
+    "id": "business-innovation",
+    "name": {
+      "en": "Business Activity — Innovation Clause",
+      "pl": "Działalność gospodarcza — klauzula innowacyjności"
+    },
+    "legal_basis": "Art. 142 ust. 1 pkt 3 lit. b), Ustawa o cudzoziemcach",
+    "who": {
+      "en": "Founders of companies that don't yet meet revenue/employment thresholds but demonstrate future potential",
+      "pl": "Założyciele firm, które jeszcze nie spełniają progów przychodowych/zatrudnieniowych, ale wykazują potencjał na przyszłość"
+    },
+    "requirements": [
+      {
+        "en": "Company registered in KRS (or in process of registration)",
+        "pl": "Firma zarejestrowana w KRS (lub w trakcie rejestracji)"
+      },
+      {
+        "en": "Company possesses funds or conducts activities contributing to future threshold compliance",
+        "pl": "Firma posiada środki lub prowadzi działalność przyczyniającą się do przyszłego spełnienia warunków"
+      },
+      {
+        "en": "Evidence of investment growth, technology transfer, beneficial innovations, or job creation",
+        "pl": "Dowody na wzrost inwestycji, transfer technologii, korzystne innowacje lub tworzenie miejsc pracy"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      },
+      {
+        "en": "Stable and regular source of income",
+        "pl": "Stabilne i regularne źródło dochodu"
+      },
+      {
+        "en": "Confirmed accommodation in Poland",
+        "pl": "Potwierdzone zakwaterowanie w Polsce"
+      }
+    ],
+    "documents": [
+      {
+        "en": "KRS extract",
+        "pl": "Wypis z KRS"
+      },
+      {
+        "en": "Investment agreement (VC/angel — proof of \"possessing funds\")",
+        "pl": "Umowa inwestycyjna (VC/anioł biznesu — dowód na „posiadanie środków”)"
+      },
+      {
+        "en": "Business plan",
+        "pl": "Biznesplan"
+      },
+      {
+        "en": "Product/technology description (proof of \"technology transfer / beneficial innovation\")",
+        "pl": "Opis produktu/technologii (dowód na „transfer technologii / korzystną innowację”)"
+      },
+      {
+        "en": "Hiring plan (proof of \"future job creation\")",
+        "pl": "Plan zatrudnienia (dowód na „tworzenie miejsc pracy w przyszłości”)"
+      },
+      {
+        "en": "Accelerator/incubator certificate (if applicable)",
+        "pl": "Certyfikat akceleratora/inkubatora (jeśli dotyczy)"
+      },
+      {
+        "en": "Revenue/customer traction evidence",
+        "pl": "Dokumentacja przychodów/pozyskanych klientów"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation",
+        "pl": "Potwierdzenie zakwaterowania"
+      }
+    ],
+    "timeline": {
+      "en": "60 days officially, often 4-18 months in practice",
+      "pl": "Oficjalnie 60 dni, w praktyce często 4-18 miesięcy"
+    },
+    "fast_track": {
+      "en": "No specific fast-track for this path",
+      "pl": "Brak dedykowanej ścieżki przyspieszonej"
+    },
+    "benefits": [
+      {
+        "en": "Accessible to early-stage startups",
+        "pl": "Dostępna dla startupów na wczesnym etapie rozwoju"
+      },
+      {
+        "en": "VC investment counts as qualifying evidence",
+        "pl": "Inwestycja VC stanowi dowód kwalifikujący"
+      },
+      {
+        "en": "Does not require meeting revenue/employment thresholds yet",
+        "pl": "Nie wymaga jeszcze spełnienia progów przychodowych/zatrudnieniowych"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "THIS IS THE CRITICAL PATH FOR STARTUPS. Officials lack guidelines on evaluating startups.",
+        "pl": "TO KLUCZOWA ŚCIEŻKA DLA STARTUPÓW. Urzędnicy nie mają wytycznych dotyczących oceny startupów."
+      },
+      {
+        "en": "Common failure: application argued under lit. a) when it should be lit. b). Specifically reference art. 142 ust. 1 pkt 3 lit. b) in your application.",
+        "pl": "Częsty błąd: wniosek argumentowany na podstawie lit. a) zamiast lit. b). W swoim wniosku wyraźnie powołaj się na art. 142 ust. 1 pkt 3 lit. b)."
+      },
+      {
+        "en": "Frame VC investment as \"środki pozwalające na spełnienie warunków w przyszłości.\"",
+        "pl": "Przedstaw inwestycję VC jako „środki pozwalające na spełnienie warunków w przyszłości”."
+      },
+      {
+        "en": "Have your lawyer write an explicit legal argument citing this article.",
+        "pl": "Poproś prawnika o sporządzenie wyraźnej argumentacji prawnej powołującej się na ten artykuł."
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "name": {
+      "en": "Research Residence Permit",
+      "pl": "Zezwolenie na pobyt w celu prowadzenia badań naukowych"
+    },
+    "legal_basis": "Art. 151, Ustawa o cudzoziemcach + art. 77 ust. 13 (consular priority) + art. 112a ust. 3b (voivodeship priority)",
+    "who": {
+      "en": "Researchers invited by a Polish university, PAN institute, or research institute",
+      "pl": "Naukowcy zaproszeni przez polską uczelnię, instytut PAN lub instytut badawczy"
+    },
+    "requirements": [
+      {
+        "en": "Hosting agreement with a research institution",
+        "pl": "Umowa o przyjęciu z instytucją badawczą"
+      },
+      {
+        "en": "Sufficient funds",
+        "pl": "Wystarczające środki finansowe"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      },
+      {
+        "en": "Confirmed accommodation",
+        "pl": "Potwierdzone zakwaterowanie"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Hosting agreement",
+        "pl": "Umowa o przyjęciu"
+      },
+      {
+        "en": "Valid passport",
+        "pl": "Ważny paszport"
+      },
+      {
+        "en": "Proof of qualifications",
+        "pl": "Potwierdzenie kwalifikacji"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation",
+        "pl": "Potwierdzenie zakwaterowania"
+      },
+      {
+        "en": "Proof of sufficient funds",
+        "pl": "Potwierdzenie wystarczających środków finansowych"
+      }
+    ],
+    "timeline": {
+      "en": "Priority processing at both consulate and voivodeship",
+      "pl": "Priorytetowe rozpatrywanie zarówno w konsulacie, jak i w urzędzie wojewódzkim"
+    },
+    "fast_track": {
+      "en": "Yes — priority processing at both consulate (art. 77 ust. 13) and voivodeship (art. 112a ust. 3b)",
+      "pl": "Tak — priorytetowe rozpatrywanie zarówno w konsulacie (art. 77 ust. 13), jak i w urzędzie wojewódzkim (art. 112a ust. 3b)"
+    },
+    "benefits": [
+      {
+        "en": "Priority processing queue",
+        "pl": "Priorytetowa kolejka rozpatrywania"
+      },
+      {
+        "en": "Doctoral permits extended to 2.5 years",
+        "pl": "Zezwolenia dla doktorantów przedłużone do 2,5 roku"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "NAWA programs (ULAM, Polish Returns) can facilitate but have limited spots (~5-10/year for top positions, 17M PLN total budget)",
+        "pl": "Programy NAWA (ULAM, Polskie Powroty) mogą ułatwić proces, ale mają ograniczoną liczbę miejsc (~5-10/rok na najwyższe stanowiska, łączny budżet 17 mln PLN)"
+      }
+    ]
+  },
+  {
+    "id": "student",
+    "name": {
+      "en": "Student Residence Permit",
+      "pl": "Zezwolenie na pobyt w celu kształcenia się"
+    },
+    "legal_basis": "Art. 144-149, Ustawa o cudzoziemcach",
+    "who": {
+      "en": "Students accepted to a Polish university or doctoral school",
+      "pl": "Studenci przyjęci na polską uczelnię wyższą lub do szkoły doktorskiej"
+    },
+    "requirements": [
+      {
+        "en": "Acceptance letter from a Polish university or doctoral school",
+        "pl": "Zaświadczenie o przyjęciu na polską uczelnię wyższą lub do szkoły doktorskiej"
+      },
+      {
+        "en": "Sufficient funds (minimum ~700 PLN/month)",
+        "pl": "Wystarczające środki finansowe (minimum ok. 700 PLN/miesiąc)"
+      },
+      {
+        "en": "Health insurance",
+        "pl": "Ubezpieczenie zdrowotne"
+      },
+      {
+        "en": "Confirmed accommodation",
+        "pl": "Potwierdzone zakwaterowanie"
+      },
+      {
+        "en": "Visa D09 required first",
+        "pl": "Wymagana uprzednia wiza D09"
+      }
+    ],
+    "documents": [
+      {
+        "en": "Acceptance letter",
+        "pl": "Zaświadczenie o przyjęciu na studia"
+      },
+      {
+        "en": "Valid passport",
+        "pl": "Ważny paszport"
+      },
+      {
+        "en": "Proof of sufficient funds",
+        "pl": "Potwierdzenie wystarczających środków finansowych"
+      },
+      {
+        "en": "Health insurance confirmation",
+        "pl": "Potwierdzenie ubezpieczenia zdrowotnego"
+      },
+      {
+        "en": "Proof of accommodation",
+        "pl": "Potwierdzenie zakwaterowania"
+      },
+      {
+        "en": "Visa D09",
+        "pl": "Wiza D09"
+      }
+    ],
+    "timeline": {
+      "en": "Standard processing. Doctoral school students get priority (art. 112a ust. 3b).",
+      "pl": "Standardowy tryb rozpatrywania. Doktoranci mają priorytet (art. 112a ust. 3b)."
+    },
+    "fast_track": {
+      "en": "Doctoral school students get priority processing (art. 112a ust. 3b)",
+      "pl": "Doktoranci mają priorytetowe rozpatrywanie (art. 112a ust. 3b)"
+    },
+    "benefits": [
+      {
+        "en": "Doctoral permits extended to 2.5 years",
+        "pl": "Zezwolenia dla doktorantów przedłużone do 2,5 roku"
+      },
+      {
+        "en": "Students can work part-time without a separate work permit",
+        "pl": "Studenci mogą pracować w niepełnym wymiarze godzin bez odrębnego zezwolenia na pracę"
+      }
+    ],
+    "watch_out": [
+      {
+        "en": "Must maintain active student status",
+        "pl": "Konieczność utrzymania aktywnego statusu studenta"
+      },
+      {
+        "en": "Visa D09 required first from a Polish consulate",
+        "pl": "Wymagana uprzednia wiza D09 wydana przez polski konsulat"
+      }
+    ]
+  }
+]
