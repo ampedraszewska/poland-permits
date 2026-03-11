@@ -754,6 +754,7 @@ const UI = {
   q4e_b2b_desc: { en: 'Business-to-business / self-employed contract', pl: 'Kontrakt między firmami / samozatrudnienie' },
   q4e_unknown: { en: "I don't know yet", pl: 'Jeszcze nie wiem' },
   q4e_unknown_desc: { en: "I haven't discussed contract details with the employer", pl: 'Nie omawiałem jeszcze szczegółów umowy z pracodawcą' },
+  q5e_unknown: { en: "I don't know yet — show me all options", pl: 'Jeszcze nie wiem — pokaż wszystkie opcje' },
 
   // B2B redirect
   b2bRedirect: { en: "B2B contracts don't qualify for work permits or Blue Card. If you're running your own business, the founder/business path is the right one for you.", pl: 'Kontrakty B2B nie kwalifikują się do zezwoleń na pracę ani Niebieskiej Karty. Jeśli prowadzisz własną działalność, ścieżka dla założycieli jest dla Ciebie odpowiednia.' },
@@ -1264,6 +1265,7 @@ function renderQ5e(el) {
         <button class="salary-submit" id="salaryBtn" onclick="submitSalary()" disabled>${t('salarySubmit')}</button>
         <div class="salary-threshold-note">${t('salaryNote')}</div>
       </div>
+      <div class="occ-skip"><button onclick="submitSalaryUnknown()">${t('q5e_unknown')}</button></div>
     </div>`;
 
   document.getElementById('salaryInput').addEventListener('input', function() {
@@ -1290,6 +1292,17 @@ function submitSalary() {
     paths.unshift('declaration');
   }
 
+  state.answers.resultPaths = paths;
+  goTo('result');
+}
+
+function submitSalaryUnknown() {
+  state.answers.salary = null;
+  // Show both paths so user can compare
+  const paths = ['blue-card', 'standard-work'];
+  if (state.answers.countryGroup === 'declaration') {
+    paths.unshift('declaration');
+  }
   state.answers.resultPaths = paths;
   goTo('result');
 }
