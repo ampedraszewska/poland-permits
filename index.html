@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Can I Work in Poland? — Permit Path Finder</title>
+  <title>Next step: Polish tech and academia</title>
   <link rel="icon" href="assets/vp-favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -650,7 +650,7 @@
       <button id="langEN" class="active" onclick="setLang('en')">EN</button>
       <button id="langPL" onclick="setLang('pl')">PL</button>
     </div>
-    <h1 id="heroTitle">Can I work<br>in Poland?</h1>
+    <h1 id="heroTitle">Next step:<br>Polish tech &amp; academia</h1>
     <div class="subheader" id="heroSub">Answer a few questions to find your path to a Polish work or residence permit.</div>
     <div class="powered-by">
       Powered by <a href="https://vastpoint.vc" target="_blank" rel="noopener"><img src="assets/vp-logo.svg" alt="Vastpoint"></a>
@@ -684,7 +684,7 @@
 
 // ---- i18n ----
 const UI = {
-  heroTitle: { en: 'Can I work<br>in Poland?', pl: 'Czy mogę pracować<br>w Polsce?' },
+  heroTitle: { en: 'Next step:<br>Polish tech &amp; academia', pl: 'Następny krok:<br>Polski tech i nauka' },
   heroSub: { en: 'Answer a few questions to find your path to a Polish work or residence permit.', pl: 'Odpowiedz na kilka pytań, aby znaleźć swoją ścieżkę do zezwolenia na pracę lub pobyt w Polsce.' },
   back: { en: '\u2190 Back', pl: '\u2190 Wstecz' },
   stepOf: { en: 'Step {n} of {t}', pl: 'Krok {n} z {t}' },
@@ -1084,9 +1084,6 @@ function selectLocation(inPoland) {
 }
 
 // ---- Q3e: Describe your role (client-side fuzzy matching) ----
-let occupationsData = [];
-fetch('occupations.json').then(r => r.json()).then(d => { occupationsData = d; });
-
 function normalizeStr(s) {
   return s.toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
