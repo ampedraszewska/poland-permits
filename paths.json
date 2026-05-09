@@ -122,16 +122,8 @@
     ],
     "watch_out": [
       {
-        "en": "Still need a visa to enter Poland (unless visa-exempt)",
-        "pl": "Nadal wymagana wiza wjazdowa do Polski (chyba że obywatel jest zwolniony z obowiązku wizowego)"
-      },
-      {
-        "en": "After 24 months, must switch to a residence permit",
-        "pl": "Po 24 miesiącach konieczne przejście na zezwolenie na pobyt"
-      },
-      {
-        "en": "Does NOT apply to self-employed / B2B contractors",
-        "pl": "NIE dotyczy osób samozatrudnionych / współpracujących na B2B"
+        "en": "Does NOT apply to self-employed / B2B contractors — declaration is for employees only.",
+        "pl": "NIE dotyczy osób samozatrudnionych ani współpracujących na B2B — oświadczenie jest tylko dla pracowników etatowych."
       }
     ],
     "legal_text": {

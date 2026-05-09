@@ -796,6 +796,29 @@
     .sp-footer-admin { color: rgba(255,255,255,.4); text-decoration: none; font-size: .75rem; }
     .sp-footer-admin:hover { color: rgba(255,255,255,.7); }
 
+    /* ---- KEY STEPS (process stepper) ---- */
+    .key-steps { background: linear-gradient(180deg, #f7f4ff 0%, #efe9fa 100%); border-radius: 12px; padding: 1.5rem 1.5rem 1.25rem; margin: 0.5rem 0 1.5rem; }
+    .key-steps-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #370c82; margin-bottom: 1rem; }
+    .step-row { display: flex; gap: 1rem; align-items: flex-start; position: relative; }
+    .step-row + .step-row { margin-top: 1rem; }
+    .step-marker { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #370c82; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; position: relative; z-index: 1; }
+    .step-row:not(:last-child) .step-marker::after { content: ''; position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 2px; height: calc(100% + 1rem); background: #d8d2eb; z-index: 0; }
+    .step-body { flex: 1; padding-top: 4px; min-width: 0; }
+    .step-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #1a1230; margin-bottom: 0.25rem; }
+    .step-meta { font-size: 0.78rem; color: #5a4982; margin-bottom: 0.5rem; font-weight: 500; }
+    .step-content { font-size: 0.88rem; line-height: 1.55; color: #2d1560; }
+    .step-content p { margin-bottom: 0.5rem; }
+    .step-content p:last-child { margin-bottom: 0; }
+    .step-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.6rem; }
+    @media (max-width: 600px) { .step-options { grid-template-columns: 1fr; } }
+    .step-option-card { background: #fff; border: 1px solid #d8d2eb; border-radius: 8px; padding: 0.85rem 1rem; }
+    .step-option-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #370c82; margin-bottom: 0.4rem; }
+    .step-option-card p { font-size: 0.83rem; line-height: 1.5; color: #1a1230; margin: 0 0 0.35rem; }
+    .step-option-card p:last-child { margin-bottom: 0; }
+    .step-warning { background: #fff7ed; border-left: 3px solid #e8461a; border-radius: 6px; padding: 0.55rem 0.75rem; font-size: 0.8rem; line-height: 1.5; color: #6e2a08; margin-top: 0.6rem; }
+    .step-warning a { color: #6e2a08; font-weight: 600; }
+    .step-skipped { font-style: italic; font-size: 0.85rem; color: #7b6f8a; }
+
     /* ---- INTRO BANNER (ecosystem context) ---- */
     .intro-banner { max-width: 920px; margin: 1.75rem auto 0; padding: 0 1.5rem; }
     .intro-card { background: #f7f4ff; border: 1px solid #d8d2eb; border-left: 4px solid #370c82; border-radius: 12px; padding: 1.5rem 1.75rem; }
@@ -1027,6 +1050,34 @@ const UI = {
   qLoc_no: { en: "No, I'm outside Poland", pl: 'Nie, jestem poza Polską' },
   qLoc_no_desc: { en: "I haven't arrived yet", pl: 'Jeszcze nie przyjechałem' },
   nextSteps: { en: 'YOUR NEXT STEPS', pl: 'TWOJE KOLEJNE KROKI' },
+
+  // Key Steps (process stepper)
+  keyStepsLabel: { en: 'KEY STEPS', pl: 'KLUCZOWE KROKI' },
+  step1Title: { en: 'Enter Poland', pl: 'Wjazd do Polski' },
+  step1MetaInPoland: { en: 'Already in Poland — skip to step 2', pl: 'Jesteś już w Polsce — przejdź do kroku 2' },
+  step1MetaExempt: { en: 'Two routes available', pl: 'Dwie możliwe ścieżki' },
+  step1MetaNonExempt: { en: 'D-type visa from consulate (mandatory)', pl: 'Wiza typu D z konsulatu (obowiązkowa)' },
+  step1OptA: { en: 'Option A — Visa-free Schengen entry', pl: 'Wariant A — Wjazd bez wizy w ramach Schengen' },
+  step1OptADesc: { en: '<p>Up to 90 days within 180. No consulate appointment needed.</p><p><strong>You must submit your residence permit application before day 90.</strong></p>', pl: '<p>Do 90 dni w okresie 180 dni. Bez wizyty w konsulacie.</p><p><strong>Wniosek o pobyt musisz złożyć przed 90. dniem pobytu.</strong></p>' },
+  step1OptB: { en: 'Option B — D-type visa from consulate', pl: 'Wariant B — Wiza typu D z konsulatu' },
+  step1OptBDesc: { en: '<p>Apply for {visaType} at the Polish consulate in your country.</p><p>Processing 2–6 weeks. Cleaner timing on arrival.</p>', pl: '<p>Złóż wniosek o {visaType} w polskim konsulacie w Twoim kraju.</p><p>Rozpatrywanie 2–6 tygodni. Wjazd na uporządkowanej podstawie.</p>' },
+  step1NonExempt: { en: '<p>Apply for {visaType} at the Polish consulate in your country (mandatory before entry). Processing typically 2–6 weeks.</p>', pl: '<p>Złóż wniosek o {visaType} w polskim konsulacie w Twoim kraju (obowiązkowe przed wjazdem). Rozpatrywanie zwykle 2–6 tygodni.</p>' },
+  step1InPoland: { en: 'You are already in Poland on a valid legal basis. You can submit the residence permit application directly — see step 2.', pl: 'Jesteś już w Polsce na legalnej podstawie pobytu. Wniosek o zezwolenie na pobyt możesz złożyć bezpośrednio — zobacz krok 2.' },
+  step2Title: { en: 'Submit residence permit application', pl: 'Złożenie wniosku o zezwolenie na pobyt' },
+  step2Meta: { en: 'Voivodeship Office (Urząd Wojewódzki) · before your current legal stay expires', pl: 'Urząd Wojewódzki · przed upływem obecnego legalnego pobytu' },
+  step2Body: { en: '<p>Submit at the voivodeship office where you live (e.g. Mazowiecki UW in Warsaw, Małopolski UW in Kraków).</p><p>You receive a passport stamp on the day of submission, confirming legal stay throughout the proceedings. From that day you can stay (and, depending on path, work) legally in Poland.</p>', pl: '<p>Wniosek składasz w urzędzie wojewódzkim miejsca zamieszkania (np. Mazowiecki UW w Warszawie, Małopolski UW w Krakowie).</p><p>W dniu złożenia otrzymujesz stempel w paszporcie potwierdzający legalny pobyt na czas postępowania. Od tego dnia legalnie przebywasz (i, zależnie od ścieżki, pracujesz) w Polsce.</p>' },
+  step3Title: { en: 'Wait for the decision', pl: 'Oczekiwanie na decyzję' },
+  step3Meta: { en: '3–18 months · Mazowieckie typically slowest', pl: '3–18 miesięcy · w Mazowieckiem zwykle najdłużej' },
+  step3Body: { en: '<p>Once you submit, you generally cannot leave Poland until the decision arrives — the stamp is not a travel document. No Schengen travel, no foreign client visits, no conferences abroad.</p><p>After a positive decision, you receive a residence card valid for the duration of the permit.</p>', pl: '<p>Od momentu złożenia wniosku zasadniczo nie możesz opuścić Polski do czasu decyzji — stempel nie jest dokumentem podróżnym. Brak podróży po Schengen, brak wizyt u klientów za granicą, brak konferencji.</p><p>Po pozytywnej decyzji otrzymujesz kartę pobytu na okres ważności zezwolenia.</p>' },
+  // Declaration-specific
+  decl_step2Title: { en: 'Employer registers the declaration (oświadczenie)', pl: 'Pracodawca rejestruje oświadczenie' },
+  decl_step2Meta: { en: 'Powiat employment office · 7–14 days', pl: 'Powiatowy urząd pracy · 7–14 dni' },
+  decl_step2Body: { en: '<p>Your Polish employer registers the declaration of intent to entrust work at the local powiat employment office. The voivodeship office is not involved at this stage.</p><p>Once the declaration is in the registry, you can lawfully work for that employer for up to 24 months.</p>', pl: '<p>Twój polski pracodawca rejestruje oświadczenie o powierzeniu wykonywania pracy w powiatowym urzędzie pracy. Na tym etapie urząd wojewódzki nie jest zaangażowany.</p><p>Po wpisie do ewidencji możesz legalnie pracować u tego pracodawcy przez okres do 24 miesięcy.</p>' },
+  decl_step3Title: { en: 'Switch to a residence permit before 24 months', pl: 'Przejście na zezwolenie na pobyt przed upływem 24 miesięcy' },
+  decl_step3Meta: { en: 'Voivodeship Office · plan ahead', pl: 'Urząd Wojewódzki · zaplanuj z wyprzedzeniem' },
+  decl_step3Body: { en: '<p>The declaration procedure is temporary. Before the 24-month window expires, you must apply for a residence permit (Blue Card or single permit) at the voivodeship office to continue legal stay and work in Poland.</p>', pl: '<p>Procedura oświadczeniowa jest tymczasowa. Przed upływem 24 miesięcy musisz złożyć wniosek o zezwolenie na pobyt (Niebieska Karta lub jednolite zezwolenie) w urzędzie wojewódzkim, aby kontynuować legalny pobyt i pracę w Polsce.</p>' },
+  // Per-path warnings inside step 1
+  step1WarnInnov: { en: 'For art. 142 lit. b applications, consulates rarely issue D-04 visas based on intent to incorporate alone. Option A (visa-free entry then apply from Poland) is currently the realistic route. See ref [5] in the intro banner.', pl: 'Dla wniosków pod art. 142 lit. b konsulaty rzadko wydają wizy D-04 na sam zamiar rejestracji spółki. Wariant A (wjazd bez wizy i aplikacja z Polski) jest obecnie realnie dostępny. Zob. odnośnik [5] w bannerze powyżej.' },
   nextStepsInPoland: { en: "<strong>Since you're already in Poland:</strong> Go to the voivodeship office (urząd wojewódzki) and submit your application <strong>before your current legal stay expires</strong> (e.g., before day 90 of a Schengen tourist stay). You'll receive a stamp in your passport confirming legal stay for the duration of the proceedings. From that day you can stay and work legally in Poland.<br><br><strong>Critical limitation:</strong> This stamp is <strong>not a travel document</strong>. While your application is pending, you generally cannot leave Poland — if you exit, you may not be able to re-enter, as it does not function as a visa. This means no Schengen travel, no conferences abroad, no client visits in other EU countries. Proceedings typically take <strong>3-6 months</strong> for Blue Card, and <strong>6-18 months</strong> for business activity permits (longer in Mazowieckie voivodeship). Plan accordingly — you may be effectively grounded in Poland for the entire processing period.", pl: '<strong>Ponieważ jesteś już w Polsce:</strong> Udaj się do urzędu wojewódzkiego i złóż wniosek <strong>przed upływem obecnego legalnego pobytu</strong> (np. przed 90. dniem pobytu w strefie Schengen). Otrzymasz stempel w paszporcie potwierdzający legalny pobyt na czas trwania postępowania. Od tego dnia możesz legalnie przebywać i pracować w Polsce.<br><br><strong>Kluczowe ograniczenie:</strong> Stempel <strong>nie jest dokumentem podróżnym</strong>. W trakcie oczekiwania na decyzję zasadniczo nie możesz opuścić Polski — jeśli wyjedziesz, możesz nie być w stanie wrócić, ponieważ stempel nie funkcjonuje jako wiza. Oznacza to brak podróży po Schengen, brak konferencji za granicą, brak wizyt u klientów w innych krajach UE. Postępowanie trwa zazwyczaj <strong>3-6 miesięcy</strong> dla Niebieskiej Karty i <strong>6-18 miesięcy</strong> dla zezwoleń na działalność gospodarczą (dłużej w województwie mazowieckim). Planuj odpowiednio — możesz być faktycznie uziemiony w Polsce przez cały okres rozpatrywania.' },
   nextStepsAbroad: { en: "<strong>Since you're outside Poland:</strong> You'll need a D-type visa first. Apply at the Polish consulate in your country ({visaType}). Processing takes 2-6 weeks. After entering Poland with your visa, apply for the residence permit at the voivodeship office (urząd wojewódzki). You'll receive a stamp allowing legal stay while processing — but note that <strong>once you submit your residence permit application, you generally cannot leave Poland</strong> until a decision is made (this stamp is not a travel document). Processing takes 3-18 months depending on permit type and voivodeship.", pl: '<strong>Ponieważ jesteś poza Polską:</strong> Najpierw potrzebujesz wizy typu D. Złóż wniosek w polskim konsulacie w Twoim kraju ({visaType}). Rozpatrywanie trwa 2-6 tygodni. Po wjeździe do Polski z wizą złóż wniosek o zezwolenie na pobyt w urzędzie wojewódzkim. Otrzymasz stempel legalizujący pobyt na czas rozpatrywania — ale uwaga: <strong>po złożeniu wniosku o kartę pobytu zasadniczo nie możesz opuścić Polski</strong> do czasu decyzji (stempel nie jest dokumentem podróżnym). Rozpatrywanie trwa 3-18 miesięcy w zależności od rodzaju zezwolenia i województwa.' },
 
@@ -1109,6 +1160,19 @@ const UI = {
 };
 
 // ---- COUNTRIES ----
+// Visa-exempt for Schengen short-stay (90/180), per EU Reg 2018/1806 Annex II.
+// Citizens of these countries can enter Poland without a visa for up to 90 days
+// and may submit a residence-permit application from Poland during that window.
+const VISA_EXEMPT = new Set([
+  'United States','United Kingdom','Canada','Australia','New Zealand','Japan','South Korea','Singapore',
+  'Hong Kong','Taiwan','Israel','United Arab Emirates','Argentina','Brazil','Chile','Colombia','Costa Rica',
+  'El Salvador','Guatemala','Honduras','Malaysia','Mexico','Nicaragua','Panama','Paraguay','Peru','Uruguay',
+  'Venezuela','Andorra','Monaco','San Marino','Vatican','Bahamas','Barbados','Brunei','Dominica','Grenada',
+  'Kiribati','Mauritius','Marshall Islands','Micronesia','Nauru','Palau','Saint Kitts and Nevis','Saint Lucia',
+  'Saint Vincent','Samoa','Seychelles','Solomon Islands','Timor-Leste','Tonga','Trinidad and Tobago','Tuvalu',
+  'Vanuatu','Antigua and Barbuda','Bosnia and Herzegovina','Georgia','Montenegro','North Macedonia','Serbia','Albania'
+]);
+
 const COUNTRIES = {
   eu: [
     'Austria','Belgium','Bulgaria','Croatia','Cyprus','Czech Republic','Denmark','Estonia',
@@ -1843,6 +1907,9 @@ function renderResult(el) {
     // Who
     html += renderSection(t('who'), 'text', tp(path.who));
 
+    // KEY STEPS — process stepper at top of result body
+    html += renderKeySteps(pathId);
+
     // Requirements
     html += renderSection(t('requirements'), 'list', path.requirements.map(r => tp(r)));
 
@@ -1881,26 +1948,6 @@ function renderResult(el) {
       html += `</details>`;
     }
 
-    // Next steps based on location (skip for EU citizens and declaration-only)
-    if (pathId !== 'eu-citizen' && pathId !== 'declaration' && state.answers.inPoland !== undefined) {
-      const visaTypes = {
-        'blue-card': state.language === 'pl' ? 'wiza D w celu wykonywania pracy — Niebieska Karta' : 'D-type visa for work — Blue Card',
-        'standard-work': state.language === 'pl' ? 'wiza D w celu wykonywania pracy' : 'D-type visa for work',
-        'business-standard': state.language === 'pl' ? 'wiza D04 w celu prowadzenia działalności gospodarczej' : 'visa D04 — business activity',
-        'business-innovation': state.language === 'pl' ? 'wiza D04 w celu prowadzenia działalności gospodarczej' : 'visa D04 — business activity',
-        'research': state.language === 'pl' ? 'wiza D w celu prowadzenia badań naukowych' : 'D-type visa for scientific research',
-        'student': state.language === 'pl' ? 'wiza D09 w celu kształcenia się na studiach' : 'visa D09 — study'
-      };
-      const visaType = visaTypes[pathId] || 'D-type';
-      const stepsText = state.answers.inPoland
-        ? t('nextStepsInPoland')
-        : t('nextStepsAbroad').replace('{visaType}', visaType);
-      html += `<div class="result-section" style="background:#f0ebf8;border-radius:10px;padding:1rem 1.25rem;margin-top:0.5rem">`;
-      html += `<div class="result-section-label" style="color:#2d1560">${t('nextSteps')}</div>`;
-      html += `<p>${stepsText}</p>`;
-      html += `</div>`;
-    }
-
     html += `</div>`;
   });
 
@@ -1913,6 +1960,84 @@ function renderResult(el) {
   html += `<div class="restart-wrap"><button class="progress-back" onclick="goBack()" style="margin-right:1rem">${t('back')}</button><button class="restart-btn" onclick="restart()">${t('startOver')}</button></div>`;
   html += '</div>';
   el.innerHTML = html;
+}
+
+function renderKeySteps(pathId) {
+  // Skip stepper for pure EU citizen path — covered by Watch out
+  if (pathId === 'eu-citizen') return '';
+
+  const visaTypes = {
+    'blue-card': state.language === 'pl' ? 'wizę D — Niebieska Karta' : 'a D-type visa — Blue Card',
+    'standard-work': state.language === 'pl' ? 'wizę D w celu wykonywania pracy' : 'a D-type visa for work',
+    'business-standard': state.language === 'pl' ? 'wizę D-04 w celu prowadzenia działalności gospodarczej' : 'a D-04 visa — business activity',
+    'business-innovation': state.language === 'pl' ? 'wizę D-04 w celu prowadzenia działalności gospodarczej' : 'a D-04 visa — business activity',
+    'research': state.language === 'pl' ? 'wizę D w celu prowadzenia badań naukowych' : 'a D-type visa for research',
+    'student': state.language === 'pl' ? 'wizę D-09 w celu kształcenia się na studiach' : 'a D-09 study visa',
+    'declaration': state.language === 'pl' ? 'wizę D w celu wykonywania pracy' : 'a D-type visa for work'
+  };
+  const visaType = visaTypes[pathId] || (state.language === 'pl' ? 'wizę typu D' : 'a D-type visa');
+
+  const inPoland = !!state.answers.inPoland;
+  const country = state.answers.country || '';
+  const isExempt = VISA_EXEMPT.has(country);
+
+  let html = `<div class="key-steps"><div class="key-steps-label">${t('keyStepsLabel')}</div>`;
+
+  // ---- STEP 1: Entry ----
+  html += `<div class="step-row"><div class="step-marker">1</div><div class="step-body">`;
+  html += `<div class="step-title">${t('step1Title')}</div>`;
+  if (inPoland) {
+    html += `<div class="step-meta">${t('step1MetaInPoland')}</div>`;
+    html += `<div class="step-content step-skipped">${t('step1InPoland')}</div>`;
+  } else if (isExempt) {
+    html += `<div class="step-meta">${t('step1MetaExempt')}</div>`;
+    html += `<div class="step-options">`;
+    html += `<div class="step-option-card"><div class="step-option-label">${t('step1OptA')}</div>${t('step1OptADesc')}</div>`;
+    html += `<div class="step-option-card"><div class="step-option-label">${t('step1OptB')}</div>${t('step1OptBDesc').replace('{visaType}', visaType)}</div>`;
+    html += `</div>`;
+    if (pathId === 'business-innovation') {
+      html += `<div class="step-warning">${t('step1WarnInnov')}</div>`;
+    }
+  } else {
+    html += `<div class="step-meta">${t('step1MetaNonExempt')}</div>`;
+    html += `<div class="step-content">${t('step1NonExempt').replace('{visaType}', visaType)}</div>`;
+    if (pathId === 'business-innovation') {
+      html += `<div class="step-warning">${t('step1WarnInnov')}</div>`;
+    }
+  }
+  html += `</div></div>`;
+
+  // ---- STEP 2 & 3 ----
+  if (pathId === 'declaration') {
+    // Declaration: employer registers oświadczenie (not residence permit)
+    html += `<div class="step-row"><div class="step-marker">2</div><div class="step-body">`;
+    html += `<div class="step-title">${t('decl_step2Title')}</div>`;
+    html += `<div class="step-meta">${t('decl_step2Meta')}</div>`;
+    html += `<div class="step-content">${t('decl_step2Body')}</div>`;
+    html += `</div></div>`;
+
+    html += `<div class="step-row"><div class="step-marker">3</div><div class="step-body">`;
+    html += `<div class="step-title">${t('decl_step3Title')}</div>`;
+    html += `<div class="step-meta">${t('decl_step3Meta')}</div>`;
+    html += `<div class="step-content">${t('decl_step3Body')}</div>`;
+    html += `</div></div>`;
+  } else {
+    // Standard residence-permit paths
+    html += `<div class="step-row"><div class="step-marker">2</div><div class="step-body">`;
+    html += `<div class="step-title">${t('step2Title')}</div>`;
+    html += `<div class="step-meta">${t('step2Meta')}</div>`;
+    html += `<div class="step-content">${t('step2Body')}</div>`;
+    html += `</div></div>`;
+
+    html += `<div class="step-row"><div class="step-marker">3</div><div class="step-body">`;
+    html += `<div class="step-title">${t('step3Title')}</div>`;
+    html += `<div class="step-meta">${t('step3Meta')}</div>`;
+    html += `<div class="step-content">${t('step3Body')}</div>`;
+    html += `</div></div>`;
+  }
+
+  html += `</div>`;
+  return html;
 }
 
 function renderSection(label, type, content) {
