@@ -718,6 +718,10 @@
     ],
     "watch_out": [
       {
+        "en": "<strong>Studia stacjonarne vs niestacjonarne matters for work rights.</strong> Foreign students enrolled in studia stacjonarne (full-time, on-site) are exempt from the work-permit requirement and may take up employment alongside studies. Students in studia niestacjonarne (part-time / weekend / online / distance) are NOT exempt — if you intend to work for a Polish employer alongside studying, the employer must obtain a separate work permit (typ A) for you. Confirm your enrolment mode in writing with the university registrar before signing any work contract.",
+        "pl": "<strong>Tryb studiów (stacjonarne vs niestacjonarne) ma znaczenie dla prawa do pracy.</strong> Studenci-cudzoziemcy na studiach stacjonarnych są zwolnieni z wymogu zezwolenia na pracę i mogą podjąć zatrudnienie w trakcie nauki. Studenci na studiach niestacjonarnych (zaocznych, weekendowych, online, na odległość) NIE są zwolnieni — jeśli planujesz pracować u polskiego pracodawcy równolegle ze studiami, pracodawca musi uzyskać osobne zezwolenie na pracę (typ A). Potwierdź formalnie tryb studiów w dziekanacie przed podpisaniem umowy o pracę."
+      },
+      {
         "en": "Must maintain active student status",
         "pl": "Konieczność utrzymania aktywnego statusu studenta"
       },

@@ -1079,6 +1079,9 @@ const UI = {
   // Per-path warnings inside step 1
   step1WarnInnov: { en: 'For art. 142 lit. b applications, consulates rarely issue D-04 visas based on intent to incorporate alone. Option A (visa-free entry, then apply from Poland) is currently the realistic route — and if your Polish company is not yet registered, you will need to register it within the 90-day window before submitting the residence permit application.', pl: 'Dla wniosków pod art. 142 lit. b konsulaty rzadko wydają wizy D-04 na sam zamiar rejestracji spółki. Wariant A (wjazd bez wizy i aplikacja z Polski) jest obecnie realnie dostępny — a jeśli Twoja polska spółka nie jest jeszcze zarejestrowana, musisz to zrobić w ciągu 90-dniowego okna przed złożeniem wniosku o pobyt.' },
 
+  // B2B nuance note shown when contract = b2b
+  b2bNote: { en: 'You selected a B2B contract. EU Directive 2021/1883/UE (art. 2 ust. 1 lit. b) explicitly permits B2B for the Blue Card, regardless of the legal form of the work relationship. In current Polish practice, however, voivodeship offices traditionally require an employment contract for the Blue Card and may push back on B2B applications. The realistic options for a B2B contractor are therefore (a) apply for the Blue Card and be prepared to argue EU primacy of law, or (b) apply under art. 142 ust. 1 pkt 3 lit. b (self-employment / innovative business activity), which is structurally a better fit for B2B. Both paths are shown above.', pl: 'Wybrałeś kontrakt B2B. Dyrektywa UE 2021/1883/UE (art. 2 ust. 1 lit. b) wprost dopuszcza B2B dla Niebieskiej Karty, niezależnie od formy prawnej stosunku pracy. W obecnej polskiej praktyce urzędy wojewódzkie zwykle wymagają jednak umowy o pracę dla Niebieskiej Karty i mogą kwestionować wnioski oparte na B2B. Realne opcje dla kontraktora B2B to: (a) aplikować o Niebieską Kartę i być przygotowanym argumentować pierwszeństwo prawa UE, albo (b) aplikować pod art. 142 ust. 1 pkt 3 lit. b (samozatrudnienie / innowacyjna działalność gospodarcza), co strukturalnie pasuje lepiej do B2B. Obie ścieżki są pokazane powyżej.' },
+
   // EU citizen Key Steps
   eu_step1Title: { en: 'Enter Poland', pl: 'Wjazd do Polski' },
   eu_step1Meta: { en: 'EU/EEA freedom of movement · no visa needed', pl: 'Swoboda przemieszczania się w UE/EOG · brak wizy' },
@@ -1607,11 +1610,10 @@ function renderQ4e(el) {
 
 function selectContract(type) {
   state.answers.contract = type;
-  if (type === 'b2b') {
-    goTo('b2b_redirect');
-  } else {
-    goTo('q5e');
-  }
+  // B2B continues to Q5e (salary) — Blue Card legally permits B2B per Dyrektywa
+  // 2021/1883/UE art. 2 ust. 1 lit. b, and self-employment also opens art. 142 lit. b.
+  // We surface both paths and let the user compare.
+  goTo('q5e');
 }
 
 // ---- B2B Redirect ----
@@ -1668,7 +1670,14 @@ function submitSalary() {
     paths.push('standard-work');
   }
 
-  // Declaration countries get both paths
+  // For B2B contracts: also surface art. 142 lit. b (self-employment / innovation)
+  // because B2B legally falls under działalność gospodarcza and may be a more
+  // straightforward route in current Polish practice than Blue Card on B2B.
+  if (state.answers.contract === 'b2b') {
+    paths.push('business-innovation');
+  }
+
+  // Declaration countries get the declaration path on top
   if (state.answers.countryGroup === 'declaration') {
     paths.unshift('declaration');
   }
@@ -1679,8 +1688,11 @@ function submitSalary() {
 
 function submitSalaryUnknown() {
   state.answers.salary = null;
-  // Show both paths so user can compare
+  // Show both core paths so user can compare
   const paths = ['blue-card', 'standard-work'];
+  if (state.answers.contract === 'b2b') {
+    paths.push('business-innovation');
+  }
   if (state.answers.countryGroup === 'declaration') {
     paths.unshift('declaration');
   }
@@ -1963,6 +1975,11 @@ function renderResult(el) {
   if (state.answers.countryGroup === 'declaration' && paths.length === 1 && paths[0] !== 'declaration') {
     const note = t('declarationNote').replace('{country}', state.answers.country);
     html += `<div class="result-note">${note}</div>`;
+  }
+
+  // B2B nuance note
+  if (state.answers.contract === 'b2b') {
+    html += `<div class="result-note">${t('b2bNote')}</div>`;
   }
 
   html += `<div class="restart-wrap"><button class="progress-back" onclick="goBack()" style="margin-right:1rem">${t('back')}</button><button class="restart-btn" onclick="restart()">${t('startOver')}</button></div>`;
