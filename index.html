@@ -1080,7 +1080,7 @@ const UI = {
   step1WarnInnov: { en: 'For art. 142 lit. b applications, consulates rarely issue D-04 visas based on intent to incorporate alone. Option A (visa-free entry, then apply from Poland) is currently the realistic route — and if your Polish company is not yet registered, you will need to register it within the 90-day window before submitting the residence permit application.', pl: 'Dla wniosków pod art. 142 lit. b konsulaty rzadko wydają wizy D-04 na sam zamiar rejestracji spółki. Wariant A (wjazd bez wizy i aplikacja z Polski) jest obecnie realnie dostępny — a jeśli Twoja polska spółka nie jest jeszcze zarejestrowana, musisz to zrobić w ciągu 90-dniowego okna przed złożeniem wniosku o pobyt.' },
 
   // B2B nuance note shown when contract = b2b
-  b2bNote: { en: 'You selected a B2B contract. EU Directive 2021/1883/UE (art. 2 ust. 1 lit. b) explicitly permits B2B for the Blue Card, regardless of the legal form of the work relationship. In current Polish practice, however, voivodeship offices traditionally require an employment contract for the Blue Card and may push back on B2B applications. The realistic options for a B2B contractor are therefore (a) apply for the Blue Card and be prepared to argue EU primacy of law, or (b) apply under art. 142 ust. 1 pkt 3 lit. b (self-employment / innovative business activity), which is structurally a better fit for B2B. Both paths are shown above.', pl: 'Wybrałeś kontrakt B2B. Dyrektywa UE 2021/1883/UE (art. 2 ust. 1 lit. b) wprost dopuszcza B2B dla Niebieskiej Karty, niezależnie od formy prawnej stosunku pracy. W obecnej polskiej praktyce urzędy wojewódzkie zwykle wymagają jednak umowy o pracę dla Niebieskiej Karty i mogą kwestionować wnioski oparte na B2B. Realne opcje dla kontraktora B2B to: (a) aplikować o Niebieską Kartę i być przygotowanym argumentować pierwszeństwo prawa UE, albo (b) aplikować pod art. 142 ust. 1 pkt 3 lit. b (samozatrudnienie / innowacyjna działalność gospodarcza), co strukturalnie pasuje lepiej do B2B. Obie ścieżki są pokazane powyżej.' },
+  b2bNote: { en: 'You selected a B2B contract. The standard work permit (art. 114) is built around an employer–employee relationship and does not fit B2B — voivodeship offices typically redirect B2B applicants to art. 142. The realistic options for a B2B contractor are: (a) art. 142 ust. 1 pkt 3 lit. b (self-employment / innovative business activity) — structurally the best fit, treats your JDG or spółka as the entity conducting business in Poland; or (b) the EU Blue Card — explicitly permitted for B2B under EU Directive 2021/1883/UE (art. 2 ust. 1 lit. b), but in current Polish practice voivodeship offices require an employment contract and may push back, so be prepared to argue EU primacy of law.', pl: 'Wybrałeś kontrakt B2B. Standardowe zezwolenie na pracę (art. 114) jest skonstruowane wokół relacji pracownik–pracodawca i nie pasuje do B2B — urzędy wojewódzkie zwykle odsyłają takich wnioskodawców do art. 142. Realne opcje dla kontraktora B2B to: (a) art. 142 ust. 1 pkt 3 lit. b (samozatrudnienie / innowacyjna działalność gospodarcza) — strukturalnie najlepsze dopasowanie, traktuje Twoją JDG lub spółkę jako podmiot prowadzący działalność w Polsce; albo (b) Niebieska Karta UE — wprost dopuszczona dla B2B przez Dyrektywę UE 2021/1883/UE (art. 2 ust. 1 lit. b), ale w obecnej polskiej praktyce urzędy wojewódzkie wymagają umowy o pracę i mogą kwestionować wnioski oparte na B2B, więc trzeba być gotowym argumentować pierwszeństwo prawa UE.' },
 
   // EU citizen Key Steps
   eu_step1Title: { en: 'Enter Poland', pl: 'Wjazd do Polski' },
@@ -1679,18 +1679,23 @@ function renderQ5e(el) {
 function submitSalary() {
   const salary = Number(document.getElementById('salaryInput').value);
   state.answers.salary = salary;
+  const isB2B = state.answers.contract === 'b2b';
 
   const paths = [];
   if (salary >= 13355) {
     paths.push('blue-card');
-  } else {
+  } else if (!isB2B) {
+    // Standard work permit (art. 114) is structurally for employer–employee
+    // relationships ("podmiot powierzający pracę"). B2B contractors invoice
+    // Polish companies as clients, which fits art. 142 (działalność gosp.),
+    // not art. 114. So we don't surface standard-work for B2B.
     paths.push('standard-work');
   }
 
-  // For B2B contracts: also surface art. 142 lit. b (self-employment / innovation)
-  // because B2B legally falls under działalność gospodarcza and may be a more
-  // straightforward route in current Polish practice than Blue Card on B2B.
-  if (state.answers.contract === 'b2b') {
+  // For B2B contracts: surface art. 142 lit. b (self-employment / innovation)
+  // as the main fit. Blue Card stays in if salary qualifies (legally permitted
+  // for B2B per Dyrektywa 2021/1883/UE).
+  if (isB2B) {
     paths.push('business-innovation');
   }
 
@@ -1705,11 +1710,11 @@ function submitSalary() {
 
 function submitSalaryUnknown() {
   state.answers.salary = null;
-  // Show both core paths so user can compare
-  const paths = ['blue-card', 'standard-work'];
-  if (state.answers.contract === 'b2b') {
-    paths.push('business-innovation');
-  }
+  const isB2B = state.answers.contract === 'b2b';
+  // Show both core paths so user can compare; B2B drops standard-work.
+  const paths = ['blue-card'];
+  if (!isB2B) paths.push('standard-work');
+  if (isB2B) paths.push('business-innovation');
   if (state.answers.countryGroup === 'declaration') {
     paths.unshift('declaration');
   }
