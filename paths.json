@@ -230,6 +230,10 @@
     ],
     "watch_out": [
       {
+        "en": "<strong>Contract must be at least 6 months long.</strong> Art. 127 ust. 1 pkt 1 lit. a of the Foreigners Act explicitly requires the employment contract, contract of mandate, or B2B services contract to cover a minimum period of 6 months. Shorter contracts disqualify you from the Blue Card path — consider standard work permit (art. 114) or self-employment under art. 142 instead.",
+        "pl": "<strong>Umowa musi obejmować co najmniej 6 miesięcy.</strong> Art. 127 ust. 1 pkt 1 lit. a ustawy o cudzoziemcach wprost wymaga, aby umowa o pracę, umowa cywilnoprawna lub kontrakt B2B na świadczenie usług obejmował minimum 6 miesięcy. Krótsze umowy dyskwalifikują z Niebieskiej Karty — rozważ standardowe zezwolenie na pracę (art. 114) albo samozatrudnienie pod art. 142."
+      },
+      {
         "en": "B2B contracts do NOT qualify",
         "pl": "Umowy B2B NIE kwalifikują się"
       },
