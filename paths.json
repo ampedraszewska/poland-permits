@@ -57,7 +57,11 @@
         "en": "PESEL number needed for many administrative tasks",
         "pl": "Numer PESEL wymagany do wielu czynności administracyjnych"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Traktat o funkcjonowaniu Unii Europejskiej, art. 20",
+      "text": "Każda osoba mająca obywatelstwo Państwa Członkowskiego jest obywatelem Unii. Obywatelstwo Unii ma charakter dodatkowy w stosunku do obywatelstwa krajowego, nie zastępując go jednak. Obywatele Unii korzystają z praw i podlegają obowiązkom przewidzianym w Traktatach, w tym z prawa do swobodnego przemieszczania się i przebywania na terytorium Państw Członkowskich.\n\nSwobodny przepływ pracowników, swoboda przedsiębiorczości oraz swobodne świadczenie usług gwarantowane są na podstawie art. 45, art. 49 i art. 56 TFUE. Obywatele państw EOG (Norwegia, Islandia, Liechtenstein) i Szwajcarii korzystają z analogicznych praw na podstawie umów stowarzyszeniowych."
+    }
   },
   {
     "id": "declaration",
@@ -129,7 +133,11 @@
         "en": "Does NOT apply to self-employed / B2B contractors",
         "pl": "NIE dotyczy osób samozatrudnionych / współpracujących na B2B"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 87-90, Ustawa z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom (Dz.U. 2025 poz. 621)",
+      "text": "Procedura oświadczenia o powierzeniu wykonywania pracy cudzoziemcowi pozwala obywatelom Armenii, Białorusi, Mołdawii i Ukrainy na podjęcie pracy w Polsce bez konieczności uzyskiwania zezwolenia na pracę. Pracodawca składa oświadczenie do powiatowego urzędu pracy właściwego ze względu na siedzibę lub miejsce zamieszkania. Po wpisie oświadczenia do ewidencji oświadczeń, cudzoziemiec może świadczyć pracę u danego pracodawcy przez okres do 24 miesięcy.\n\n(Cytowanie pełnego brzmienia art. 87-90 dostępne w Dzienniku Ustaw 2025 poz. 621.)"
+    }
   },
   {
     "id": "blue-card",
@@ -241,7 +249,11 @@
         "en": "MOS portal has known technical issues (as of 01.2026)",
         "pl": "Portal MOS ma znane problemy techniczne (stan na 01.2026)"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 127, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+      "text": "Art. 127. Zezwolenia na pobyt czasowy w celu wykonywania pracy w zawodzie wymagającym wysokich kwalifikacji udziela się, gdy celem pobytu cudzoziemca na terytorium Rzeczypospolitej Polskiej jest wykonywanie pracy w zawodzie wymagającym wysokich kwalifikacji oraz spełnione są łącznie następujące warunki:\n\n1) cudzoziemiec:\n  a) zawarł, na okres przynajmniej 6 miesięcy, umowę o pracę, umowę o pracę nakładczą, umowę cywilnoprawną, na podstawie której wykonuje pracę, świadczy usługi lub pozostaje w stosunku służbowym,\n  b) posiada formalne kwalifikacje i spełnia inne warunki, które są wymagane, w przypadku zamiaru wykonywania pracy w zawodzie regulowanym,\n  c) posiada wyższe kwalifikacje zawodowe niezbędne do wykonywania pracy w tym zawodzie, w przypadku zamiaru wykonywania pracy w zawodzie niebędącym zawodem regulowanym,\n  d) posiada ubezpieczenie zdrowotne w rozumieniu ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych lub potwierdzenie pokrycia przez ubezpieczyciela kosztów leczenia na terytorium Rzeczypospolitej Polskiej;\n2) cudzoziemiec będzie wykonywał pracę w zawodzie, który nie znajduje się na liście zawodów, o której mowa w art. 31 ust. 3 ustawy z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej;\n3) roczne wynagrodzenie brutto wynikające z miesięcznego lub rocznego wynagrodzenia wskazane w umowie nie jest niższe niż równowartość 150% kwoty przeciętnego wynagrodzenia w gospodarce narodowej w roku poprzedzającym złożenie wniosku."
+    }
   },
   {
     "id": "standard-work",
@@ -337,7 +349,11 @@
         "en": "MOS portal may have technical issues — prepare for potential in-person submission",
         "pl": "Portal MOS może mieć problemy techniczne — przygotuj się na ewentualne osobiste złożenie wniosku"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 114, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+      "text": "Art. 114. 1. Zezwolenia na pobyt czasowy i pracę udziela się, gdy celem pobytu cudzoziemca na terytorium Rzeczypospolitej Polskiej jest wykonywanie pracy oraz spełnione są łącznie następujące warunki:\n\n1) cudzoziemiec posiada ubezpieczenie zdrowotne w rozumieniu przepisów ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych lub potwierdzenie pokrycia przez ubezpieczyciela kosztów leczenia na terytorium Rzeczypospolitej Polskiej;\n2) (uchylony)\n3) cudzoziemiec będzie wykonywał pracę w zawodzie, który nie znajduje się na liście zawodów, o której mowa w art. 31 ust. 3 ustawy z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej;\n4) wynagrodzenie, które jest wskazane przez podmiot powierzający pracę cudzoziemcowi w załączniku do wniosku o udzielenie zezwolenia, nie jest niższe niż wynagrodzenie pracowników wykonujących w tym samym wymiarze czasu pracy pracę porównywalnego rodzaju lub na porównywalnym stanowisku;\n5) wysokość miesięcznego wynagrodzenia, o którym mowa w pkt 4, nie jest niższa niż wysokość minimalnego wynagrodzenia za pracę niezależnie od wymiaru czasu pracy i rodzaju stosunku prawnego stanowiącego podstawę wykonywania pracy przez cudzoziemca.\n\n4. Przepisu ust. 1 pkt 3 i 4 nie stosuje się, gdy cudzoziemiec spełnia warunki zwolnienia z wymogu posiadania zezwolenia na pracę określone odrębnymi przepisami."
+    }
   },
   {
     "id": "business-standard",
@@ -421,7 +437,11 @@
         "en": "Officials may not understand startup business models. Prepare documentation clearly showing threshold compliance.",
         "pl": "Urzędnicy mogą nie rozumieć modeli biznesowych startupów. Przygotuj dokumentację jasno wykazującą spełnienie progów."
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 142 ust. 1 pkt 3 lit. a, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+      "text": "Art. 142. 1. Zezwolenia na pobyt czasowy w celu prowadzenia działalności gospodarczej udziela się cudzoziemcowi, jeżeli celem jego pobytu na terytorium Rzeczypospolitej Polskiej jest prowadzenie działalności gospodarczej na podstawie przepisów obowiązujących w tym zakresie na tym terytorium oraz spełnione są następujące warunki:\n\n3) podmiot, który prowadzi działalność gospodarczą:\n  a) w roku podatkowym poprzedzającym złożenie wniosku o udzielenie cudzoziemcowi zezwolenia na pobyt czasowy w celu prowadzenia działalności gospodarczej osiągnął dochód nie niższy niż 12-krotność przeciętnego miesięcznego wynagrodzenia brutto w gospodarce narodowej w województwie, w którym podmiot ten ma siedzibę lub miejsce zamieszkania, w roku poprzedzającym złożenie wniosku, ogłaszanego przez Prezesa Głównego Urzędu Statystycznego, lub zatrudnia na czas nieokreślony i w pełnym wymiarze czasu pracy co najmniej przez okres 1 roku poprzedzającego złożenie wniosku co najmniej 2 pracowników będących obywatelami polskimi lub cudzoziemcami posiadającymi określone uprawnienia.\n\n2. Przepis ust. 1 pkt 3 stosuje się również do utworzonej przez cudzoziemca spółki komandytowej, komandytowo-akcyjnej, spółki z ograniczoną odpowiedzialnością lub spółki akcyjnej albo do spółki, do której cudzoziemiec przystąpił lub której udziały lub akcje objął lub nabył.\n\n3. Zezwolenia na pobyt czasowy w celu prowadzenia działalności gospodarczej udziela się cudzoziemcowi, którego celem pobytu jest wykonywanie pracy poprzez pełnienie funkcji w zarządzie spółki z ograniczoną odpowiedzialnością lub spółki akcyjnej, którą utworzył lub której udziały lub akcje objął lub nabył."
+    }
   },
   {
     "id": "business-innovation",
@@ -537,7 +557,11 @@
         "en": "Have your lawyer write an explicit legal argument citing this article.",
         "pl": "Poproś prawnika o sporządzenie wyraźnej argumentacji prawnej powołującej się na ten artykuł."
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 142 ust. 1 pkt 3 lit. b, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+      "text": "Art. 142. 1. Zezwolenia na pobyt czasowy w celu prowadzenia działalności gospodarczej udziela się cudzoziemcowi, jeżeli celem jego pobytu na terytorium Rzeczypospolitej Polskiej jest prowadzenie działalności gospodarczej oraz spełnione są następujące warunki:\n\n3) podmiot, który prowadzi działalność gospodarczą:\n  b) wykaże, że posiada środki pozwalające na spełnienie w przyszłości warunków określonych w lit. a lub prowadzi działania pozwalające na spełnienie w przyszłości tych warunków, w szczególności przyczyniające się do wzrostu inwestycji, transferu technologii, wprowadzania korzystnych innowacji lub tworzenia miejsc pracy.\n\n5. W postępowaniu w sprawie udzielenia zezwolenia, o którym mowa w ust. 1, obywatelowi Republiki Tureckiej w związku z prowadzeniem lub zamiarem prowadzenia przez niego działalności gospodarczej na własny rachunek na terytorium Rzeczypospolitej Polskiej, na podstawie przepisów obowiązujących w tym zakresie na tym terytorium, stosuje się przepis art. 41 ust. 1 Protokołu dodatkowego do Układu ustanawiającego stowarzyszenie między Europejską Wspólnotą Gospodarczą a Turcją."
+    }
   },
   {
     "id": "research",
@@ -617,7 +641,11 @@
         "en": "NAWA programs (ULAM, Polish Returns) can facilitate but have limited spots (~5-10/year for top positions, 17M PLN total budget)",
         "pl": "Programy NAWA (ULAM, Polskie Powroty) mogą ułatwić proces, ale mają ograniczoną liczbę miejsc (~5-10/rok na najwyższe stanowiska, łączny budżet 17 mln PLN)"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 151, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079)",
+      "text": "Art. 151. 1. Zezwolenia na pobyt czasowy w celu prowadzenia badań naukowych udziela się cudzoziemcowi będącemu naukowcem, gdy celem jego pobytu na terytorium Rzeczypospolitej Polskiej jest prowadzenie badań naukowych lub prac rozwojowych w jednostce naukowej mającej siedzibę na terytorium Rzeczypospolitej Polskiej zatwierdzonej przez ministra właściwego do spraw wewnętrznych, oraz są spełnione łącznie następujące warunki:\n\n1) cudzoziemiec posiada:\n  a) ubezpieczenie zdrowotne,\n  b) wystarczające środki finansowe na pokrycie kosztów utrzymania i kosztów podróży powrotnej,\n  c) pisemne oświadczenie jednostki naukowej zobowiązujące do zwrotu kosztów wydania decyzji o zobowiązaniu cudzoziemca do powrotu;\n\n2) umowa o przyjęciu cudzoziemca w celu prowadzenia badań naukowych lub prac rozwojowych, zawarta z jednostką naukową mającą siedzibę na terytorium Rzeczypospolitej Polskiej, określa: tytuł lub cel badań naukowych, zobowiązanie naukowca do uczestniczenia w prowadzeniu badań, zobowiązanie jednostki naukowej do zapewnienia warunków, datę rozpoczęcia i zakończenia, wynagrodzenie naukowca oraz inne warunki pracy."
+    }
   },
   {
     "id": "student",
@@ -705,6 +733,10 @@
         "en": "Visa D09 required first from a Polish consulate",
         "pl": "Wymagana uprzednia wiza D09 wydana przez polski konsulat"
       }
-    ]
+    ],
+    "legal_text": {
+      "source": "Art. 144, Ustawa o cudzoziemcach (Dz.U. 2025 poz. 1079) + Ustawa z 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy",
+      "text": "Art. 144. 1. Zezwolenia na pobyt czasowy w celu kształcenia się na studiach udziela się cudzoziemcowi, gdy celem jego pobytu na terytorium Rzeczypospolitej Polskiej jest podjęcie lub kontynuacja studiów w jednostce prowadzącej studia zatwierdzonej przez ministra właściwego do spraw wewnętrznych, oraz gdy są spełnione łącznie następujące warunki:\n\n1) cudzoziemiec przedłoży:\n  a) zaświadczenie jednostki prowadzącej studia o przyjęciu na studia lub o kontynuacji studiów,\n  b) dowód uiszczenia opłaty za semestr lub rok studiów, jeżeli podejmuje lub kontynuuje studia odpłatne;\n2) cudzoziemiec posiada:\n  a) ubezpieczenie zdrowotne,\n  b) wystarczające środki finansowe na pokrycie kosztów utrzymania i podróży powrotnej do państwa pochodzenia, oraz kosztów studiów.\n\nPRAWO DO PRACY (na podstawie Ustawy z 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy):\nZwolnienie z wymogu posiadania zezwolenia na pracę przysługuje cudzoziemcom będącym studentami studiów stacjonarnych w Polsce. Studenci studiów niestacjonarnych (zaocznych, online, wieczorowych) NIE są zwolnieni z wymogu zezwolenia na pracę i muszą uzyskać zezwolenie typu A, jeżeli zamierzają wykonywać pracę u polskiego pracodawcy."
+    }
   }
 ]

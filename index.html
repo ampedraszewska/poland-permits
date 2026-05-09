@@ -583,6 +583,85 @@
       background: #e65100;
     }
 
+    /* Legal text dropdown */
+    .legal-text-details {
+      margin-top: 1rem;
+      border: 1px solid #d8d2eb;
+      border-radius: 10px;
+      background: #faf8ff;
+    }
+
+    .legal-text-details summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 0.85rem 1.1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2d1560;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legal-text-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .legal-text-details summary::before {
+      content: '+';
+      display: inline-block;
+      width: 1.1rem;
+      height: 1.1rem;
+      line-height: 1.05rem;
+      text-align: center;
+      border-radius: 50%;
+      background: #2d1560;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+
+    .legal-text-details[open] summary::before {
+      content: '\2212';
+    }
+
+    .legal-text-body {
+      padding: 0 1.1rem 1.1rem;
+      border-top: 1px solid #ece6f5;
+    }
+
+    .legal-text-source {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      color: #5a4982;
+      padding: 0.75rem 0 0.5rem;
+    }
+
+    .legal-text-quote {
+      font-family: 'Space Grotesk', 'Georgia', serif;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #fff;
+      border-left: 3px solid #2d1560;
+      padding: 0.9rem 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin: 0;
+    }
+
+    .legal-text-note {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      color: #6b5b8d;
+      font-style: italic;
+      padding-top: 0.6rem;
+      line-height: 1.45;
+    }
+
     .restart-wrap {
       text-align: center;
       margin-top: 2rem;
@@ -811,6 +890,11 @@ const UI = {
   // Declaration note
   declarationNote: { en: 'As a citizen of {country}, you also qualify for the simplified declaration procedure (oświadczenie). Your employer can register a declaration at the local labor office in 7-14 days, bypassing the voivodeship office entirely. This works for up to 24 months. However, if you plan to stay longer, consider the Blue Card or standard permit for more stability.', pl: 'Jako obywatel {country} kwalifikujesz się również do uproszczonej procedury oświadczeniowej. Twój pracodawca może zarejestrować oświadczenie w powiatowym urzędzie pracy w ciągu 7-14 dni, z pominięciem urzędu wojewódzkiego. Procedura obowiązuje do 24 miesięcy. Jeśli planujesz zostać dłużej, rozważ Niebieską Kartę lub standardowe zezwolenie dla większej stabilności.' },
   dualPathNote: { en: 'Based on your answers, you have two options. The declaration procedure is faster but temporary (24 months). The permit path below offers more long-term stability.', pl: 'Na podstawie Twoich odpowiedzi masz dwie opcje. Procedura oświadczeniowa jest szybsza, ale tymczasowa (24 miesiące). Poniższa ścieżka zezwolenia oferuje większą stabilność długoterminową.' },
+
+  // Legal text dropdown
+  legalTextLabel: { en: 'View the original text of the legislation', pl: 'Zobacz oryginalne brzmienie ustawy' },
+  legalTextSource: { en: 'Source', pl: 'Źródło' },
+  legalTextNote: { en: 'Verbatim quote from the act. Where ellipses appear, the full text has been condensed for readability — refer to the source for the complete provision.', pl: 'Cytat z ustawy w brzmieniu obowiązującym. W miejscach skrócenia zachowano sens przepisu — pełne brzmienie znajdziesz pod podanym źródłem.' },
 };
 
 // ---- COUNTRIES ----
@@ -1557,6 +1641,19 @@ function renderResult(el) {
       html += `<div class="result-section-label">${t('watchOut')}</div>`;
       html += `<ul>${path.watch_out.map(w => `<li>${tp(w)}</li>`).join('')}</ul>`;
       html += `</div>`;
+    }
+
+    // Legal text dropdown — verbatim source from the act
+    if (path.legal_text && path.legal_text.text) {
+      const escaped = path.legal_text.text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      html += `<details class="legal-text-details">`;
+      html += `<summary>${t('legalTextLabel')}</summary>`;
+      html += `<div class="legal-text-body">`;
+      html += `<div class="legal-text-source"><strong>${t('legalTextSource')}:</strong> ${path.legal_text.source}</div>`;
+      html += `<pre class="legal-text-quote">${escaped}</pre>`;
+      html += `<div class="legal-text-note">${t('legalTextNote')}</div>`;
+      html += `</div>`;
+      html += `</details>`;
     }
 
     // Next steps based on location (skip for EU citizens and declaration-only)
