@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Next step: Polish tech and academia</title>
-  <link rel="icon" href="assets/vp-favicon.png" type="image/png">
+  <title>Polish work & residence permits — Visa Path Finder</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/vp-favicon.png">
+
+  <!-- Open Graph / WhatsApp / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Polish work & residence permits — Visa Path Finder">
+  <meta property="og:description" content="Interactive guide to Polish work and residence permits for tech founders, employees, researchers and students. Powered by Startup Poland, curated by Vastpoint.">
+  <meta property="og:image" content="https://ampedraszewska.github.io/poland-permits/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://visa.startuppoland.org/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Polish work & residence permits — Visa Path Finder">
+  <meta name="twitter:description" content="Interactive guide to Polish work and residence permits for tech founders, employees, researchers and students.">
+  <meta name="twitter:image" content="https://ampedraszewska.github.io/poland-permits/assets/og-image.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +39,7 @@
 
     /* ---- HERO ---- */
     .hero {
-      background: #1c004c;
+      background: #370c82;
       color: #ffffff;
       padding: 3.5rem 2rem 3rem;
       text-align: center;
@@ -720,19 +739,127 @@
       .result-card { padding: 1.5rem 1.25rem; }
       .result-card .path-name { font-size: 1.35rem; }
     }
+
+    /* ---- SP HEADER (matches events.startuppoland.org) ---- */
+    .sp-header { background: #370c82; position: sticky; top: 0; z-index: 100; }
+    .sp-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; padding: 0 1.5rem; height: 72px; }
+    .sp-logo img { height: 36px; display: block; }
+    .sp-nav { flex: 1; }
+    .sp-nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .sp-nav a { font-size: 1rem; font-weight: 500; color: #fff; text-decoration: none; position: relative; padding: 4px 0; transition: opacity .3s; letter-spacing: .05em; }
+    .sp-nav a:hover { opacity: .7; }
+    .sp-nav a::after { content: ''; position: absolute; left: -5px; bottom: -2px; width: 0; height: 9px; background: #150238; opacity: 0; transition: all .5s; z-index: -1; }
+    .sp-nav a:hover::after, .sp-nav-active > a::after { width: calc(100% + 10px); opacity: 1; }
+    .sp-nav-active > a { color: #fff; position: relative; z-index: 1; }
+    .sp-dropdown { position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,.15); min-width: 200px; padding: .5rem 0; display: none; flex-direction: column; border-radius: 4px; }
+    .sp-dropdown a { display: block; padding: .5rem 1rem; color: #220554; font-size: .8125rem; font-weight: 500; }
+    .sp-dropdown a::after { display: none; }
+    .has-dropdown { position: relative; }
+    .has-dropdown:hover .sp-dropdown { display: flex; }
+    .sp-header-lang { display: flex; gap: 2px; flex-shrink: 0; }
+    .sp-header-lang button { background: none; border: 1px solid rgba(255,255,255,.5); color: #fff; font-size: .75rem; font-weight: 600; padding: 3px 8px; cursor: pointer; transition: all .2s; font-family: 'Montserrat', sans-serif; }
+    .sp-header-lang button:first-child { border-radius: 4px 0 0 4px; }
+    .sp-header-lang button:last-child { border-radius: 0 4px 4px 0; }
+    .sp-header-lang button.active { background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.8); }
+    .sp-hamburger { display: none; background: none; border: none; font-size: 1.5rem; color: #fff; cursor: pointer; margin-left: auto; padding: 0.25rem; }
+    @media (max-width: 768px) {
+      .sp-nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: #370c82; padding: 1rem 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,.3); z-index: 99; }
+      .sp-nav.open { display: block; }
+      .sp-nav ul { flex-direction: column; gap: .75rem; }
+      .sp-hamburger { display: block; }
+      .sp-header-lang { display: none; }
+    }
+
+    /* ---- SP FOOTER ---- */
+    .sp-footer { background: #19161e; color: #fff; padding: 3.5rem 2rem 0; margin-top: 4rem; }
+    .sp-footer-main { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; }
+    @media (max-width: 768px) { .sp-footer-main { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .sp-footer-main { grid-template-columns: 1fr; } }
+    .sp-footer-label { font-size: .625rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #7b6f8a; margin-bottom: 1.25rem; }
+    .sp-footer-menu { display: flex; flex-direction: column; gap: .625rem; }
+    .sp-footer-menu a { color: #fff; text-decoration: none; font-size: 1.0625rem; font-weight: 700; transition: opacity .2s; }
+    .sp-footer-menu a:hover { opacity: .7; }
+    .sp-footer-logo { height: 54px; display: block; margin-bottom: 1.25rem; }
+    .sp-footer-address { font-size: .8125rem; line-height: 1.8; color: rgba(255,255,255,.6); }
+    .sp-footer-email { display: inline-flex; align-items: center; gap: .5rem; color: #e8461a; text-decoration: none; font-size: .875rem; font-weight: 600; transition: opacity .2s; }
+    .sp-footer-email:hover { opacity: .8; }
+    .sp-footer-email-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #e8461a; color: #fff; font-size: .7rem; font-weight: 700; flex-shrink: 0; font-style: normal; }
+    .sp-footer-social { display: flex; gap: .5rem; margin-top: .75rem; }
+    .sp-social-icon { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,.1); border-radius: 6px; transition: background .2s; flex-shrink: 0; }
+    .sp-social-icon:hover { background: rgba(255,255,255,.2); }
+    .sp-social-icon svg { display: block; }
+    .sp-footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 1.25rem 0; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .sp-footer-bottom-left { display: flex; flex-direction: column; gap: .3rem; }
+    .sp-footer-bottom-left > a { color: #fff; text-decoration: none; font-size: .8125rem; font-weight: 700; }
+    .sp-footer-bottom-left > a:hover { text-decoration: underline; }
+    .sp-footer-copyright { font-size: .75rem; color: rgba(255,255,255,.4); }
+    .sp-footer-admin { color: rgba(255,255,255,.4); text-decoration: none; font-size: .75rem; }
+    .sp-footer-admin:hover { color: rgba(255,255,255,.7); }
+
+    /* ---- BOTTLENECKS BANNER (current problems) ---- */
+    .bottlenecks { max-width: 920px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
+    .bottlenecks-card { background: #fff7ed; border: 1px solid #f4d8b4; border-left: 4px solid #e8461a; border-radius: 12px; padding: 1.4rem 1.6rem; }
+    .bottlenecks-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; color: #6e2a08; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+    .bottlenecks-title::before { content: '⚠'; font-size: 1.1rem; }
+    .bottlenecks-card ul { margin: 0.4rem 0 0 1.1rem; padding: 0; font-size: 0.86rem; line-height: 1.55; color: #3d1f08; }
+    .bottlenecks-card ul li { margin-bottom: 0.35rem; }
+    .bottlenecks-footnote { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid #f4d8b4; font-size: 0.78rem; color: #7d4d29; line-height: 1.5; }
+    .bottlenecks-footnote a { color: #6e2a08; font-weight: 600; }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="lang-toggle">
-      <button id="langEN" class="active" onclick="setLang('en')">EN</button>
-      <button id="langPL" onclick="setLang('pl')">PL</button>
+  <header class="sp-header">
+    <div class="sp-header-inner">
+      <a class="sp-logo" href="https://startuppoland.org/" data-href-pl="https://startuppoland.org/" data-href-en="https://startuppoland.org/en/" target="_blank" rel="noopener">
+        <img src="https://startuppoland.org/wp-content/uploads/2021/02/logo-Startup-Poland-rgb-1.svg" alt="Startup Poland">
+      </a>
+      <nav class="sp-nav" id="spNav">
+        <ul>
+          <li><a href="https://startuppoland.org/aktualnosci/" data-i18n="navNews" data-href-pl="https://startuppoland.org/aktualnosci/" data-href-en="https://startuppoland.org/en/news/">Aktualności</a></li>
+          <li><a href="https://standardy.startuppoland.org/" data-i18n="navStandards">Standardy</a></li>
+          <li><a href="https://startuppoland.org/raporty/" data-i18n="navReports" data-href-pl="https://startuppoland.org/raporty/" data-href-en="https://startuppoland.org/en/reports/">Raporty</a></li>
+          <li><a href="https://events.startuppoland.org/" data-i18n="navEvents">Wydarzenia</a></li>
+          <li class="sp-nav-active"><a href="#" data-i18n="navVisas">Wizy</a></li>
+          <li class="has-dropdown">
+            <a href="#" data-i18n="navAbout">O nas ▾</a>
+            <div class="sp-dropdown">
+              <a href="https://startuppoland.org/zarzad-i-rada-fundacji/" data-i18n="navAboutBoard" data-href-pl="https://startuppoland.org/zarzad-i-rada-fundacji/" data-href-en="https://startuppoland.org/en/management-board-and-foundation-council/">Zarząd i Rada Fundacji</a>
+              <a href="https://startuppoland.org/historia/" data-i18n="navAboutHistory" data-href-pl="https://startuppoland.org/historia/" data-href-en="https://startuppoland.org/en/history/">Historia</a>
+              <a href="https://startuppoland.org/dokumenty/" data-i18n="navAboutDocs" data-href-pl="https://startuppoland.org/dokumenty/" data-href-en="https://startuppoland.org/en/documents/">Dokumenty</a>
+            </div>
+          </li>
+          <li><a href="https://startuppoland.org/#kontakt" data-i18n="navContact" data-href-pl="https://startuppoland.org/#kontakt" data-href-en="https://startuppoland.org/en/#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="sp-header-lang">
+        <button data-lang="en">EN</button>
+        <button data-lang="pl">PL</button>
+      </div>
+      <button class="sp-hamburger" id="spHamburger" aria-label="Menu">&#9776;</button>
     </div>
+  </header>
+
+  <div class="hero">
     <h1 id="heroTitle">Next step:<br>Polish tech &amp; academia</h1>
     <div class="subheader" id="heroSub">Answer a few questions to find your path to a Polish work or residence permit.</div>
     <div class="powered-by">
       Powered by <a href="https://vastpoint.vc" target="_blank" rel="noopener"><img src="assets/vp-logo.svg" alt="Vastpoint"></a>
+    </div>
+  </div>
+
+  <div class="bottlenecks">
+    <div class="bottlenecks-card">
+      <div class="bottlenecks-title" id="bottlenecksTitle">What's broken right now</div>
+      <ul id="bottlenecksList">
+        <li><strong>Long wait times.</strong> Decisions in Poland take 4–18 months — compared to 10 days in Estonia and 15 days in France.</li>
+        <li><strong>Founder path is on paper but not operational.</strong> Art. 142 ust. 1 pkt 3 lit. b (innovative business activity) exists, but officials have no defined criteria for "innovation" and reject applications from caution.</li>
+        <li><strong>No consistency between voivodeships.</strong> The same case can be processed differently in Warsaw and Kraków. Mazowieckie is typically the slowest.</li>
+        <li><strong>Visa D04 is in practice unavailable to founders without a registered Polish company.</strong> Consulates rarely issue visas based on intent to incorporate, which means art. 142 lit. b is currently usable mostly by foreigners already legally in Poland on another basis.</li>
+      </ul>
+      <div class="bottlenecks-footnote" id="bottlenecksFootnote">
+        Operational fixes are being developed with the Polish Council of Ministers. Read the policy memo on operationalising existing instruments (Niebieska Karta + B2B, Art. 142 lit. b via PFR-Ventures-anchored gatekeeper) submitted to KPRM in April 2026.
+      </div>
     </div>
   </div>
 
@@ -752,9 +879,63 @@
     This tool provides general guidance only and does not constitute legal advice. Immigration law changes frequently. Always consult a licensed immigration lawyer for your specific situation. Information current as of March 2026.
   </div>
 
-  <div class="footer">
-    &copy; 2026 <a href="https://vastpoint.vc">Vastpoint</a>
-  </div>
+  <footer class="sp-footer">
+    <div class="sp-footer-main">
+
+      <div>
+        <p class="sp-footer-label">MENU</p>
+        <nav class="sp-footer-menu">
+          <a href="https://startuppoland.org/" data-i18n="navHome" data-href-pl="https://startuppoland.org/" data-href-en="https://startuppoland.org/en/">Strona główna</a>
+          <a href="https://startuppoland.org/aktualnosci/" data-i18n="navNews" data-href-pl="https://startuppoland.org/aktualnosci/" data-href-en="https://startuppoland.org/en/news/">Aktualności</a>
+          <a href="https://startuppoland.org/raporty/" data-i18n="navReports" data-href-pl="https://startuppoland.org/raporty/" data-href-en="https://startuppoland.org/en/reports/">Raporty</a>
+          <a href="https://events.startuppoland.org/" data-i18n="navEvents">Wydarzenia</a>
+          <a href="#" data-i18n="navVisas">Wizy</a>
+        </nav>
+      </div>
+
+      <div>
+        <a href="https://startuppoland.org/" target="_blank" rel="noopener">
+          <img class="sp-footer-logo" src="https://startuppoland.org/wp-content/uploads/2021/02/logo-Startup-Poland-rgb-1.svg" alt="Startup Poland">
+        </a>
+        <p class="sp-footer-address">
+          Adres korespondencyjny:<br>
+          Startup Poland<br>
+          pl. Jana Nowaka Jeziorańskiego 3<br>
+          31-154 Kraków, Poland<br>
+          NIP: 5252616364
+        </p>
+      </div>
+
+      <div>
+        <p class="sp-footer-label" data-i18n="footerContact">Pytania, zgłoszenia poprawek, uwagi:</p>
+        <a class="sp-footer-email" href="mailto:kontakt@startuppoland.org">
+          <i class="sp-footer-email-icon">@</i>
+          kontakt@startuppoland.org
+        </a>
+        <p class="sp-footer-label" style="margin-top:1.75rem;" data-i18n="footerSocial">Znajdziesz nas także na</p>
+        <div class="sp-footer-social">
+          <a href="https://pl.linkedin.com/company/startup-poland" target="_blank" rel="noopener" class="sp-social-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/FundacjaStartupPoland" target="_blank" rel="noopener" class="sp-social-icon" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCDULeLgoTkGgROtVwsXqPBQ" target="_blank" rel="noopener" class="sp-social-icon" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sp-footer-bottom">
+      <div class="sp-footer-bottom-left">
+        <a href="https://startuppoland.org/polityka-prywatnosci/" data-i18n="navPrivacy" data-href-pl="https://startuppoland.org/polityka-prywatnosci/" data-href-en="https://startuppoland.org/en/privacy-policy/" target="_blank" rel="noopener">Polityka prywatności</a>
+        <span class="sp-footer-copyright">All rights reserved &copy; 2015&ndash;2026 Startup Poland</span>
+      </div>
+      <a href="https://vastpoint.vc" target="_blank" rel="noopener" class="sp-footer-admin">Vibecoded by <img src="assets/vp-logo.svg" alt="vastpoint" style="height:12px; vertical-align:middle; margin-left:3px; opacity:.6;"></a>
+    </div>
+  </footer>
 
 <script>
 /* ============================================================
@@ -765,6 +946,39 @@
 const UI = {
   heroTitle: { en: 'Next step:<br>Polish tech &amp; academia', pl: 'Następny krok:<br>Polski tech i nauka' },
   heroSub: { en: 'Answer a few questions to find your path to a Polish work or residence permit.', pl: 'Odpowiedz na kilka pytań, aby znaleźć swoją ścieżkę do zezwolenia na pracę lub pobyt w Polsce.' },
+
+  // SP nav
+  navNews: { en: 'News', pl: 'Aktualności' },
+  navStandards: { en: 'Standards', pl: 'Standardy' },
+  navReports: { en: 'Reports', pl: 'Raporty' },
+  navEvents: { en: 'Events', pl: 'Wydarzenia' },
+  navVisas: { en: 'Visas', pl: 'Wizy' },
+  navAbout: { en: 'About \u25BE', pl: 'O nas \u25BE' },
+  navAboutBoard: { en: 'Board & Council', pl: 'Zarząd i Rada Fundacji' },
+  navAboutHistory: { en: 'History', pl: 'Historia' },
+  navAboutDocs: { en: 'Documents', pl: 'Dokumenty' },
+  navContact: { en: 'Contact', pl: 'Kontakt' },
+  navHome: { en: 'Home', pl: 'Strona główna' },
+  navPrivacy: { en: 'Privacy policy', pl: 'Polityka prywatności' },
+  footerContact: { en: 'Questions, corrections, comments:', pl: 'Pytania, zgłoszenia poprawek, uwagi:' },
+  footerSocial: { en: 'You can also find us on', pl: 'Znajdziesz nas także na' },
+
+  // Bottlenecks banner
+  bottlenecksTitle: { en: "What's broken right now", pl: 'Co dziś nie działa' },
+  bottlenecksList: {
+    en: '<li><strong>Long wait times.</strong> Decisions in Poland take 4\u201318 months \u2014 compared to 10 days in Estonia and 15 days in France.</li>'
+      + '<li><strong>Founder path is on paper but not operational.</strong> Art. 142 ust. 1 pkt 3 lit. b (innovative business activity) exists, but officials have no defined criteria for "innovation" and reject applications from caution.</li>'
+      + '<li><strong>No consistency between voivodeships.</strong> The same case can be processed differently in Warsaw and Krak\u00f3w. Mazowieckie is typically the slowest.</li>'
+      + '<li><strong>Visa D04 is in practice unavailable to founders without a registered Polish company.</strong> Consulates rarely issue visas based on intent to incorporate, which means art. 142 lit. b is currently usable mostly by foreigners already legally in Poland on another basis.</li>',
+    pl: '<li><strong>D\u0142ugi czas oczekiwania.</strong> Decyzje w Polsce trwaj\u0105 4\u201318 miesi\u0119cy \u2014 dla por\u00f3wnania 10 dni w Estonii i 15 dni we Francji.</li>'
+      + '<li><strong>\u015acie\u017cka dla za\u0142o\u017cycieli istnieje na papierze, ale nie dzia\u0142a operacyjnie.</strong> Art. 142 ust. 1 pkt 3 lit. b (innowacyjna dzia\u0142alno\u015b\u0107 gospodarcza) jest w ustawie, ale urz\u0119dnicy nie maj\u0105 zdefiniowanych kryteri\u00f3w "innowacyjno\u015bci" i odrzucaj\u0105 wnioski z ostro\u017cno\u015bci.</li>'
+      + '<li><strong>Brak sp\u00f3jno\u015bci mi\u0119dzy urz\u0119dami wojew\u00f3dzkimi.</strong> Ta sama sprawa mo\u017ce by\u0107 procesowana inaczej w Warszawie i Krakowie. Mazowieckie jest zwykle najwolniejsze.</li>'
+      + '<li><strong>Wiza D04 jest w praktyce niedost\u0119pna dla za\u0142o\u017cycieli, kt\u00f3rzy nie zarejestrowali jeszcze sp\u00f3\u0142ki w Polsce.</strong> Konsulowie rzadko wydaj\u0105 wizy na podstawie samego zamiaru rejestracji, przez co art. 142 lit. b jest dzi\u015b realnie dost\u0119pny g\u0142\u00f3wnie dla cudzoziemc\u00f3w przebywaj\u0105cych ju\u017c w Polsce na innej podstawie.</li>'
+  },
+  bottlenecksFootnote: {
+    en: 'Operational fixes are being developed with the Polish Council of Ministers. Read the policy memo on operationalising existing instruments (Niebieska Karta + B2B, Art. 142 lit. b via PFR-Ventures-anchored gatekeeper) submitted to KPRM in April 2026.',
+    pl: 'Rozwi\u0105zania operacyjne s\u0105 wypracowywane wsp\u00f3lnie z Kancelari\u0105 Prezesa Rady Ministr\u00f3w. Wi\u0119cej w memorandum dla KPRM z kwietnia 2026 r. o operacjonalizacji istniej\u0105cych instrument\u00f3w (Niebieska Karta + B2B, Art. 142 lit. b z gatekeeperem zakorzenionym w ekosystemie PFR Ventures).'
+  },
   back: { en: '\u2190 Back', pl: '\u2190 Wstecz' },
   stepOf: { en: 'Step {n} of {t}', pl: 'Krok {n} z {t}' },
   startOver: { en: 'Start over', pl: 'Zacznij od nowa' },
@@ -940,11 +1154,29 @@ let occupationsData = [];
 function setLang(lang) {
   state.language = lang;
   localStorage.setItem('pp-lang', lang);
-  document.getElementById('langEN').classList.toggle('active', lang === 'en');
-  document.getElementById('langPL').classList.toggle('active', lang === 'pl');
+  // SP header language buttons
+  document.querySelectorAll('.sp-header-lang button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
   document.getElementById('heroTitle').innerHTML = UI.heroTitle[lang];
   document.getElementById('heroSub').textContent = UI.heroSub[lang];
   document.getElementById('disclaimer').textContent = UI.disclaimer[lang];
+  // Bottlenecks banner i18n
+  const bt = document.getElementById('bottlenecksTitle');
+  if (bt && UI.bottlenecksTitle) bt.textContent = UI.bottlenecksTitle[lang];
+  const bl = document.getElementById('bottlenecksList');
+  if (bl && UI.bottlenecksList) bl.innerHTML = UI.bottlenecksList[lang];
+  const bf = document.getElementById('bottlenecksFootnote');
+  if (bf && UI.bottlenecksFootnote) bf.innerHTML = UI.bottlenecksFootnote[lang];
+  // SP nav i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (UI[key] && UI[key][lang]) el.textContent = UI[key][lang];
+  });
+  // Language-aware external links
+  document.querySelectorAll('[data-href-pl]').forEach(el => {
+    el.href = lang === 'pl' ? el.dataset.hrefPl : el.dataset.hrefEn;
+  });
   document.documentElement.lang = lang;
   renderStep();
 }
@@ -1722,6 +1954,19 @@ async function init() {
 }
 
 init();
+
+// SP header lang buttons
+document.querySelectorAll('.sp-header-lang button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.lang === state.language) return;
+    setLang(btn.dataset.lang);
+  });
+});
+
+// Hamburger toggle
+document.getElementById('spHamburger').addEventListener('click', () => {
+  document.getElementById('spNav').classList.toggle('open');
+});
 </script>
 
 </body>
