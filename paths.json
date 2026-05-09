@@ -16,14 +16,30 @@
         "pl": "Ważny paszport lub dowód osobisty"
       },
       {
-        "en": "Register stay at Urząd Gminy if staying longer than 3 months",
-        "pl": "Zarejestrowanie pobytu w Urzędzie Gminy w przypadku pobytu dłuższego niż 3 miesiące"
+        "en": "Register your stay at the voivodeship office (Urząd Wojewódzki) if staying longer than 3 months — you receive a 'zaświadczenie o zarejestrowaniu pobytu obywatela UE' confirming the registration",
+        "pl": "Zarejestrowanie pobytu w Urzędzie Wojewódzkim, jeśli pobyt przekroczy 3 miesiące — wydawane jest 'zaświadczenie o zarejestrowaniu pobytu obywatela UE'"
+      },
+      {
+        "en": "Apply for a PESEL number at the local urząd gminy/miasta — required for almost all administrative tasks (banking, healthcare, taxes, registering a company). <a href=\"https://www.gov.pl/web/gov/uzyskaj-numer-pesel-dla-cudzoziemcow\" target=\"_blank\" rel=\"noopener\">How to obtain a PESEL on gov.pl →</a>",
+        "pl": "Numer PESEL — uzyskasz go w urzędzie gminy/miasta. Niezbędny do prawie wszystkich czynności administracyjnych (konto bankowe, NFZ, podatki, zakładanie firmy). <a href=\"https://www.gov.pl/web/gov/uzyskaj-numer-pesel-dla-cudzoziemcow\" target=\"_blank\" rel=\"noopener\">Jak uzyskać PESEL — poradnik gov.pl →</a>"
+      },
+      {
+        "en": "Register your address (zameldowanie) at the urząd gminy where you actually live — separate from stay registration and from PESEL",
+        "pl": "Zameldowanie pod faktycznym adresem zamieszkania w urzędzie gminy — odrębne od rejestracji pobytu i odrębne od PESEL"
       }
     ],
     "documents": [
       {
         "en": "Passport or national ID card",
         "pl": "Paszport lub dowód osobisty"
+      },
+      {
+        "en": "Proof of purpose of stay (employment contract, university enrolment, business registration, sufficient funds + health insurance, or family ties to a Polish citizen) — required for stay registration",
+        "pl": "Dokument potwierdzający cel pobytu (umowa o pracę, zaświadczenie z uczelni, wpis do CEIDG, wystarczające środki + ubezpieczenie zdrowotne, albo więzi rodzinne z obywatelem PL) — wymagany do rejestracji pobytu"
+      },
+      {
+        "en": "Lease agreement or accommodation confirmation — required for zameldowanie",
+        "pl": "Umowa najmu lub potwierdzenie zakwaterowania — wymagane do zameldowania"
       }
     ],
     "timeline": {
@@ -50,12 +66,16 @@
     ],
     "watch_out": [
       {
-        "en": "Must register stay if longer than 3 months",
-        "pl": "Konieczność zarejestrowania pobytu w przypadku pobytu dłuższego niż 3 miesiące"
+        "en": "Three separate registrations: (a) stay registration at urząd wojewódzki for stays >3 months, (b) PESEL at urząd gminy/miasta, (c) zameldowanie at urząd gminy. They are independent — completing one does not register you for the others.",
+        "pl": "Trzy odrębne procedury: (a) rejestracja pobytu w urzędzie wojewódzkim przy pobycie >3 miesięcy, (b) PESEL w urzędzie gminy/miasta, (c) zameldowanie w urzędzie gminy. Każda załatwiana osobno."
       },
       {
-        "en": "PESEL number needed for many administrative tasks",
-        "pl": "Numer PESEL wymagany do wielu czynności administracyjnych"
+        "en": "Without PESEL most processes are blocked: opening a Polish bank account, NFZ healthcare, paying taxes, registering a sole proprietorship (CEIDG) or a company.",
+        "pl": "Bez PESEL większość procesów jest zablokowana: otwarcie konta bankowego, NFZ, podatki, rejestracja JDG (CEIDG) lub spółki."
+      },
+      {
+        "en": "Family members from outside the EU need a separate residence card — see Family Reunification (not currently a result option, ask a lawyer).",
+        "pl": "Członkowie rodziny spoza UE potrzebują osobnej karty pobytu — łączenie rodzin (nie ujęte w tej wyszukiwarce, wymaga konsultacji prawnej)."
       }
     ],
     "legal_text": {
