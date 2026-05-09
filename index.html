@@ -796,15 +796,19 @@
     .sp-footer-admin { color: rgba(255,255,255,.4); text-decoration: none; font-size: .75rem; }
     .sp-footer-admin:hover { color: rgba(255,255,255,.7); }
 
-    /* ---- BOTTLENECKS BANNER (current problems) ---- */
-    .bottlenecks { max-width: 920px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
-    .bottlenecks-card { background: #fff7ed; border: 1px solid #f4d8b4; border-left: 4px solid #e8461a; border-radius: 12px; padding: 1.4rem 1.6rem; }
-    .bottlenecks-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; color: #6e2a08; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
-    .bottlenecks-title::before { content: '⚠'; font-size: 1.1rem; }
-    .bottlenecks-card ul { margin: 0.4rem 0 0 1.1rem; padding: 0; font-size: 0.86rem; line-height: 1.55; color: #3d1f08; }
-    .bottlenecks-card ul li { margin-bottom: 0.35rem; }
-    .bottlenecks-footnote { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid #f4d8b4; font-size: 0.78rem; color: #7d4d29; line-height: 1.5; }
-    .bottlenecks-footnote a { color: #6e2a08; font-weight: 600; }
+    /* ---- INTRO BANNER (ecosystem context) ---- */
+    .intro-banner { max-width: 920px; margin: 1.75rem auto 0; padding: 0 1.5rem; }
+    .intro-card { background: #f7f4ff; border: 1px solid #d8d2eb; border-left: 4px solid #370c82; border-radius: 12px; padding: 1.5rem 1.75rem; }
+    .intro-card p { font-size: 0.95rem; line-height: 1.65; color: #1a1230; margin-bottom: 0.9rem; }
+    .intro-card p:last-of-type { margin-bottom: 0; }
+    .intro-card a.cite { color: #370c82; text-decoration: none; font-weight: 600; vertical-align: super; font-size: 0.7em; padding: 0 1px; }
+    .intro-card a.cite:hover { text-decoration: underline; }
+    .intro-pivot { color: #2d1560; font-weight: 600; }
+    .intro-refs { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #d8d2eb; font-size: 0.74rem; line-height: 1.6; color: #5a4982; }
+    .intro-refs ol { list-style: none; counter-reset: ref; padding-left: 0; }
+    .intro-refs ol li { counter-increment: ref; padding-left: 1.6rem; position: relative; margin-bottom: 0.25rem; }
+    .intro-refs ol li::before { content: '[' counter(ref) ']'; position: absolute; left: 0; font-weight: 600; color: #370c82; }
+    .intro-refs a { color: #370c82; text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -848,19 +852,8 @@
     </div>
   </div>
 
-  <div class="bottlenecks">
-    <div class="bottlenecks-card">
-      <div class="bottlenecks-title" id="bottlenecksTitle">What's broken right now</div>
-      <ul id="bottlenecksList">
-        <li><strong>Long wait times.</strong> Decisions in Poland take 4–18 months — compared to 10 days in Estonia and 15 days in France.</li>
-        <li><strong>Founder path is on paper but not operational.</strong> Art. 142 ust. 1 pkt 3 lit. b (innovative business activity) exists, but officials have no defined criteria for "innovation" and reject applications from caution.</li>
-        <li><strong>No consistency between voivodeships.</strong> The same case can be processed differently in Warsaw and Kraków. Mazowieckie is typically the slowest.</li>
-        <li><strong>Visa D04 is in practice unavailable to founders without a registered Polish company.</strong> Consulates rarely issue visas based on intent to incorporate, which means art. 142 lit. b is currently usable mostly by foreigners already legally in Poland on another basis.</li>
-      </ul>
-      <div class="bottlenecks-footnote" id="bottlenecksFootnote">
-        Operational fixes are being developed with the Polish Council of Ministers. Read the policy memo on operationalising existing instruments (Niebieska Karta + B2B, Art. 142 lit. b via PFR-Ventures-anchored gatekeeper) submitted to KPRM in April 2026.
-      </div>
-    </div>
+  <div class="intro-banner">
+    <div class="intro-card" id="introCard"></div>
   </div>
 
   <div class="progress-wrap" id="progressWrap" style="display:none">
@@ -963,21 +956,24 @@ const UI = {
   footerContact: { en: 'Questions, corrections, comments:', pl: 'Pytania, zgłoszenia poprawek, uwagi:' },
   footerSocial: { en: 'You can also find us on', pl: 'Znajdziesz nas także na' },
 
-  // Bottlenecks banner
-  bottlenecksTitle: { en: "What's broken right now", pl: 'Co dziś nie działa' },
-  bottlenecksList: {
-    en: '<li><strong>Long wait times.</strong> Decisions in Poland take 4\u201318 months \u2014 compared to 10 days in Estonia and 15 days in France.</li>'
-      + '<li><strong>Founder path is on paper but not operational.</strong> Art. 142 ust. 1 pkt 3 lit. b (innovative business activity) exists, but officials have no defined criteria for "innovation" and reject applications from caution.</li>'
-      + '<li><strong>No consistency between voivodeships.</strong> The same case can be processed differently in Warsaw and Krak\u00f3w. Mazowieckie is typically the slowest.</li>'
-      + '<li><strong>Visa D04 is in practice unavailable to founders without a registered Polish company.</strong> Consulates rarely issue visas based on intent to incorporate, which means art. 142 lit. b is currently usable mostly by foreigners already legally in Poland on another basis.</li>',
-    pl: '<li><strong>D\u0142ugi czas oczekiwania.</strong> Decyzje w Polsce trwaj\u0105 4\u201318 miesi\u0119cy \u2014 dla por\u00f3wnania 10 dni w Estonii i 15 dni we Francji.</li>'
-      + '<li><strong>\u015acie\u017cka dla za\u0142o\u017cycieli istnieje na papierze, ale nie dzia\u0142a operacyjnie.</strong> Art. 142 ust. 1 pkt 3 lit. b (innowacyjna dzia\u0142alno\u015b\u0107 gospodarcza) jest w ustawie, ale urz\u0119dnicy nie maj\u0105 zdefiniowanych kryteri\u00f3w "innowacyjno\u015bci" i odrzucaj\u0105 wnioski z ostro\u017cno\u015bci.</li>'
-      + '<li><strong>Brak sp\u00f3jno\u015bci mi\u0119dzy urz\u0119dami wojew\u00f3dzkimi.</strong> Ta sama sprawa mo\u017ce by\u0107 procesowana inaczej w Warszawie i Krakowie. Mazowieckie jest zwykle najwolniejsze.</li>'
-      + '<li><strong>Wiza D04 jest w praktyce niedost\u0119pna dla za\u0142o\u017cycieli, kt\u00f3rzy nie zarejestrowali jeszcze sp\u00f3\u0142ki w Polsce.</strong> Konsulowie rzadko wydaj\u0105 wizy na podstawie samego zamiaru rejestracji, przez co art. 142 lit. b jest dzi\u015b realnie dost\u0119pny g\u0142\u00f3wnie dla cudzoziemc\u00f3w przebywaj\u0105cych ju\u017c w Polsce na innej podstawie.</li>'
-  },
-  bottlenecksFootnote: {
-    en: 'Operational fixes are being developed with the Polish Council of Ministers. Read the policy memo on operationalising existing instruments (Niebieska Karta + B2B, Art. 142 lit. b via PFR-Ventures-anchored gatekeeper) submitted to KPRM in April 2026.',
-    pl: 'Rozwi\u0105zania operacyjne s\u0105 wypracowywane wsp\u00f3lnie z Kancelari\u0105 Prezesa Rady Ministr\u00f3w. Wi\u0119cej w memorandum dla KPRM z kwietnia 2026 r. o operacjonalizacji istniej\u0105cych instrument\u00f3w (Niebieska Karta + B2B, Art. 142 lit. b z gatekeeperem zakorzenionym w ekosystemie PFR Ventures).'
+  // Intro banner — ecosystem context with sourced evidence (Wikipedia-style citations)
+  introBanner: {
+    en: '<p>The Polish technology sector is booming. Polish programmers consistently rank among the top three globally in international competitive-programming benchmarks<a href="#ref1" class="cite">[1]</a>, the country has produced multiple unicorns including Allegro, DocPlanner, ICEYE and Brainly<a href="#ref2" class="cite">[2]</a>, and Polish startups raised over USD 600M in venture capital in 2024 across roughly 400 deals<a href="#ref3" class="cite">[3]</a>. Poland is also home to the largest business-services sector in Europe, with more than 470,000 specialists across 1,800+ centres<a href="#ref4" class="cite">[4]</a>. EU and Schengen membership, a Central European time zone that overlaps both Asia and the US, deep engineering talent, and competitive operating costs make Poland one of the strongest places in Europe to work in tech and to build a business — for both local and international entrepreneurs.</p>'
+      + '<p><span class="intro-pivot">However</span>, the visa and residence-permit system for foreigners continues to suffer from legacy limitations that can make joining a Polish business, research institution, or university — or starting a business in Poland from abroad — difficult to navigate. This portal aims to help you find the right path, regardless of your nationality or background.</p>'
+      + '<div class="intro-refs"><ol>'
+      + '<li id="ref1">HackerRank, <a href="https://www.hackerrank.com/blog/which-country-would-win-in-the-programming-olympics/" target="_blank" rel="noopener">"Which Country Would Win in the Programming Olympics?"</a> (2016) — Poland ranked #3 globally.</li>'
+      + '<li id="ref2">Dealroom, <a href="https://dealroom.co/guides/poland" target="_blank" rel="noopener">"The Polish startup ecosystem"</a> (2024).</li>'
+      + '<li id="ref3">PFR Ventures + Inovo Venture Partners, <a href="https://pfrventures.pl/aktualnosci/transakcje-na-polskim-rynku-vc.html" target="_blank" rel="noopener">"Transakcje na polskim rynku VC"</a> (2024 annual report).</li>'
+      + '<li id="ref4">ABSL Poland, <a href="https://absl.pl/en/publications/" target="_blank" rel="noopener">"Business Services Sector in Poland 2024"</a>.</li>'
+      + '</ol></div>',
+    pl: '<p>Polski sektor technologiczny przeżywa wyjątkowy rozkwit. Polscy programiści regularnie plasują się w pierwszej trójce światowych rankingów programistycznych<a href="#ref1" class="cite">[1]</a>, w Polsce powstały jednorożce takie jak Allegro, DocPlanner, ICEYE czy Brainly<a href="#ref2" class="cite">[2]</a>, a polskie startupy pozyskały w 2024 roku ponad 600 mln USD finansowania VC w około 400 transakcjach<a href="#ref3" class="cite">[3]</a>. Polska jest też największym ośrodkiem usług biznesowych w Europie — ponad 470 tysięcy specjalistów w przeszło 1 800 centrach<a href="#ref4" class="cite">[4]</a>. Członkostwo w UE i Schengen, strefa czasowa pokrywająca Azję i USA, głęboka pula talentów inżynierskich oraz konkurencyjne koszty operacyjne sprawiają, że Polska jest jednym z najmocniejszych miejsc w Europie do pracy w branży technologicznej i budowania biznesu — zarówno dla lokalnych, jak i międzynarodowych przedsiębiorców.</p>'
+      + '<p><span class="intro-pivot">Jednakże</span> system wizowo-pobytowy dla cudzoziemców wciąż obciążony jest historycznymi ograniczeniami, przez które dołączenie do polskiej firmy, instytucji badawczej czy uczelni — lub założenie działalności gospodarczej w Polsce z zagranicy — bywa trudne do zrozumienia i poprowadzenia. Ten portal ma za zadanie pomóc znaleźć właściwą ścieżkę, niezależnie od obywatelstwa i sytuacji zawodowej.</p>'
+      + '<div class="intro-refs"><ol>'
+      + '<li id="ref1">HackerRank, <a href="https://www.hackerrank.com/blog/which-country-would-win-in-the-programming-olympics/" target="_blank" rel="noopener">"Which Country Would Win in the Programming Olympics?"</a> (2016) — Polska na 3. miejscu na świecie.</li>'
+      + '<li id="ref2">Dealroom, <a href="https://dealroom.co/guides/poland" target="_blank" rel="noopener">"The Polish startup ecosystem"</a> (2024).</li>'
+      + '<li id="ref3">PFR Ventures + Inovo Venture Partners, <a href="https://pfrventures.pl/aktualnosci/transakcje-na-polskim-rynku-vc.html" target="_blank" rel="noopener">"Transakcje na polskim rynku VC"</a> (raport roczny 2024).</li>'
+      + '<li id="ref4">ABSL Polska, <a href="https://absl.pl/pl/publikacje/" target="_blank" rel="noopener">"Sektor nowoczesnych usług biznesowych w Polsce 2024"</a>.</li>'
+      + '</ol></div>'
   },
   back: { en: '\u2190 Back', pl: '\u2190 Wstecz' },
   stepOf: { en: 'Step {n} of {t}', pl: 'Krok {n} z {t}' },
@@ -1161,13 +1157,9 @@ function setLang(lang) {
   document.getElementById('heroTitle').innerHTML = UI.heroTitle[lang];
   document.getElementById('heroSub').textContent = UI.heroSub[lang];
   document.getElementById('disclaimer').textContent = UI.disclaimer[lang];
-  // Bottlenecks banner i18n
-  const bt = document.getElementById('bottlenecksTitle');
-  if (bt && UI.bottlenecksTitle) bt.textContent = UI.bottlenecksTitle[lang];
-  const bl = document.getElementById('bottlenecksList');
-  if (bl && UI.bottlenecksList) bl.innerHTML = UI.bottlenecksList[lang];
-  const bf = document.getElementById('bottlenecksFootnote');
-  if (bf && UI.bottlenecksFootnote) bf.innerHTML = UI.bottlenecksFootnote[lang];
+  // Intro banner i18n
+  const ib = document.getElementById('introCard');
+  if (ib && UI.introBanner) ib.innerHTML = UI.introBanner[lang];
   // SP nav i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
