@@ -1078,6 +1078,7 @@ const UI = {
   decl_step3Body: { en: '<p>The declaration procedure is temporary. Before the 24-month window expires, you must apply for a residence permit (Blue Card or single permit) at the voivodeship office to continue legal stay and work in Poland.</p>', pl: '<p>Procedura oświadczeniowa jest tymczasowa. Przed upływem 24 miesięcy musisz złożyć wniosek o zezwolenie na pobyt (Niebieska Karta lub jednolite zezwolenie) w urzędzie wojewódzkim, aby kontynuować legalny pobyt i pracę w Polsce.</p>' },
   // Per-path warnings inside step 1
   step1WarnInnov: { en: 'For art. 142 lit. b applications, consulates rarely issue D-04 visas based on intent to incorporate alone. Option A (visa-free entry, then apply from Poland) is currently the realistic route — and if your Polish company is not yet registered, you will need to register it within the 90-day window before submitting the residence permit application.', pl: 'Dla wniosków pod art. 142 lit. b konsulaty rzadko wydają wizy D-04 na sam zamiar rejestracji spółki. Wariant A (wjazd bez wizy i aplikacja z Polski) jest obecnie realnie dostępny — a jeśli Twoja polska spółka nie jest jeszcze zarejestrowana, musisz to zrobić w ciągu 90-dniowego okna przed złożeniem wniosku o pobyt.' },
+  step1WarnWorkPermit: { en: '<strong>Prerequisite — the work permit comes first.</strong> Before you can apply for the D-type visa at the consulate, your employer must have already obtained the work permit (or, for Blue Card, a positive Blue Card decision) from the voivodeship office. That takes 1–3 months. <strong>Signing your contract is the start of the work permit application, not the end of it</strong> — a common misconception is that contract = ready to apply for the visa. The consulate will refuse a work-purpose D visa without an issued permit.', pl: '<strong>Warunek wstępny — najpierw zezwolenie na pracę.</strong> Zanim złożysz wniosek o wizę typu D w konsulacie, pracodawca musi już mieć wydane zezwolenie na pracę (a w przypadku Niebieskiej Karty — pozytywną decyzję o Niebieskiej Karcie) z urzędu wojewódzkiego. To trwa 1–3 miesiące. <strong>Podpisanie umowy to początek procesu zezwolenia na pracę, a nie jego koniec</strong> — częstym błędem jest myślenie, że umowa = gotowość do złożenia wniosku wizowego. Konsulat odmówi wydania wizy D w celu pracy bez wydanego zezwolenia.' },
 
   // B2B nuance note shown when contract = b2b
   b2bNote: { en: 'You selected a B2B contract. The standard work permit (art. 114) is built around an employer–employee relationship and does not fit B2B — voivodeship offices typically redirect B2B applicants to art. 142. The realistic options for a B2B contractor are: (a) art. 142 ust. 1 pkt 3 lit. b (self-employment / innovative business activity) — structurally the best fit, treats your JDG or spółka as the entity conducting business in Poland; or (b) the EU Blue Card — explicitly permitted for B2B under EU Directive 2021/1883/UE (art. 2 ust. 1 lit. b), but in current Polish practice voivodeship offices require an employment contract and may push back, so be prepared to argue EU primacy of law.', pl: 'Wybrałeś kontrakt B2B. Standardowe zezwolenie na pracę (art. 114) jest skonstruowane wokół relacji pracownik–pracodawca i nie pasuje do B2B — urzędy wojewódzkie zwykle odsyłają takich wnioskodawców do art. 142. Realne opcje dla kontraktora B2B to: (a) art. 142 ust. 1 pkt 3 lit. b (samozatrudnienie / innowacyjna działalność gospodarcza) — strukturalnie najlepsze dopasowanie, traktuje Twoją JDG lub spółkę jako podmiot prowadzący działalność w Polsce; albo (b) Niebieska Karta UE — wprost dopuszczona dla B2B przez Dyrektywę UE 2021/1883/UE (art. 2 ust. 1 lit. b), ale w obecnej polskiej praktyce urzędy wojewódzkie wymagają umowy o pracę i mogą kwestionować wnioski oparte na B2B, więc trzeba być gotowym argumentować pierwszeństwo prawa UE.' },
@@ -1126,7 +1127,9 @@ const UI = {
   q5e_unknown: { en: "I don't know yet — show me all options", pl: 'Jeszcze nie wiem — pokaż wszystkie opcje' },
 
   // B2B redirect
-  b2bRedirect: { en: "B2B contracts don't qualify for work permits or Blue Card. If you're running your own business, the founder/business path is the right one for you.", pl: 'Kontrakty B2B nie kwalifikują się do zezwoleń na pracę ani Niebieskiej Karty. Jeśli prowadzisz własną działalność, ścieżka dla założycieli jest dla Ciebie odpowiednia.' },
+  b2bRedirect: { en: "B2B contracts don't qualify for work permits or Blue Card. Two possibilities:", pl: 'Kontrakty B2B nie kwalifikują się do zezwoleń na pracę ani Niebieskiej Karty. Dwie możliwości:' },
+  b2bEmployerWarning: { en: "<strong>If a Polish employer offered you B2B as an employee:</strong> this is a common mistake — many companies in Poland (including big tech) default to offering B2B to all candidates because it's cheaper for them, but for non-EU candidates it blocks the work permit and Blue Card paths entirely. <strong>Ask your employer for an umowa o pracę (UoP)</strong> — the standard employment contract under the Polish labor code. Once that's in place, restart this wizard with the correct contract type.", pl: '<strong>Jeśli polski pracodawca zaproponował Ci B2B jako pracownikowi:</strong> to częsty błąd — wiele firm w Polsce (w tym duże firmy technologiczne) domyślnie oferuje B2B wszystkim kandydatom, bo jest to dla nich tańsze. Ale dla osób spoza UE B2B całkowicie blokuje ścieżkę zezwolenia na pracę i Niebieskiej Karty. <strong>Poproś pracodawcę o umowę o pracę (UoP)</strong> — standardową umowę z Kodeksu pracy. Gdy ją otrzymasz, uruchom kreator ponownie z prawidłowym typem umowy.' },
+  b2bFounderIntro: { en: "<strong>If you actually run your own business:</strong> the founder/business path is the right one for you.", pl: '<strong>Jeśli faktycznie prowadzisz własną działalność:</strong> ścieżka założycielska jest dla Ciebie odpowiednia.' },
   b2bBtn: { en: 'Go to founder path \u2192', pl: 'Przejdź do ścieżki założyciela \u2192' },
 
   // Q5e
@@ -1640,6 +1643,8 @@ function renderB2BRedirect(el) {
       <div class="question-text">${t('q4e')}</div>
       <div class="info-panel">
         <p>${t('b2bRedirect')}</p>
+        <p style="margin-top:0.75rem">${t('b2bEmployerWarning')}</p>
+        <p style="margin-top:0.75rem">${t('b2bFounderIntro')}</p>
         <button class="continue-btn" onclick="redirectToFounder()">${t('b2bBtn')}</button>
       </div>
     </div>`;
@@ -2074,11 +2079,17 @@ function renderKeySteps(pathId) {
     if (pathId === 'business-innovation' && !inPoland) {
       html += `<div class="step-warning">${t('step1WarnInnov')}</div>`;
     }
+    if ((pathId === 'blue-card' || pathId === 'standard-work') && !inPoland) {
+      html += `<div class="step-warning">${t('step1WarnWorkPermit')}</div>`;
+    }
   } else {
     html += `<div class="step-meta">${t('step1MetaNonExempt')}</div>`;
     html += `<div class="step-content">${t('step1NonExempt').replace('{visaType}', visaType)}</div>`;
     if (pathId === 'business-innovation' && !inPoland) {
       html += `<div class="step-warning">${t('step1WarnInnov')}</div>`;
+    }
+    if ((pathId === 'blue-card' || pathId === 'standard-work') && !inPoland) {
+      html += `<div class="step-warning">${t('step1WarnWorkPermit')}</div>`;
     }
   }
   html += `</div></div>`;
