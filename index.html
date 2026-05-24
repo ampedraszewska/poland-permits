@@ -1169,6 +1169,7 @@ const UI = {
   b2bEmployerWarning: { en: "<strong>If a Polish employer offered you B2B as an employee:</strong> this is a common mistake — many companies in Poland (including big tech) default to offering B2B to all candidates because it's cheaper for them, but for non-EU candidates it blocks the work permit and Blue Card paths entirely. <strong>Ask your employer for an umowa o pracę (UoP)</strong> — the standard employment contract under the Polish labor code. Once that's in place, restart this wizard with the correct contract type.", pl: '<strong>Jeśli polski pracodawca zaproponował Ci B2B jako pracownikowi:</strong> to częsty błąd — wiele firm w Polsce (w tym duże firmy technologiczne) domyślnie oferuje B2B wszystkim kandydatom, bo jest to dla nich tańsze. Ale dla osób spoza UE B2B całkowicie blokuje ścieżkę zezwolenia na pracę i Niebieskiej Karty. <strong>Poproś pracodawcę o umowę o pracę (UoP)</strong> — standardową umowę z Kodeksu pracy. Gdy ją otrzymasz, uruchom kreator ponownie z prawidłowym typem umowy.' },
   b2bFounderIntro: { en: "<strong>If you actually run your own business:</strong> the founder/business path is the right one for you.", pl: '<strong>Jeśli faktycznie prowadzisz własną działalność:</strong> ścieżka założycielska jest dla Ciebie odpowiednia.' },
   b2bBtn: { en: 'Go to founder path \u2192', pl: 'Przejdź do ścieżki założyciela \u2192' },
+  b2bContinueAnywayLink: { en: "I really am running a B2B contractor business — continue to the standard comparison", pl: 'Faktycznie prowadzę działalność B2B — kontynuuj do standardowego porównania ścieżek' },
 
   // Q5e
   q5e: { en: 'What is your gross monthly salary (or offered salary)?', pl: 'Jakie jest Twoje wynagrodzenie brutto miesięcznie (lub oferowane)?' },
@@ -1688,9 +1689,18 @@ function renderQ4e(el) {
 
 function selectContract(type) {
   state.answers.contract = type;
-  // B2B continues to Q5e (salary) — Blue Card legally permits B2B per Dyrektywa
-  // 2021/1883/UE art. 2 ust. 1 lit. b, and self-employment also opens art. 142 lit. b.
-  // We surface both paths and let the user compare.
+  // B2B → first show the employer-mistake warning + founder/B2B options.
+  // The redirect page now offers a "continue anyway" link to q5e for real B2B contractors
+  // (Blue Card legally permits B2B per Dyrektywa 2021/1883/UE art. 2 ust. 1 lit. b).
+  if (type === 'b2b') {
+    goTo('b2b_redirect');
+    return;
+  }
+  goTo('q5e');
+}
+
+function b2bContinueAnyway() {
+  // For real B2B contractors who want to see the Blue Card / business-innovation comparison
   goTo('q5e');
 }
 
@@ -1822,6 +1832,7 @@ function renderB2BRedirect(el) {
         <p style="margin-top:0.75rem">${t('b2bEmployerWarning')}</p>
         <p style="margin-top:0.75rem">${t('b2bFounderIntro')}</p>
         <button class="continue-btn" onclick="redirectToFounder()">${t('b2bBtn')}</button>
+        <div style="margin-top:1rem;text-align:center"><a href="#" onclick="b2bContinueAnyway(); return false;" style="font-size:0.875rem;color:#6a5acd">${t('b2bContinueAnywayLink')}</a></div>
       </div>
     </div>`;
 }
@@ -2245,6 +2256,12 @@ function renderKeySteps(pathId) {
   if (inPoland) {
     html += `<div class="step-meta">${t('step1MetaInPoland')}</div>`;
     html += `<div class="step-content step-skipped">${t('step1InPoland')}</div>`;
+    if (pathId === 'blue-card' || pathId === 'standard-work') {
+      html += `<div class="step-warning">${t('step1WarnWorkPermitInPoland')}</div>`;
+    }
+    if (pathId === 'standard-work') {
+      html += `<div class="step-warning">${t('step1WarnStdWorkChecks')}</div>`;
+    }
   } else if (isExempt) {
     html += `<div class="step-meta">${t('step1MetaExempt')}</div>`;
     html += `<div class="step-options">`;
