@@ -148,8 +148,8 @@
         "pl": "Umowa o pracę na co najmniej 6 miesięcy"
       },
       {
-        "en": "Salary ≥ 13,355 PLN/month gross (150% of national average)",
-        "pl": "Wynagrodzenie ≥ 13 355 PLN brutto miesięcznie (150% średniego krajowego)"
+        "en": "Salary ≥ 13,355 PLN/month gross (150% of national average; reflects 2025 baseline — confirm the current threshold with your consulate or voivodeship before submitting, as it is recalculated annually each Q1 from the prior-year GUS average)",
+        "pl": "Wynagrodzenie ≥ 13 355 PLN brutto miesięcznie (150% średniej krajowej; wartość bazowa z 2025 r. — potwierdź aktualny próg w konsulacie lub urzędzie wojewódzkim przed złożeniem wniosku, jest on co roku w I kwartale przeliczany na podstawie średniej GUS z poprzedniego roku)"
       },
       {
         "en": "Higher qualifications (university degree or 3 years of professional experience for Annex I occupations)",
@@ -238,8 +238,8 @@
         "pl": "Umowy B2B NIE kwalifikują się"
       },
       {
-        "en": "Salary threshold changes annually",
-        "pl": "Próg wynagrodzenia zmienia się co roku"
+        "en": "Salary threshold is recalculated annually each Q1 from the prior-year GUS average. The 13,355 PLN figure shown here was the 2025 baseline — verify the current number before submitting.",
+        "pl": "Próg wynagrodzenia jest co roku w I kwartale przeliczany na podstawie średniej GUS z poprzedniego roku. Wartość 13 355 PLN to baza z 2025 r. — sprawdź aktualną liczbę przed złożeniem wniosku."
       },
       {
         "en": "MOS portal has known technical issues (as of 01.2026)",
@@ -268,8 +268,8 @@
         "pl": "Umowa o pracę"
       },
       {
-        "en": "Salary at or above minimum wage",
-        "pl": "Wynagrodzenie równe lub wyższe od płacy minimalnej"
+        "en": "Salary cannot be lower than what Polish workers at the same employer earn for the same job (comparator rule, art. 114 ust. 1 pkt 4), and must also clear the national minimum wage",
+        "pl": "Wynagrodzenie nie może być niższe niż to, które polscy pracownicy u tego samego pracodawcy otrzymują za porównywalną pracę (reguła komparatora, art. 114 ust. 1 pkt 4), oraz musi być co najmniej równe minimalnemu wynagrodzeniu krajowemu"
       },
       {
         "en": "Health insurance",
@@ -334,6 +334,10 @@
     ],
     "watch_out": [
       {
+        "en": "<strong>Salary trap:</strong> the wage you are offered must match what comparable Polish staff at the same employer earn for the same role — not just the legal minimum. A common employer mistake is offering minimum wage to a foreign hire while paying Polish staff more; that gets the permit refused.",
+        "pl": "<strong>Pułapka wynagrodzenia:</strong> oferowana płaca musi być na poziomie wynagrodzenia, jakie u tego samego pracodawcy otrzymują porównywalni polscy pracownicy na tym samym stanowisku — nie tylko równa minimalnemu wynagrodzeniu. Częstym błędem pracodawcy jest oferowanie minimalnej krajowej cudzoziemcowi, gdy polski personel zarabia więcej; to skutkuje odmową zezwolenia."
+      },
+      {
         "en": "Tied to a specific employer — changing jobs requires a new permit (unless same occupation and conditions)",
         "pl": "Przypisane do konkretnego pracodawcy — zmiana pracy wymaga nowego zezwolenia (chyba że ten sam zawód i warunki)"
       },
@@ -364,8 +368,8 @@
     },
     "requirements": [
       {
-        "en": "Company revenue ≥ 12x average monthly wage in the voivodeship, OR employment of ≥ 2 full-time employees for at least 1 year",
-        "pl": "Przychód firmy ≥ 12-krotność przeciętnego miesięcznego wynagrodzenia w województwie LUB zatrudnienie ≥ 2 pracowników na pełen etat przez co najmniej 1 rok"
+        "en": "Company revenue ≥ 12x average monthly wage in the voivodeship (in practice ~100,000–130,000 PLN/year depending on voivodeship — Mazowieckie is the highest at ~127K PLN), OR employment of ≥ 2 full-time employees for at least 1 year",
+        "pl": "Przychód firmy ≥ 12-krotność przeciętnego miesięcznego wynagrodzenia w województwie (w praktyce ~100 000–130 000 PLN/rok w zależności od województwa — mazowieckie najwyższe, ok. 127 tys. PLN), LUB zatrudnienie ≥ 2 pracowników na pełen etat przez co najmniej 1 rok"
       },
       {
         "en": "Health insurance",

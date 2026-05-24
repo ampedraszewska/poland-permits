@@ -1004,12 +1004,12 @@ const UI = {
   startOver: { en: 'Start over', pl: 'Zacznij od nowa' },
   disclaimer: { en: 'This tool provides general guidance only and does not constitute legal advice. Immigration law changes frequently. Always consult a licensed immigration lawyer for your specific situation. Information current as of March 2026.', pl: 'To narzędzie dostarcza jedynie ogólnych wskazówek i nie stanowi porady prawnej. Prawo imigracyjne zmienia się często. Zawsze skonsultuj się z licencjonowanym prawnikiem imigracyjnym w Twojej konkretnej sytuacji. Informacje aktualne na marzec 2026.' },
   searchCountry: { en: 'Search for your country...', pl: 'Wyszukaj swój kraj...' },
-  searchOccupation: { en: 'e.g. "I build mobile apps" or "nurse in oncology ward"', pl: 'np. „tworzę aplikacje mobilne" lub „pielęgniarka na oddziale onkologii"' },
-  notSure: { en: "Skip — I'll check later", pl: 'Pomiń — sprawdzę później' },
-  checkRole: { en: 'Check my role', pl: 'Sprawdź moje stanowisko' },
+  searchOccupation: { en: 'Type your job title (e.g. "backend developer", "oncology nurse", "sales manager")', pl: 'Wpisz nazwę stanowiska (np. „backend developer", „pielęgniarka onkologiczna", „kierownik sprzedaży")' },
+  notSure: { en: 'My title isn\'t on the list — Continue', pl: 'Mojego stanowiska nie ma na liście — Dalej' },
+  checkRole: { en: 'Check the deficit list', pl: 'Sprawdź listę deficytową' },
   checking: { en: 'Checking...', pl: 'Sprawdzanie...' },
-  matchFound: { en: 'Match found!', pl: 'Znaleziono dopasowanie!' },
-  noMatch: { en: 'No exact match in the deficit list — you can still proceed.', pl: 'Brak dokładnego dopasowania na liście deficytowej — możesz kontynuować.' },
+  matchFound: { en: 'Possible matches in the deficit list — pick yours if any, otherwise click Continue', pl: 'Możliwe dopasowania na liście deficytowej — wybierz swoje (jeśli pasuje) albo kliknij Dalej' },
+  noMatch: { en: 'No match in the deficit list — your role is not eligible for priority processing. You can still proceed.', pl: 'Brak dopasowania na liście deficytowej — Twoje stanowisko nie kwalifikuje się do priorytetowego rozpatrzenia. Możesz kontynuować.' },
   matchError: { en: 'Could not check right now. You can proceed without this check.', pl: 'Nie udało się sprawdzić. Możesz kontynuować bez tej weryfikacji.' },
   proceed: { en: 'Continue', pl: 'Dalej' },
   salaryLabel: { en: 'PLN / month (gross)', pl: 'PLN / miesiąc (brutto)' },
@@ -1079,6 +1079,44 @@ const UI = {
   // Per-path warnings inside step 1
   step1WarnInnov: { en: 'For art. 142 lit. b applications, consulates rarely issue D-04 visas based on intent to incorporate alone. Option A (visa-free entry, then apply from Poland) is currently the realistic route — and if your Polish company is not yet registered, you will need to register it within the 90-day window before submitting the residence permit application.', pl: 'Dla wniosków pod art. 142 lit. b konsulaty rzadko wydają wizy D-04 na sam zamiar rejestracji spółki. Wariant A (wjazd bez wizy i aplikacja z Polski) jest obecnie realnie dostępny — a jeśli Twoja polska spółka nie jest jeszcze zarejestrowana, musisz to zrobić w ciągu 90-dniowego okna przed złożeniem wniosku o pobyt.' },
   step1WarnWorkPermit: { en: '<strong>Prerequisite — the work permit comes first.</strong> Before you can apply for the D-type visa at the consulate, your employer must have already obtained the work permit (or, for Blue Card, a positive Blue Card decision) from the voivodeship office. That takes 1–3 months. <strong>Signing your contract is the start of the work permit application, not the end of it</strong> — a common misconception is that contract = ready to apply for the visa. The consulate will refuse a work-purpose D visa without an issued permit.', pl: '<strong>Warunek wstępny — najpierw zezwolenie na pracę.</strong> Zanim złożysz wniosek o wizę typu D w konsulacie, pracodawca musi już mieć wydane zezwolenie na pracę (a w przypadku Niebieskiej Karty — pozytywną decyzję o Niebieskiej Karcie) z urzędu wojewódzkiego. To trwa 1–3 miesiące. <strong>Podpisanie umowy to początek procesu zezwolenia na pracę, a nie jego koniec</strong> — częstym błędem jest myślenie, że umowa = gotowość do złożenia wniosku wizowego. Konsulat odmówi wydania wizy D w celu pracy bez wydanego zezwolenia.' },
+  step1WarnWorkPermitInPoland: { en: '<strong>Your employer still needs the work permit.</strong> Being in Poland already lets you skip the D-visa step, but the employer must still obtain the work permit (or Blue Card decision) — typically bundled into the same "one-stop" residence-permit submission (jednolite zezwolenie). Submitting the residence-permit application without an underlying work-permit basis means an incomplete file, and the voivodeship will not issue the stamp. Confirm with your employer that they have started or are ready to start the work-permit side before you submit.', pl: '<strong>Pracodawca i tak musi uzyskać zezwolenie na pracę.</strong> Jeśli jesteś już w Polsce, pomijasz krok wizy D, ale pracodawca nadal musi uzyskać zezwolenie na pracę (lub decyzję o Niebieskiej Karcie) — zwykle dołączane do tego samego wniosku „jednolitego zezwolenia" na pobyt. Złożenie wniosku o pobyt bez podstawy w postaci zezwolenia na pracę = niekompletny wniosek, a urząd wojewódzki nie wyda stempla. Upewnij się u pracodawcy, że uruchomił lub jest gotowy uruchomić procedurę zezwolenia na pracę, zanim złożysz wniosek.' },
+  step1WarnStdWorkChecks: { en: '<strong>Plan for ~90 extra days.</strong> If your occupation is not on the deficit list (the one we checked earlier), your employer must run additional checks before the work permit is issued — most commonly a labour-market check at the local employment office. Plan for the work-permit step itself to take up to ~90 days from the moment your employer starts the application.', pl: '<strong>Doliczone ok. 90 dni.</strong> Jeśli Twojego stanowiska nie ma na liście zawodów deficytowych (tej sprawdzanej wcześniej), pracodawca musi przeprowadzić dodatkowe weryfikacje przed wydaniem zezwolenia na pracę — najczęściej test rynku pracy w powiatowym urzędzie pracy. Sam etap uzyskiwania zezwolenia może zająć nawet ~90 dni od momentu rozpoczęcia procedury przez pracodawcę.' },
+
+  // Karta Polaka — surfaced as banner on Q1 + dedicated info page
+  kartaPolakaBanner: { en: 'Hold a Karta Polaka? <a href="#" onclick="goTo(\'karta_polaka_info\'); return false;">See your special pathway →</a>', pl: 'Masz Kartę Polaka? <a href="#" onclick="goTo(\'karta_polaka_info\'); return false;">Zobacz swoją specjalną ścieżkę →</a>' },
+  kartaPolakaTitle: { en: 'Karta Polaka — special pathway', pl: 'Karta Polaka — specjalna ścieżka' },
+  kartaPolakaBody: { en: '<p><strong>Karta Polaka holders have rights that go far beyond a standard residence permit:</strong></p><ul><li>Right to work in Poland without any work permit</li><li>Right to register a business on the same terms as Polish citizens</li><li>Right to study without tuition fees at public universities</li><li>Free access to the public healthcare system in emergencies</li><li>Direct path to Polish permanent residence (after 1 year of stay) and then citizenship</li><li>Government financial support for settlement (jednorazowe świadczenie pieniężne)</li></ul><p><strong>If you already hold Karta Polaka:</strong> Apply directly for a residence permit "for repatriation to Poland" (zezwolenie na pobyt stały na podstawie Karty Polaka) at any voivodeship office. You do not need a work permit, a Blue Card, or any of the paths in this wizard.</p><p><strong>If you think you might be eligible</strong> (Polish ancestry, declared connection to Polish heritage, language at A1+ level): see the <a href="https://www.gov.pl/web/diplomacy/karta-polaka" target="_blank" rel="noopener">official Karta Polaka guidance on gov.pl</a> and apply at any Polish consulate.</p>', pl: '<p><strong>Posiadacze Karty Polaka mają uprawnienia znacznie wykraczające poza standardowe zezwolenie na pobyt:</strong></p><ul><li>Prawo do pracy w Polsce bez żadnego zezwolenia na pracę</li><li>Prawo do założenia działalności gospodarczej na takich samych zasadach jak obywatele Polski</li><li>Prawo do bezpłatnych studiów na uczelniach publicznych</li><li>Bezpłatny dostęp do publicznej opieki zdrowotnej w sytuacjach nagłych</li><li>Bezpośrednia ścieżka do pobytu stałego (po 1 roku pobytu) i obywatelstwa</li><li>Wsparcie finansowe państwa na zasiedlenie (jednorazowe świadczenie pieniężne)</li></ul><p><strong>Jeśli masz już Kartę Polaka:</strong> Złóż wniosek bezpośrednio o zezwolenie na pobyt stały na podstawie Karty Polaka w dowolnym urzędzie wojewódzkim. Nie potrzebujesz zezwolenia na pracę, Niebieskiej Karty ani żadnej ze ścieżek z tego kreatora.</p><p><strong>Jeśli sądzisz, że możesz się kwalifikować</strong> (polskie pochodzenie, zadeklarowana przynależność do polskiego dziedzictwa, język polski na poziomie A1+): zobacz <a href="https://www.gov.pl/web/dyplomacja/karta-polaka" target="_blank" rel="noopener">oficjalne informacje o Karcie Polaka na gov.pl</a> i złóż wniosek w dowolnym polskim konsulacie.</p>' },
+  kartaPolakaBack: { en: '← Back to wizard', pl: '← Wróć do kreatora' },
+
+  // Russia warning — D-type visas largely unavailable
+  russiaTitle: { en: 'Restrictions for Russian passport holders', pl: 'Ograniczenia dla obywateli Federacji Rosyjskiej' },
+  russiaBody: { en: '<p><strong>Poland operates a near-total D-visa ban for Russian citizens.</strong> Since 19 September 2022 Russian citizens have been banned from entering Poland for tourism, business, sports, and culture. Polish consulates issue D-type long-stay visas to Russian citizens only as single-entry humanitarian visas under narrowly defined exceptions — typically: spouses/dependants of Polish or EU citizens, journalists and dissidents at risk, scientific or artistic cooperation under specific government programmes.</p><p><strong>As of 1 April 2026, non-biometric Russian passports are no longer accepted</strong> for entry or stay in Poland. Diplomatic and service passports ceased to be accepted on 1 January 2026. Only biometric passports with an electronic chip are valid.</p><p><strong>What to do:</strong> If you believe your case falls under a humanitarian exception, contact the Polish consulate in your country of residence directly — do not rely on online application portals, which may not surface the humanitarian track. If you are persecuted in Russia for political or human-rights reasons, consider the humanitarian-visa track (apply at the consulate). For standard work/business/study residence permits via this wizard — Polish consulates currently do not issue them to Russian citizens.</p>', pl: '<p><strong>Polska stosuje niemal całkowity zakaz wydawania wiz typu D obywatelom Rosji.</strong> Od 19 września 2022 r. obywatele Rosji nie mogą wjeżdżać do Polski w celu turystycznym, biznesowym, sportowym ani kulturalnym. Polskie konsulaty wydają wizy długoterminowe typu D obywatelom Rosji jedynie jako wizy jednokrotne humanitarne pod ściśle określonymi wyjątkami — typowo: małżonkowie/osoby na utrzymaniu obywateli Polski lub UE, dziennikarze i dysydenci zagrożeni represjami, współpraca naukowa lub artystyczna w ramach konkretnych programów rządowych.</p><p><strong>Od 1 kwietnia 2026 r. niebiometryczne paszporty rosyjskie nie są już akceptowane</strong> jako dokument wjazdowy ani pobytowy w Polsce. Paszporty dyplomatyczne i służbowe przestały być akceptowane 1 stycznia 2026 r. Ważne są wyłącznie paszporty biometryczne z chipem.</p><p><strong>Co zrobić:</strong> Jeśli sądzisz, że Twoja sytuacja może mieścić się w wyjątkach humanitarnych, skontaktuj się bezpośrednio z polskim konsulatem w kraju zamieszkania — nie polegaj na internetowych portalach wnioskowych, które mogą nie obsługiwać ścieżki humanitarnej. Jeśli jesteś prześladowany w Rosji ze względów politycznych lub praw człowieka, rozważ wizę humanitarną (wniosek w konsulacie). Standardowe ścieżki pobytowe (praca, biznes, studia) z tego kreatora — polskie konsulaty obecnie nie wydają ich obywatelom Rosji.</p>' },
+  russiaContinueBtn: { en: 'Continue anyway (humanitarian/exception case)', pl: 'Kontynuuj mimo to (przypadek humanitarny/wyjątkowy)' },
+
+  // Belarus options
+  belarusTitle: { en: 'Pathways for Belarusian citizens', pl: 'Ścieżki dla obywateli Białorusi' },
+  belarusBody: { en: '<p>Standard work/business/study residence-permit paths are open to Belarusian citizens. Two Belarus-specific tracks may be significantly faster:</p><ol><li><strong>Poland Business Harbour (PBH) — IT specialists.</strong> Expedited national-visa pathway for IT workers from Belarus and their families. Eligibility: a degree in a technology field, OR at least 1 year of professional experience in IT. Issued by a list of Polish consulates with priority processing. See the <a href="https://www.gov.pl/web/poland-businessharbour" target="_blank" rel="noopener">Poland Business Harbour programme</a>.</li><li><strong>Humanitarian visa</strong> — for those persecuted for political reasons. Free of charge, valid 1 year, and (since 1 Dec 2020) <strong>grants the right to work in Poland without any work permit</strong>. Apply at the Polish consulate; bring evidence of political persecution. See the <a href="https://interwencjaprawna.pl/en/changes-regarding-humanitarian-visas-and-humanitarian-stay-for-citizens-of-belarus/" target="_blank" rel="noopener">humanitarian-visa guidance for Belarusians</a>.</li></ol><p>If neither special track fits, continue through this wizard for the standard paths (Blue Card, standard work permit, business activity, etc.).</p>', pl: '<p>Standardowe ścieżki pobytowe (praca, biznes, studia) są dostępne dla obywateli Białorusi. Dwie ścieżki dedykowane dla Białorusi mogą być znacznie szybsze:</p><ol><li><strong>Poland Business Harbour (PBH) — specjaliści IT.</strong> Przyspieszona ścieżka wiz krajowych dla pracowników IT z Białorusi i ich rodzin. Wymagania: dyplom w dziedzinie technologii LUB co najmniej 1 rok doświadczenia zawodowego w IT. Wydawane przez wskazaną listę polskich konsulatów w trybie priorytetowym. Zobacz <a href="https://www.gov.pl/web/poland-businessharbour" target="_blank" rel="noopener">program Poland Business Harbour</a>.</li><li><strong>Wiza humanitarna</strong> — dla osób prześladowanych politycznie. Bezpłatna, ważna 1 rok, a od 1 grudnia 2020 r. <strong>uprawnia do pracy w Polsce bez żadnego zezwolenia na pracę</strong>. Wniosek w polskim konsulacie; należy przedstawić dowody prześladowań politycznych. Zobacz <a href="https://interwencjaprawna.pl/en/changes-regarding-humanitarian-visas-and-humanitarian-stay-for-citizens-of-belarus/" target="_blank" rel="noopener">informacje o wizie humanitarnej dla obywateli Białorusi</a>.</li></ol><p>Jeśli żadna z dedykowanych ścieżek nie pasuje, kontynuuj kreator dla standardowych ścieżek (Niebieska Karta, zezwolenie na pracę, działalność gospodarcza itd.).</p>' },
+  belarusContinueBtn: { en: 'Continue with standard paths', pl: 'Kontynuuj standardową ścieżką' },
+
+  // Ukraine UKR temporary protection option
+  ukraineTitle: { en: 'For Ukrainian citizens — temporary protection (UKR status)', pl: 'Dla obywateli Ukrainy — ochrona czasowa (status UKR)' },
+  ukraineBody: { en: '<p>If you are a Ukrainian citizen who left Ukraine after 24 February 2022, you may already qualify (or be able to register) for <strong>temporary protection in Poland — the so-called UKR status under the specustawa pomocowa</strong>. UKR status is currently extended through at least March 2026 (with further extensions widely expected).</p><p><strong>UKR status gives you, without any further permits:</strong></p><ul><li>Legal residence in Poland for the duration of temporary protection</li><li>Right to work without any work permit, for any Polish employer</li><li>PESEL UKR — registered automatically, opens bank accounts, NFZ healthcare, public services</li><li>Access to public healthcare (NFZ) and public schools for your children</li><li>Limited cash assistance (one-off and ongoing, depending on situation)</li></ul><p>If you are registered (or can register) for UKR status, you generally do <strong>not need</strong> the declaration procedure or a standard residence permit. <a href="https://www.gov.pl/web/udsc-en/temporary-protection" target="_blank" rel="noopener">See the official UKR/temporary-protection guidance on gov.pl →</a></p>', pl: '<p>Jeśli jesteś obywatelem Ukrainy, który opuścił Ukrainę po 24 lutego 2022 r., możesz już kwalifikować się (lub móc się zarejestrować) na <strong>ochronę czasową w Polsce — tzw. status UKR na podstawie specustawy pomocowej</strong>. Status UKR jest obecnie przedłużony co najmniej do marca 2026 r. (powszechnie spodziewane są kolejne przedłużenia).</p><p><strong>Status UKR daje Ci, bez żadnych dodatkowych zezwoleń:</strong></p><ul><li>Legalny pobyt w Polsce przez okres trwania ochrony czasowej</li><li>Prawo do pracy bez żadnego zezwolenia, u dowolnego polskiego pracodawcy</li><li>PESEL UKR — rejestrowany automatycznie, otwiera konta bankowe, NFZ, usługi publiczne</li><li>Dostęp do publicznej opieki zdrowotnej (NFZ) i szkół publicznych dla dzieci</li><li>Ograniczone wsparcie pieniężne (jednorazowe i bieżące, zależnie od sytuacji)</li></ul><p>Jeśli jesteś zarejestrowany (lub możesz się zarejestrować) na status UKR, zwykle <strong>nie potrzebujesz</strong> procedury oświadczeniowej ani standardowego zezwolenia na pobyt. <a href="https://www.gov.pl/web/udsc/ochrona-czasowa" target="_blank" rel="noopener">Zobacz oficjalne informacje o ochronie czasowej UKR na gov.pl →</a></p>' },
+  ukraineUkrYes: { en: 'I already have UKR status (or can register for it)', pl: 'Mam już status UKR (lub mogę się zarejestrować)' },
+  ukraineUkrYesDesc: { en: 'Skip the wizard — UKR is the simplest path', pl: 'Pomiń kreator — UKR to najprostsza ścieżka' },
+  ukraineUkrNo: { en: "UKR doesn't fit my situation — continue", pl: 'Status UKR nie pasuje do mojej sytuacji — kontynuuj' },
+  ukraineUkrNoDesc: { en: 'Continue to the declaration procedure or other paths', pl: 'Kontynuuj do procedury oświadczeniowej lub innych ścieżek' },
+  ukraineUkrSelected: { en: '<p><strong>UKR is your simplest path.</strong> Register at the nearest urząd gminy (commune office) with your Ukrainian passport or other ID. PESEL UKR is issued the same day in most cases. Once issued, you can sign a Polish employment contract or open a business without any further permit.</p>', pl: '<p><strong>UKR to Twoja najprostsza ścieżka.</strong> Zarejestruj się w najbliższym urzędzie gminy z paszportem ukraińskim lub innym dokumentem tożsamości. PESEL UKR jest w większości przypadków wydawany tego samego dnia. Po wydaniu możesz podpisać polską umowę o pracę lub założyć działalność gospodarczą bez żadnego dodatkowego zezwolenia.</p>' },
+
+  // Blue Card qualifications gate
+  q6e_title: { en: 'Blue Card qualifications check', pl: 'Sprawdzenie kwalifikacji do Niebieskiej Karty' },
+  q6e_intro: { en: 'Your salary qualifies you for the Blue Card path. The law also requires one of two qualifications credentials. Tick whichever applies — if neither, we will route you to the standard work-permit path instead.', pl: 'Twoje wynagrodzenie kwalifikuje Cię do ścieżki Niebieskiej Karty. Ustawa wymaga dodatkowo jednej z dwóch przesłanek kwalifikacyjnych. Zaznacz tę, która Cię dotyczy — jeśli żadna, skierujemy Cię na ścieżkę standardowego zezwolenia na pracę.' },
+  q6e_degree: { en: 'I have a university degree relevant to the role', pl: 'Mam dyplom ukończenia studiów wyższych odpowiedni dla stanowiska' },
+  q6e_degreeDesc: { en: "Bachelor's, Master's, PhD, or equivalent. The diploma must relate to the occupation you will perform (e.g. CS degree for a software engineering role).", pl: 'Licencjat, magister, doktorat lub równoważne. Dyplom musi być odpowiedni dla zawodu, który będziesz wykonywać (np. dyplom informatyki dla stanowiska programisty).' },
+  q6e_experience: { en: 'I have at least 3 years of professional experience in an ICT/IT role', pl: 'Mam co najmniej 3 lata doświadczenia zawodowego w stanowisku IT/ICT' },
+  q6e_experienceDesc: { en: 'The 3-years-experience route applies only to Annex I occupations — essentially ICT specialists, ICT managers, and ICT technicians (ISCO-08 codes 133, 25, 35). For non-ICT roles, a degree is required.', pl: 'Ścieżka 3-letniego doświadczenia ma zastosowanie wyłącznie do zawodów z Załącznika I — zasadniczo specjalistów IT, kierowników IT i techników IT (kody ISCO-08: 133, 25, 35). Dla pozostałych zawodów wymagany jest dyplom.' },
+  q6e_neither: { en: "I don't have either", pl: 'Nie spełniam żadnego z warunków' },
+  q6e_neitherDesc: { en: 'We will route you to the standard work-permit path instead.', pl: 'Skierujemy Cię na ścieżkę standardowego zezwolenia na pracę.' },
+
 
   // B2B nuance note shown when contract = b2b
   b2bNote: { en: 'You selected a B2B contract. The standard work permit (art. 114) is built around an employer–employee relationship and does not fit B2B — voivodeship offices typically redirect B2B applicants to art. 142. The realistic options for a B2B contractor are: (a) art. 142 ust. 1 pkt 3 lit. b (self-employment / innovative business activity) — structurally the best fit, treats your JDG or spółka as the entity conducting business in Poland; or (b) the EU Blue Card — explicitly permitted for B2B under EU Directive 2021/1883/UE (art. 2 ust. 1 lit. b), but in current Polish practice voivodeship offices require an employment contract and may push back, so be prepared to argue EU primacy of law.', pl: 'Wybrałeś kontrakt B2B. Standardowe zezwolenie na pracę (art. 114) jest skonstruowane wokół relacji pracownik–pracodawca i nie pasuje do B2B — urzędy wojewódzkie zwykle odsyłają takich wnioskodawców do art. 142. Realne opcje dla kontraktora B2B to: (a) art. 142 ust. 1 pkt 3 lit. b (samozatrudnienie / innowacyjna działalność gospodarcza) — strukturalnie najlepsze dopasowanie, traktuje Twoją JDG lub spółkę jako podmiot prowadzący działalność w Polsce; albo (b) Niebieska Karta UE — wprost dopuszczona dla B2B przez Dyrektywę UE 2021/1883/UE (art. 2 ust. 1 lit. b), ale w obecnej polskiej praktyce urzędy wojewódzkie wymagają umowy o pracę i mogą kwestionować wnioski oparte na B2B, więc trzeba być gotowym argumentować pierwszeństwo prawa UE.' },
@@ -1111,8 +1149,8 @@ const UI = {
   nextStepsAbroad: { en: "<strong>Since you're outside Poland:</strong> You'll need a D-type visa first. Apply at the Polish consulate in your country ({visaType}). Processing takes 2-6 weeks. After entering Poland with your visa, apply for the residence permit at the voivodeship office (urząd wojewódzki). You'll receive a stamp allowing legal stay while processing — but note that <strong>once you submit your residence permit application, you generally cannot leave Poland</strong> until a decision is made (this stamp is not a travel document). Processing takes 3-18 months depending on permit type and voivodeship.", pl: '<strong>Ponieważ jesteś poza Polską:</strong> Najpierw potrzebujesz wizy typu D. Złóż wniosek w polskim konsulacie w Twoim kraju ({visaType}). Rozpatrywanie trwa 2-6 tygodni. Po wjeździe do Polski z wizą złóż wniosek o zezwolenie na pobyt w urzędzie wojewódzkim. Otrzymasz stempel legalizujący pobyt na czas rozpatrywania — ale uwaga: <strong>po złożeniu wniosku o kartę pobytu zasadniczo nie możesz opuścić Polski</strong> do czasu decyzji (stempel nie jest dokumentem podróżnym). Rozpatrywanie trwa 3-18 miesięcy w zależności od rodzaju zezwolenia i województwa.' },
 
   // Q3e
-  q3e: { en: 'Describe your role', pl: 'Opisz swoje stanowisko' },
-  q3e_sub: { en: 'We\'ll check if your occupation qualifies for priority processing.', pl: 'Sprawdzimy, czy Twoje stanowisko kwalifikuje się do priorytetowego rozpatrzenia.' },
+  q3e: { en: 'Is your role on the deficit-occupations list?', pl: 'Czy Twoje stanowisko jest na liście zawodów deficytowych?' },
+  q3e_sub: { en: 'Roles on the list (art. 29) get priority processing at both the consulate and voivodeship office. Type your job title — we will look for a match. <strong>If your title does not match anything below, you are not on the deficit list — just click "Continue".</strong>', pl: 'Stanowiska z listy (art. 29) mają priorytet w konsulacie i urzędzie wojewódzkim. Wpisz nazwę swojego stanowiska — sprawdzimy, czy jest dopasowanie. <strong>Jeśli Twoje stanowisko nie pasuje do żadnego poniżej, nie jesteś na liście deficytowej — kliknij „Dalej".</strong>' },
 
   // Q4e
   q4e: { en: 'What type of contract do you have (or will have)?', pl: 'Jaki rodzaj umowy masz (lub będziesz mieć)?' },
@@ -1314,7 +1352,14 @@ function getProgress() {
     b2b_redirect: [5, total],
     no_company_info: [4, total],
     nawa_info: null,
-    student_info: null
+    student_info: null,
+    // New (May 2026): Blue Card qualifications gate + country-specific routing
+    q6e_qualifications: null,
+    russia_warning: null,
+    belarus_warning: null,
+    ukraine_options: null,
+    ukraine_ukr_result: null,
+    karta_polaka_info: null
   };
   return stepMap[state.step] || null;
 }
@@ -1354,6 +1399,12 @@ function renderStep() {
     case 'q3e': return renderQ3e(el);
     case 'q4e': return renderQ4e(el);
     case 'b2b_redirect': return renderB2BRedirect(el);
+    case 'q6e_qualifications': return renderQ6eQualifications(el);
+    case 'russia_warning': return renderRussiaWarning(el);
+    case 'belarus_warning': return renderBelarusWarning(el);
+    case 'ukraine_options': return renderUkraineOptions(el);
+    case 'ukraine_ukr_result': return renderUkraineUkrResult(el);
+    case 'karta_polaka_info': return renderKartaPolakaInfo(el);
     case 'q5e': return renderQ5e(el);
     case 'q3f': return renderQ3f(el);
     case 'no_company_info': return renderNoCompanyInfo(el);
@@ -1372,6 +1423,7 @@ function renderQ1(el) {
   el.innerHTML = `
     <div class="question-wrap">
       <div class="question-text">${t('q1')}</div>
+      <div class="info-panel" style="margin:0 0 1.25rem;padding:0.75rem 1rem;font-size:0.875rem;background:#f7f5fa;border-radius:10px;text-align:center">${t('kartaPolakaBanner')}</div>
       <div class="options-grid">
         <div class="option-card" onclick="selectQ1('employee')">
           <div class="icon">&#128188;</div>
@@ -1455,6 +1507,12 @@ function selectCountry(country, group) {
   if (group === 'eu') {
     state.answers.resultPaths = ['eu-citizen'];
     goTo('result');
+  } else if (country === 'Russia') {
+    goTo('russia_warning');
+  } else if (country === 'Belarus') {
+    goTo('belarus_warning');
+  } else if (country === 'Ukraine') {
+    goTo('ukraine_options');
   } else {
     goTo('q_location');
   }
@@ -1636,6 +1694,124 @@ function selectContract(type) {
   goTo('q5e');
 }
 
+
+// ---- Russia warning ----
+function renderRussiaWarning(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('russiaTitle')}</div>
+      <div class="info-panel" style="text-align:left">
+        ${t('russiaBody')}
+        <div style="margin-top:1rem;text-align:center">
+          <button class="continue-btn" onclick="goTo('q_location')">${t('russiaContinueBtn')}</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ---- Belarus warning ----
+function renderBelarusWarning(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('belarusTitle')}</div>
+      <div class="info-panel" style="text-align:left">
+        ${t('belarusBody')}
+        <div style="margin-top:1rem;text-align:center">
+          <button class="continue-btn" onclick="goTo('q_location')">${t('belarusContinueBtn')}</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ---- Ukraine options ----
+function renderUkraineOptions(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('ukraineTitle')}</div>
+      <div class="info-panel" style="text-align:left;margin-bottom:1rem">${t('ukraineBody')}</div>
+      <div class="options-grid">
+        <div class="option-card" onclick="selectUkraineOption(true)">
+          <div class="icon">&#127482;&#127462;</div>
+          <div><div class="label">${t('ukraineUkrYes')}</div><div class="desc">${t('ukraineUkrYesDesc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectUkraineOption(false)">
+          <div class="icon">&#10145;&#65039;</div>
+          <div><div class="label">${t('ukraineUkrNo')}</div><div class="desc">${t('ukraineUkrNoDesc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectUkraineOption(useUkr) {
+  if (useUkr) {
+    state.answers.usingUkrStatus = true;
+    goTo('ukraine_ukr_result');
+  } else {
+    goTo('q_location');
+  }
+}
+
+function renderUkraineUkrResult(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('ukraineTitle')}</div>
+      <div class="info-panel" style="text-align:left">${t('ukraineUkrSelected')}</div>
+    </div>`;
+}
+
+// ---- Karta Polaka info ----
+function renderKartaPolakaInfo(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('kartaPolakaTitle')}</div>
+      <div class="info-panel" style="text-align:left">
+        ${t('kartaPolakaBody')}
+        <div style="margin-top:1rem;text-align:center">
+          <button class="continue-btn" onclick="goTo('q1')">${t('kartaPolakaBack')}</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ---- Q6e: Blue Card qualifications gate ----
+function renderQ6eQualifications(el) {
+  el.innerHTML = `
+    <div class="question-wrap">
+      <div class="question-text">${t('q6e_title')}</div>
+      <div class="question-sub" style="margin-bottom:1.25rem">${t('q6e_intro')}</div>
+      <div class="options-grid single-col">
+        <div class="option-card" onclick="selectQualification('degree')">
+          <div class="icon">&#127891;</div>
+          <div><div class="label">${t('q6e_degree')}</div><div class="desc">${t('q6e_degreeDesc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectQualification('experience')">
+          <div class="icon">&#128188;</div>
+          <div><div class="label">${t('q6e_experience')}</div><div class="desc">${t('q6e_experienceDesc')}</div></div>
+        </div>
+        <div class="option-card" onclick="selectQualification('neither')">
+          <div class="icon">&#10060;</div>
+          <div><div class="label">${t('q6e_neither')}</div><div class="desc">${t('q6e_neitherDesc')}</div></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function selectQualification(val) {
+  state.answers.qualification = val;
+  if (val === 'neither') {
+    // Reroute to standard-work
+    const paths = ['standard-work'];
+    if (state.answers.countryGroup === 'declaration') paths.unshift('declaration');
+    state.answers.resultPaths = paths;
+  } else {
+    // Blue Card path stands
+    const paths = ['blue-card'];
+    if (state.answers.countryGroup === 'declaration') paths.unshift('declaration');
+    state.answers.resultPaths = paths;
+  }
+  goTo('result');
+}
+
 // ---- B2B Redirect ----
 function renderB2BRedirect(el) {
   el.innerHTML = `
@@ -1686,25 +1862,24 @@ function submitSalary() {
   state.answers.salary = salary;
   const isB2B = state.answers.contract === 'b2b';
 
+  // Blue Card salary qualifying + UP/UZ contract → ask qualifications first
+  if (salary >= 13355 && !isB2B) {
+    goTo('q6e_qualifications');
+    return;
+  }
+
   const paths = [];
   if (salary >= 13355) {
+    // B2B + Blue Card threshold: skip qualifications gate (still legal under EU dir)
     paths.push('blue-card');
   } else if (!isB2B) {
-    // Standard work permit (art. 114) is structurally for employer–employee
-    // relationships ("podmiot powierzający pracę"). B2B contractors invoice
-    // Polish companies as clients, which fits art. 142 (działalność gosp.),
-    // not art. 114. So we don't surface standard-work for B2B.
     paths.push('standard-work');
   }
 
-  // For B2B contracts: surface art. 142 lit. b (self-employment / innovation)
-  // as the main fit. Blue Card stays in if salary qualifies (legally permitted
-  // for B2B per Dyrektywa 2021/1883/UE).
   if (isB2B) {
     paths.push('business-innovation');
   }
 
-  // Declaration countries get the declaration path on top
   if (state.answers.countryGroup === 'declaration') {
     paths.unshift('declaration');
   }
@@ -2082,6 +2257,12 @@ function renderKeySteps(pathId) {
     if ((pathId === 'blue-card' || pathId === 'standard-work') && !inPoland) {
       html += `<div class="step-warning">${t('step1WarnWorkPermit')}</div>`;
     }
+    if ((pathId === 'blue-card' || pathId === 'standard-work') && inPoland) {
+      html += `<div class="step-warning">${t('step1WarnWorkPermitInPoland')}</div>`;
+    }
+    if (pathId === 'standard-work') {
+      html += `<div class="step-warning">${t('step1WarnStdWorkChecks')}</div>`;
+    }
   } else {
     html += `<div class="step-meta">${t('step1MetaNonExempt')}</div>`;
     html += `<div class="step-content">${t('step1NonExempt').replace('{visaType}', visaType)}</div>`;
@@ -2090,6 +2271,12 @@ function renderKeySteps(pathId) {
     }
     if ((pathId === 'blue-card' || pathId === 'standard-work') && !inPoland) {
       html += `<div class="step-warning">${t('step1WarnWorkPermit')}</div>`;
+    }
+    if ((pathId === 'blue-card' || pathId === 'standard-work') && inPoland) {
+      html += `<div class="step-warning">${t('step1WarnWorkPermitInPoland')}</div>`;
+    }
+    if (pathId === 'standard-work') {
+      html += `<div class="step-warning">${t('step1WarnStdWorkChecks')}</div>`;
     }
   }
   html += `</div></div>`;
