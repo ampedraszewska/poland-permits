@@ -1630,18 +1630,30 @@ function fuzzyMatch(query, occupations, topN) {
       }
     }
 
-    // Score: sum of best match per token over all targets, divided by num tokens
+    // Score: sum of best match per specific token / num specific tokens.
+    // Filler tokens (senior, junior, manager-as-suffix, etc.) add small bonus when they hit
+    // but don't dilute the denominator (otherwise "senior software engineer" against
+    // "Software developer" gets 1/3 = 0.33 instead of the deserved 1.0).
+    const scoreTokens = specificTokens.length ? specificTokens : allTokens;
     let score = 0;
-    for (const token of allTokens) {
+    for (const token of scoreTokens) {
       let best = 0;
       for (const target of targets) {
         best = Math.max(best, wordMatchScore(token, target.split(/\s+/)));
       }
       score += best;
     }
-    // Bonus when the full normalized query appears as substring of the name
+    // Small bonus per filler token that also matched (caps quality bias)
+    for (const token of allTokens) {
+      if (!specificTokens.includes(token)) {
+        for (const target of targets) {
+          if (wordMatchScore(token, target.split(/\s+/)) > 0) { score += 0.1; break; }
+        }
+      }
+    }
+    // Big bonus when the full normalized query appears as substring of the name
     if (targets.some(t => t.includes(q))) score += 0.5;
-    return { occ, score: allTokens.length ? score / allTokens.length : 0 };
+    return { occ, score: scoreTokens.length ? score / scoreTokens.length : 0 };
   });
 
   scored.sort((a, b) => b.score - a.score);
