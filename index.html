@@ -1583,52 +1583,69 @@ function normalizeStr(s) {
 function fuzzyMatch(query, occupations, topN) {
   // Match a user-typed job title against the deficit list. Only the occupation NAME
   // is searched (group/category is excluded — it caused false positives like
-  // "construction worker" → "insulation worker" because both are in the "Construction"
-  // group). Every meaningful token in the query must hit the name; weighted by full-word
-  // matches. Strict threshold to avoid suggesting unrelated jobs.
+  // "construction worker" → "insulation worker" via group inflation).
+  //
+  // Generic nouns ("manager", "engineer", "worker", "professional", "specialist", ...)
+  // are common across many unrelated roles. When the user's role-noun (last token) is
+  // generic, we also require a specific token from the query to match — otherwise
+  // "sales manager" would falsely match Fleet manager, Hotel manager, etc.
   const q = normalizeStr(query);
-  // Drop generic filler words that overmatch (e.g. "engineer", "manager", "worker" alone
-  // shouldn't sweep dozens of unrelated occupations). When the query has multiple tokens
-  // we still keep these — but require ALL non-filler tokens to hit.
-  const GENERIC = new Set(['engineer','manager','worker','specialist','professional','associate','assistant','officer','senior','junior','lead','staff','employee']);
+  const GENERIC = new Set(['engineer','manager','worker','specialist','professional','associate','assistant','officer','senior','junior','lead','staff','employee','representative']);
   const allTokens = q.split(/\s+/).filter(t => t.length >= 2);
   if (!allTokens.length) return [];
   const specificTokens = allTokens.filter(t => !GENERIC.has(t));
-  // If user typed only filler words ("manager", "engineer"), match against full word
-  const tokens = specificTokens.length ? specificTokens : allTokens;
+
+  function wordMatchScore(token, words) {
+    // Returns: 1.0 exact, 0.7 prefix, 0.5 substring (min 4 chars), 0 none
+    for (const w of words) {
+      if (w === token) return 1.0;
+    }
+    for (const w of words) {
+      if (w.startsWith(token) && token.length >= 3) return 0.7;
+      if (token.startsWith(w) && w.length >= 3) return 0.7;
+    }
+    for (const w of words) {
+      if ((w.includes(token) || token.includes(w)) && token.length >= 4) return 0.5;
+    }
+    return 0;
+  }
 
   const scored = occupations.map(occ => {
     const nameEn = normalizeStr(occ.name.en);
     const namePl = normalizeStr(occ.name.pl);
     const targets = [nameEn, namePl];
 
-    // Every specific token must be present in at least one target name; otherwise reject
-    const allMatch = tokens.every(token =>
-      targets.some(target => target.split(/\s+/).some(w => w === token || w.startsWith(token) || token.startsWith(w)))
-    );
-    if (!allMatch) return { occ, score: 0 };
+    // GATE for multi-token queries: last token (role-noun) must hit somewhere.
+    // If the role-noun is generic, also require at least one other specific token to hit.
+    if (allTokens.length >= 2) {
+      const lastToken = allTokens[allTokens.length - 1];
+      const lastHits = targets.some(t => wordMatchScore(lastToken, t.split(/\s+/)) > 0);
+      if (!lastHits) return { occ, score: 0 };
+      if (GENERIC.has(lastToken)) {
+        const otherSpecific = specificTokens.filter(t => t !== lastToken);
+        const anyOther = otherSpecific.some(t =>
+          targets.some(tar => wordMatchScore(t, tar.split(/\s+/)) > 0)
+        );
+        if (!anyOther) return { occ, score: 0 };
+      }
+    }
 
+    // Score: sum of best match per token over all targets, divided by num tokens
     let score = 0;
-    for (const token of tokens) {
+    for (const token of allTokens) {
       let best = 0;
       for (const target of targets) {
-        const words = target.split(/\s+/);
-        if (words.some(w => w === token)) {
-          best = Math.max(best, 1.0); // exact word match
-        } else if (words.some(w => w.startsWith(token) || token.startsWith(w))) {
-          best = Math.max(best, 0.7); // prefix match
-        }
+        best = Math.max(best, wordMatchScore(token, target.split(/\s+/)));
       }
       score += best;
     }
-    // Bonus when the full normalized query is a substring of the name (e.g. "ux designer" in "ux/ui designer")
+    // Bonus when the full normalized query appears as substring of the name
     if (targets.some(t => t.includes(q))) score += 0.5;
-    return { occ, score: tokens.length ? score / tokens.length : 0 };
+    return { occ, score: allTokens.length ? score / allTokens.length : 0 };
   });
 
   scored.sort((a, b) => b.score - a.score);
-  // Strict threshold — only return matches that genuinely resemble the query
-  return scored.slice(0, topN).filter(m => m.score >= 0.7);
+  return scored.slice(0, topN).filter(m => m.score >= 0.5);
 }
 
 function renderQ3e(el) {
