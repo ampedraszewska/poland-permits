@@ -1615,19 +1615,15 @@ function fuzzyMatch(query, occupations, topN) {
     const namePl = normalizeStr(occ.name.pl);
     const targets = [nameEn, namePl];
 
-    // GATE for multi-token queries: last token (role-noun) must hit somewhere.
-    // If the role-noun is generic, also require at least one other specific token to hit.
-    if (allTokens.length >= 2) {
-      const lastToken = allTokens[allTokens.length - 1];
-      const lastHits = targets.some(t => wordMatchScore(lastToken, t.split(/\s+/)) > 0);
-      if (!lastHits) return { occ, score: 0 };
-      if (GENERIC.has(lastToken)) {
-        const otherSpecific = specificTokens.filter(t => t !== lastToken);
-        const anyOther = otherSpecific.some(t =>
-          targets.some(tar => wordMatchScore(t, tar.split(/\s+/)) > 0)
-        );
-        if (!anyOther) return { occ, score: 0 };
-      }
+    // GATE: at least one SPECIFIC token must hit. Without this, "sales manager" would
+    // false-match Fleet manager (only "manager" hits, "sales" is the specific anchor and
+    // doesn't appear). With this, "senior software engineer" still matches Software developer
+    // because "software" is the specific anchor and it hits — even though "engineer" doesn't.
+    if (specificTokens.length > 0) {
+      const anySpecificHits = specificTokens.some(t =>
+        targets.some(tar => wordMatchScore(t, tar.split(/\s+/)) > 0)
+      );
+      if (!anySpecificHits) return { occ, score: 0 };
     }
 
     // Score: sum of best match per specific token / num specific tokens.
