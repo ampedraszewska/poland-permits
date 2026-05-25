@@ -1013,7 +1013,7 @@ const UI = {
   notSure: { en: 'My title isn\'t on the list — Continue', pl: 'Mojego stanowiska nie ma na liście — Dalej' },
   checkRole: { en: 'Check the deficit list', pl: 'Sprawdź listę deficytową' },
   checking: { en: 'Checking...', pl: 'Sprawdzanie...' },
-  matchFound: { en: 'Possible matches in the deficit list — pick yours if any, otherwise click Continue', pl: 'Możliwe dopasowania na liście deficytowej — wybierz swoje (jeśli pasuje) albo kliknij Dalej' },
+  matchFound: { en: 'Closest matches in the deficit list. <strong>Only pick if one is your actual job title — adjacent titles do NOT qualify for priority.</strong> Otherwise click Continue.', pl: 'Najbliższe dopasowania z listy deficytowej. <strong>Wybierz tylko jeśli to dokładnie Twoje stanowisko — podobne nazwy NIE kwalifikują do priorytetu.</strong> W przeciwnym razie kliknij Dalej.' },
   noMatch: { en: 'No match in the deficit list — your role is not eligible for priority processing. You can still proceed.', pl: 'Brak dopasowania na liście deficytowej — Twoje stanowisko nie kwalifikuje się do priorytetowego rozpatrzenia. Możesz kontynuować.' },
   matchError: { en: 'Could not check right now. You can proceed without this check.', pl: 'Nie udało się sprawdzić. Możesz kontynuować bez tej weryfikacji.' },
   proceed: { en: 'Continue', pl: 'Dalej' },
@@ -1155,7 +1155,7 @@ const UI = {
 
   // Q3e
   q3e: { en: 'Is your role on the deficit-occupations list?', pl: 'Czy Twoje stanowisko jest na liście zawodów deficytowych?' },
-  q3e_sub: { en: 'Roles on the list (art. 29) get priority processing at both the consulate and voivodeship office. Type your job title — we will look for a match. <strong>If your title does not match anything below, you are not on the deficit list — just click "Continue".</strong>', pl: 'Stanowiska z listy (art. 29) mają priorytet w konsulacie i urzędzie wojewódzkim. Wpisz nazwę swojego stanowiska — sprawdzimy, czy jest dopasowanie. <strong>Jeśli Twoje stanowisko nie pasuje do żadnego poniżej, nie jesteś na liście deficytowej — kliknij „Dalej".</strong>' },
+  q3e_sub: { en: 'Roles on the deficit list (art. 29) get priority processing at the consulate and voivodeship office. The list is ~329 specific job titles — mostly skilled trades, healthcare, and a narrow set of technical roles. <strong>Most office jobs (sales, marketing, HR, finance, general management) are not on the list.</strong> Type your job title to check — if nothing matches, that is the normal outcome for most users. Click "Continue".', pl: 'Stanowiska z listy deficytowej (art. 29) mają priorytet w konsulacie i urzędzie wojewódzkim. Lista to ok. 329 konkretnych nazw zawodów — głównie zawody techniczne, medyczne i wąski zestaw ról specjalistycznych. <strong>Większość stanowisk biurowych (sprzedaż, marketing, HR, finanse, ogólny management) NIE jest na liście.</strong> Wpisz nazwę swojego stanowiska — jeśli nic nie pasuje, to normalny wynik dla większości użytkowników. Kliknij „Dalej".' },
 
   // Q4e
   q4e: { en: 'What type of contract do you have (or will have)?', pl: 'Jaki rodzaj umowy masz (lub będziesz mieć)?' },
@@ -1581,34 +1581,54 @@ function normalizeStr(s) {
 }
 
 function fuzzyMatch(query, occupations, topN) {
+  // Match a user-typed job title against the deficit list. Only the occupation NAME
+  // is searched (group/category is excluded — it caused false positives like
+  // "construction worker" → "insulation worker" because both are in the "Construction"
+  // group). Every meaningful token in the query must hit the name; weighted by full-word
+  // matches. Strict threshold to avoid suggesting unrelated jobs.
   const q = normalizeStr(query);
-  const tokens = q.split(/\s+/).filter(t => t.length >= 2);
-  if (!tokens.length) return [];
+  // Drop generic filler words that overmatch (e.g. "engineer", "manager", "worker" alone
+  // shouldn't sweep dozens of unrelated occupations). When the query has multiple tokens
+  // we still keep these — but require ALL non-filler tokens to hit.
+  const GENERIC = new Set(['engineer','manager','worker','specialist','professional','associate','assistant','officer','senior','junior','lead','staff','employee']);
+  const allTokens = q.split(/\s+/).filter(t => t.length >= 2);
+  if (!allTokens.length) return [];
+  const specificTokens = allTokens.filter(t => !GENERIC.has(t));
+  // If user typed only filler words ("manager", "engineer"), match against full word
+  const tokens = specificTokens.length ? specificTokens : allTokens;
 
   const scored = occupations.map(occ => {
     const nameEn = normalizeStr(occ.name.en);
     const namePl = normalizeStr(occ.name.pl);
-    const group = normalizeStr(occ.group);
-    const targets = [nameEn, namePl, group];
+    const targets = [nameEn, namePl];
+
+    // Every specific token must be present in at least one target name; otherwise reject
+    const allMatch = tokens.every(token =>
+      targets.some(target => target.split(/\s+/).some(w => w === token || w.startsWith(token) || token.startsWith(w)))
+    );
+    if (!allMatch) return { occ, score: 0 };
 
     let score = 0;
     for (const token of tokens) {
       let best = 0;
       for (const target of targets) {
-        if (target.includes(token)) {
-          let s = token.length / Math.max(target.length, 1);
-          if (target.split(/\s+/).some(w => w === token)) s += 0.6;
-          else if (target.split(/\s+/).some(w => w.startsWith(token))) s += 0.3;
-          best = Math.max(best, s);
+        const words = target.split(/\s+/);
+        if (words.some(w => w === token)) {
+          best = Math.max(best, 1.0); // exact word match
+        } else if (words.some(w => w.startsWith(token) || token.startsWith(w))) {
+          best = Math.max(best, 0.7); // prefix match
         }
       }
       score += best;
     }
+    // Bonus when the full normalized query is a substring of the name (e.g. "ux designer" in "ux/ui designer")
+    if (targets.some(t => t.includes(q))) score += 0.5;
     return { occ, score: tokens.length ? score / tokens.length : 0 };
   });
 
   scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, topN).filter(m => m.score > 0.15);
+  // Strict threshold — only return matches that genuinely resemble the query
+  return scored.slice(0, topN).filter(m => m.score >= 0.7);
 }
 
 function renderQ3e(el) {
